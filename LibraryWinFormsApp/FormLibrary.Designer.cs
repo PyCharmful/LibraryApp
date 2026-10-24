@@ -35,6 +35,7 @@
             файлToolStripMenuItem = new ToolStripMenuItem();
             видToolStripMenuItem = new ToolStripMenuItem();
             справкаToolStripMenuItem = new ToolStripMenuItem();
+            оПрограммеToolStripMenuItem = new ToolStripMenuItem();
             tabControlLibrary = new TabControl();
             tabPageBooks = new TabPage();
             groupBoxBookFind = new GroupBox();
@@ -82,7 +83,7 @@
             textBoxStuffID = new TextBox();
             buttonAddStuff = new Button();
             buttonDeleteStuff = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridStuff = new DataGridView();
             StuffID = new DataGridViewTextBoxColumn();
             StuffSecondName = new DataGridViewTextBoxColumn();
             StuffFirstName = new DataGridViewTextBoxColumn();
@@ -112,7 +113,7 @@
             textBoxCustomerID = new TextBox();
             buttonAddCustomer = new Button();
             buttonDeleteCustomer = new Button();
-            dataGridView2 = new DataGridView();
+            dataGridCustomers = new DataGridView();
             CustomerID = new DataGridViewTextBoxColumn();
             CustomerSecondName = new DataGridViewTextBoxColumn();
             CustomerFirstName = new DataGridViewTextBoxColumn();
@@ -145,6 +146,10 @@
             OperationStuffID = new DataGridViewTextBoxColumn();
             OperationCustomerID = new DataGridViewTextBoxColumn();
             OperationDate = new DataGridViewTextBoxColumn();
+            buttonEditBook = new Button();
+            buttonEditStuff = new Button();
+            buttonEditCustomer = new Button();
+            buttonEditOperation = new Button();
             menuStripPanel.SuspendLayout();
             tabControlLibrary.SuspendLayout();
             tabPageBooks.SuspendLayout();
@@ -152,10 +157,10 @@
             ((System.ComponentModel.ISupportInitialize)dataGridBooks).BeginInit();
             tabPageStuff.SuspendLayout();
             groupBoxStuffFind.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridStuff).BeginInit();
             tabPageCustomers.SuspendLayout();
             groupBoxCustomerFind.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridCustomers).BeginInit();
             tabPageBookExchange.SuspendLayout();
             groupBoxOperationFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
@@ -165,7 +170,7 @@
             // 
             buttonSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonSave.Font = new Font("Segoe UI", 12F);
-            buttonSave.Location = new Point(1217, 542);
+            buttonSave.Location = new Point(1087, 566);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(103, 43);
             buttonSave.TabIndex = 2;
@@ -178,20 +183,21 @@
             buttonAddBook.Font = new Font("Segoe UI", 10F);
             buttonAddBook.Location = new Point(8, 461);
             buttonAddBook.Name = "buttonAddBook";
-            buttonAddBook.Size = new Size(126, 35);
+            buttonAddBook.Size = new Size(109, 35);
             buttonAddBook.TabIndex = 3;
-            buttonAddBook.Text = "Добавить книгу";
+            buttonAddBook.Text = "Добавить";
             buttonAddBook.UseVisualStyleBackColor = true;
+            buttonAddBook.Click += buttonAddBook_Click;
             // 
             // buttonDeleteBook
             // 
             buttonDeleteBook.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteBook.Font = new Font("Segoe UI", 10F);
-            buttonDeleteBook.Location = new Point(140, 461);
+            buttonDeleteBook.Location = new Point(252, 461);
             buttonDeleteBook.Name = "buttonDeleteBook";
-            buttonDeleteBook.Size = new Size(126, 35);
+            buttonDeleteBook.Size = new Size(109, 35);
             buttonDeleteBook.TabIndex = 4;
-            buttonDeleteBook.Text = "Удалить книгу";
+            buttonDeleteBook.Text = "Удалить";
             buttonDeleteBook.UseVisualStyleBackColor = true;
             // 
             // menuStripPanel
@@ -199,7 +205,7 @@
             menuStripPanel.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem, видToolStripMenuItem, справкаToolStripMenuItem });
             menuStripPanel.Location = new Point(0, 0);
             menuStripPanel.Name = "menuStripPanel";
-            menuStripPanel.Size = new Size(1332, 24);
+            menuStripPanel.Size = new Size(1202, 24);
             menuStripPanel.TabIndex = 5;
             menuStripPanel.Text = "menuStrip1";
             // 
@@ -217,9 +223,17 @@
             // 
             // справкаToolStripMenuItem
             // 
+            справкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { оПрограммеToolStripMenuItem });
             справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             справкаToolStripMenuItem.Size = new Size(65, 20);
             справкаToolStripMenuItem.Text = "Справка";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            оПрограммеToolStripMenuItem.Size = new Size(149, 22);
+            оПрограммеToolStripMenuItem.Text = "О программе";
+            оПрограммеToolStripMenuItem.Click += оПрограммеToolStripMenuItem_Click;
             // 
             // tabControlLibrary
             // 
@@ -235,6 +249,7 @@
             // 
             // tabPageBooks
             // 
+            tabPageBooks.Controls.Add(buttonEditBook);
             tabPageBooks.Controls.Add(groupBoxBookFind);
             tabPageBooks.Controls.Add(dataGridBooks);
             tabPageBooks.Controls.Add(buttonAddBook);
@@ -455,10 +470,11 @@
             // 
             // tabPageStuff
             // 
+            tabPageStuff.Controls.Add(buttonEditStuff);
             tabPageStuff.Controls.Add(groupBoxStuffFind);
             tabPageStuff.Controls.Add(buttonAddStuff);
             tabPageStuff.Controls.Add(buttonDeleteStuff);
-            tabPageStuff.Controls.Add(dataGridView1);
+            tabPageStuff.Controls.Add(dataGridStuff);
             tabPageStuff.Location = new Point(4, 24);
             tabPageStuff.Name = "tabPageStuff";
             tabPageStuff.Padding = new Padding(3);
@@ -653,30 +669,31 @@
             buttonAddStuff.Font = new Font("Segoe UI", 10F);
             buttonAddStuff.Location = new Point(8, 461);
             buttonAddStuff.Name = "buttonAddStuff";
-            buttonAddStuff.Size = new Size(162, 35);
+            buttonAddStuff.Size = new Size(109, 35);
             buttonAddStuff.TabIndex = 7;
-            buttonAddStuff.Text = "Добавить сотрудника";
+            buttonAddStuff.Text = "Добавить";
             buttonAddStuff.UseVisualStyleBackColor = true;
+            buttonAddStuff.Click += buttonAddStuff_Click;
             // 
             // buttonDeleteStuff
             // 
             buttonDeleteStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteStuff.Font = new Font("Segoe UI", 10F);
-            buttonDeleteStuff.Location = new Point(176, 461);
+            buttonDeleteStuff.Location = new Point(252, 461);
             buttonDeleteStuff.Name = "buttonDeleteStuff";
-            buttonDeleteStuff.Size = new Size(167, 35);
+            buttonDeleteStuff.Size = new Size(109, 35);
             buttonDeleteStuff.TabIndex = 8;
-            buttonDeleteStuff.Text = "Удалить сотрудника";
+            buttonDeleteStuff.Text = "Удалить";
             buttonDeleteStuff.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridStuff
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { StuffID, StuffSecondName, StuffFirstName, StuffThirdName, StuffBirthDate, StuffJobRole, StuffPhoneNumber, StuffEmail });
-            dataGridView1.Location = new Point(6, 6);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(883, 449);
-            dataGridView1.TabIndex = 6;
+            dataGridStuff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridStuff.Columns.AddRange(new DataGridViewColumn[] { StuffID, StuffSecondName, StuffFirstName, StuffThirdName, StuffBirthDate, StuffJobRole, StuffPhoneNumber, StuffEmail });
+            dataGridStuff.Location = new Point(6, 6);
+            dataGridStuff.Name = "dataGridStuff";
+            dataGridStuff.Size = new Size(883, 449);
+            dataGridStuff.TabIndex = 6;
             // 
             // StuffID
             // 
@@ -720,10 +737,11 @@
             // 
             // tabPageCustomers
             // 
+            tabPageCustomers.Controls.Add(buttonEditCustomer);
             tabPageCustomers.Controls.Add(groupBoxCustomerFind);
             tabPageCustomers.Controls.Add(buttonAddCustomer);
             tabPageCustomers.Controls.Add(buttonDeleteCustomer);
-            tabPageCustomers.Controls.Add(dataGridView2);
+            tabPageCustomers.Controls.Add(dataGridCustomers);
             tabPageCustomers.Location = new Point(4, 24);
             tabPageCustomers.Name = "tabPageCustomers";
             tabPageCustomers.Size = new Size(1187, 502);
@@ -917,30 +935,32 @@
             buttonAddCustomer.Font = new Font("Segoe UI", 10F);
             buttonAddCustomer.Location = new Point(8, 461);
             buttonAddCustomer.Name = "buttonAddCustomer";
-            buttonAddCustomer.Size = new Size(142, 35);
+            buttonAddCustomer.Size = new Size(109, 35);
             buttonAddCustomer.TabIndex = 10;
-            buttonAddCustomer.Text = "Добавить клиента";
+            buttonAddCustomer.Text = "Добавить";
             buttonAddCustomer.UseVisualStyleBackColor = true;
+            buttonAddCustomer.Click += buttonAddCustomer_Click;
             // 
             // buttonDeleteCustomer
             // 
             buttonDeleteCustomer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteCustomer.Font = new Font("Segoe UI", 10F);
-            buttonDeleteCustomer.Location = new Point(156, 461);
+            buttonDeleteCustomer.Location = new Point(252, 461);
             buttonDeleteCustomer.Name = "buttonDeleteCustomer";
-            buttonDeleteCustomer.Size = new Size(138, 35);
+            buttonDeleteCustomer.Size = new Size(109, 35);
             buttonDeleteCustomer.TabIndex = 11;
-            buttonDeleteCustomer.Text = "Удалить клиента";
+            buttonDeleteCustomer.Text = "Удалить";
             buttonDeleteCustomer.UseVisualStyleBackColor = true;
+            buttonDeleteCustomer.Click += buttonDeleteCustomer_Click;
             // 
-            // dataGridView2
+            // dataGridCustomers
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { CustomerID, CustomerSecondName, CustomerFirstName, CustometThirdName, CustomerBirthDate, CustomerAddress, CustomerPhoneNumber, CustomerEmail });
-            dataGridView2.Location = new Point(6, 6);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(883, 449);
-            dataGridView2.TabIndex = 9;
+            dataGridCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { CustomerID, CustomerSecondName, CustomerFirstName, CustometThirdName, CustomerBirthDate, CustomerAddress, CustomerPhoneNumber, CustomerEmail });
+            dataGridCustomers.Location = new Point(6, 6);
+            dataGridCustomers.Name = "dataGridCustomers";
+            dataGridCustomers.Size = new Size(883, 449);
+            dataGridCustomers.TabIndex = 9;
             // 
             // CustomerID
             // 
@@ -984,6 +1004,7 @@
             // 
             // tabPageBookExchange
             // 
+            tabPageBookExchange.Controls.Add(buttonEditOperation);
             tabPageBookExchange.Controls.Add(groupBoxOperationFind);
             tabPageBookExchange.Controls.Add(buttonAddOperation);
             tabPageBookExchange.Controls.Add(buttonDeleteOperation);
@@ -1140,21 +1161,23 @@
             buttonAddOperation.Font = new Font("Segoe UI", 10F);
             buttonAddOperation.Location = new Point(8, 461);
             buttonAddOperation.Name = "buttonAddOperation";
-            buttonAddOperation.Size = new Size(151, 35);
+            buttonAddOperation.Size = new Size(109, 35);
             buttonAddOperation.TabIndex = 13;
-            buttonAddOperation.Text = "Добавить операцию";
+            buttonAddOperation.Text = "Добавить";
             buttonAddOperation.UseVisualStyleBackColor = true;
+            buttonAddOperation.Click += buttonAddOperation_Click;
             // 
             // buttonDeleteOperation
             // 
             buttonDeleteOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteOperation.Font = new Font("Segoe UI", 10F);
-            buttonDeleteOperation.Location = new Point(165, 461);
+            buttonDeleteOperation.Location = new Point(252, 461);
             buttonDeleteOperation.Name = "buttonDeleteOperation";
-            buttonDeleteOperation.Size = new Size(138, 35);
+            buttonDeleteOperation.Size = new Size(109, 35);
             buttonDeleteOperation.TabIndex = 14;
-            buttonDeleteOperation.Text = "Удалить операцию";
+            buttonDeleteOperation.Text = "Удалить";
             buttonDeleteOperation.UseVisualStyleBackColor = true;
+            buttonDeleteOperation.Click += buttonDeleteOperation_Click;
             // 
             // dataGridView3
             // 
@@ -1196,16 +1219,61 @@
             OperationDate.HeaderText = "Дата операции";
             OperationDate.Name = "OperationDate";
             // 
+            // buttonEditBook
+            // 
+            buttonEditBook.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditBook.Font = new Font("Segoe UI", 10F);
+            buttonEditBook.Location = new Point(123, 461);
+            buttonEditBook.Name = "buttonEditBook";
+            buttonEditBook.Size = new Size(123, 35);
+            buttonEditBook.TabIndex = 7;
+            buttonEditBook.Text = "Редактировать";
+            buttonEditBook.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditStuff
+            // 
+            buttonEditStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditStuff.Font = new Font("Segoe UI", 10F);
+            buttonEditStuff.Location = new Point(123, 461);
+            buttonEditStuff.Name = "buttonEditStuff";
+            buttonEditStuff.Size = new Size(123, 35);
+            buttonEditStuff.TabIndex = 10;
+            buttonEditStuff.Text = "Редактировать";
+            buttonEditStuff.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditCustomer
+            // 
+            buttonEditCustomer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditCustomer.Font = new Font("Segoe UI", 10F);
+            buttonEditCustomer.Location = new Point(123, 461);
+            buttonEditCustomer.Name = "buttonEditCustomer";
+            buttonEditCustomer.Size = new Size(123, 35);
+            buttonEditCustomer.TabIndex = 13;
+            buttonEditCustomer.Text = "Редактировать";
+            buttonEditCustomer.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditOperation
+            // 
+            buttonEditOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditOperation.Font = new Font("Segoe UI", 10F);
+            buttonEditOperation.Location = new Point(123, 461);
+            buttonEditOperation.Name = "buttonEditOperation";
+            buttonEditOperation.Size = new Size(123, 35);
+            buttonEditOperation.TabIndex = 16;
+            buttonEditOperation.Text = "Редактировать";
+            buttonEditOperation.UseVisualStyleBackColor = true;
+            // 
             // FormLibrary
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1332, 597);
+            ClientSize = new Size(1202, 621);
             Controls.Add(tabControlLibrary);
             Controls.Add(buttonSave);
             Controls.Add(menuStripPanel);
             MainMenuStrip = menuStripPanel;
             Name = "FormLibrary";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Библиотека";
             Load += FormLibrary_Load;
             menuStripPanel.ResumeLayout(false);
@@ -1218,11 +1286,11 @@
             tabPageStuff.ResumeLayout(false);
             groupBoxStuffFind.ResumeLayout(false);
             groupBoxStuffFind.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridStuff).EndInit();
             tabPageCustomers.ResumeLayout(false);
             groupBoxCustomerFind.ResumeLayout(false);
             groupBoxCustomerFind.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridCustomers).EndInit();
             tabPageBookExchange.ResumeLayout(false);
             groupBoxOperationFind.ResumeLayout(false);
             groupBoxOperationFind.PerformLayout();
@@ -1245,7 +1313,7 @@
         private TabPage tabPageCustomers;
         private TabPage tabPageBookExchange;
         private DataGridView dataGridBooks;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridStuff;
         private DataGridViewTextBoxColumn BookID;
         private DataGridViewTextBoxColumn BookInvNumber;
         private DataGridViewTextBoxColumn BookName;
@@ -1265,7 +1333,7 @@
         private DataGridViewTextBoxColumn StuffEmail;
         private Button buttonAddCustomer;
         private Button buttonDeleteCustomer;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridCustomers;
         private DataGridViewTextBoxColumn CustomerID;
         private DataGridViewTextBoxColumn CustomerSecondName;
         private DataGridViewTextBoxColumn CustomerFirstName;
@@ -1360,5 +1428,10 @@
         private Label labelOperationStuffID;
         private Label labelOperationCustomerID;
         private TextBox textBoxOperationCustomerID;
+        private ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private Button buttonEditBook;
+        private Button buttonEditStuff;
+        private Button buttonEditCustomer;
+        private Button buttonEditOperation;
     }
 }
