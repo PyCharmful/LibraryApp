@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\libraryapp\\librarywinformsapp\\formabout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\librarywinformsapp\\formabout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formabout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,11 +19,11 @@
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\addoperationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\libraryapp\\librarywinformsapp\\addoperationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\librarywinformsapp\\addoperationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\addoperationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\libraryapp\\librarywinformsapp\\addcustomerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\librarywinformsapp\\addcustomerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\addcustomerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -51,6 +51,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormLibrary.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormLibrary.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormLibrary.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAcwIgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T09:06:57.934Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FormAbout.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\FormAbout.cs",
@@ -58,21 +70,7 @@
               "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\FormAbout.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LibraryWinFormsApp\\FormAbout.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T09:44:41.938Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormLibrary.cs",
-              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormLibrary.cs",
-              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
-              "RelativeToolTip": "LibraryWinFormsApp\\FormLibrary.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAIAwwH8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T09:06:57.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-24T09:44:41.938Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\AddOperationForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LibraryWinFormsApp\\AddOperationForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T09:01:09.933Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-10-24T09:01:09.933Z"
             },
             {
               "$type": "Document",
@@ -108,8 +105,7 @@
               "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\LibraryApp\\LibraryWinFormsApp\\AddCustomerForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LibraryWinFormsApp\\AddCustomerForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T09:02:16.501Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2026-10-24T09:02:16.501Z"
             }
           ]
         }

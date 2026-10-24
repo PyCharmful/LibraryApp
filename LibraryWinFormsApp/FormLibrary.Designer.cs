@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             buttonSave = new Button();
             buttonAddBook = new Button();
             buttonDeleteBook = new Button();
@@ -38,6 +39,7 @@
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
             tabControlLibrary = new TabControl();
             tabPageBooks = new TabPage();
+            buttonEditBook = new Button();
             groupBoxBookFind = new GroupBox();
             buttonBookFind = new Button();
             textBoxBookGenre = new TextBox();
@@ -55,14 +57,8 @@
             labelBookID = new Label();
             textBoxBookID = new TextBox();
             dataGridBooks = new DataGridView();
-            BookID = new DataGridViewTextBoxColumn();
-            BookInvNumber = new DataGridViewTextBoxColumn();
-            BookName = new DataGridViewTextBoxColumn();
-            BookAuthor = new DataGridViewTextBoxColumn();
-            BookPublisher = new DataGridViewTextBoxColumn();
-            BookPublicationYear = new DataGridViewTextBoxColumn();
-            BookGenre = new DataGridViewTextBoxColumn();
             tabPageStuff = new TabPage();
+            buttonEditStuff = new Button();
             groupBoxStuffFind = new GroupBox();
             textBoxStuffEmail = new TextBox();
             labelStuffEmail = new Label();
@@ -93,6 +89,7 @@
             StuffPhoneNumber = new DataGridViewTextBoxColumn();
             StuffEmail = new DataGridViewTextBoxColumn();
             tabPageCustomers = new TabPage();
+            buttonEditCustomer = new Button();
             groupBoxCustomerFind = new GroupBox();
             textBoxCustomerEmail = new TextBox();
             labelCustomerEmail = new Label();
@@ -123,6 +120,7 @@
             CustomerPhoneNumber = new DataGridViewTextBoxColumn();
             CustomerEmail = new DataGridViewTextBoxColumn();
             tabPageBookExchange = new TabPage();
+            buttonEditOperation = new Button();
             groupBoxOperationFind = new GroupBox();
             labelOperationDate = new Label();
             textBoxOperationCustomerID = new TextBox();
@@ -146,10 +144,14 @@
             OperationStuffID = new DataGridViewTextBoxColumn();
             OperationCustomerID = new DataGridViewTextBoxColumn();
             OperationDate = new DataGridViewTextBoxColumn();
-            buttonEditBook = new Button();
-            buttonEditStuff = new Button();
-            buttonEditCustomer = new Button();
-            buttonEditOperation = new Button();
+            bookBindingSource = new BindingSource(components);
+            BookID = new DataGridViewTextBoxColumn();
+            BookInvNumber = new DataGridViewTextBoxColumn();
+            BookName = new DataGridViewTextBoxColumn();
+            BookAuthor = new DataGridViewTextBoxColumn();
+            BookPublisher = new DataGridViewTextBoxColumn();
+            BookPublicationYear = new DataGridViewTextBoxColumn();
+            BookGenre = new DataGridViewTextBoxColumn();
             menuStripPanel.SuspendLayout();
             tabControlLibrary.SuspendLayout();
             tabPageBooks.SuspendLayout();
@@ -164,6 +166,7 @@
             tabPageBookExchange.SuspendLayout();
             groupBoxOperationFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bookBindingSource).BeginInit();
             SuspendLayout();
             // 
             // buttonSave
@@ -262,6 +265,17 @@
             tabPageBooks.Text = "Книги";
             tabPageBooks.UseVisualStyleBackColor = true;
             tabPageBooks.Click += tabPageBooks_Click;
+            // 
+            // buttonEditBook
+            // 
+            buttonEditBook.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditBook.Font = new Font("Segoe UI", 10F);
+            buttonEditBook.Location = new Point(123, 461);
+            buttonEditBook.Name = "buttonEditBook";
+            buttonEditBook.Size = new Size(123, 35);
+            buttonEditBook.TabIndex = 7;
+            buttonEditBook.Text = "Редактировать";
+            buttonEditBook.UseVisualStyleBackColor = true;
             // 
             // groupBoxBookFind
             // 
@@ -425,48 +439,15 @@
             // 
             // dataGridBooks
             // 
+            dataGridBooks.AutoGenerateColumns = false;
             dataGridBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridBooks.Columns.AddRange(new DataGridViewColumn[] { BookID, BookInvNumber, BookName, BookAuthor, BookPublisher, BookPublicationYear, BookGenre });
+            dataGridBooks.DataSource = bookBindingSource;
             dataGridBooks.Location = new Point(6, 6);
             dataGridBooks.Name = "dataGridBooks";
             dataGridBooks.Size = new Size(883, 449);
             dataGridBooks.TabIndex = 5;
             dataGridBooks.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // BookID
-            // 
-            BookID.HeaderText = "ID";
-            BookID.Name = "BookID";
-            // 
-            // BookInvNumber
-            // 
-            BookInvNumber.HeaderText = "Инв. номер";
-            BookInvNumber.Name = "BookInvNumber";
-            // 
-            // BookName
-            // 
-            BookName.HeaderText = "Назв. книги";
-            BookName.Name = "BookName";
-            // 
-            // BookAuthor
-            // 
-            BookAuthor.HeaderText = "Автор";
-            BookAuthor.Name = "BookAuthor";
-            // 
-            // BookPublisher
-            // 
-            BookPublisher.HeaderText = "Издатель";
-            BookPublisher.Name = "BookPublisher";
-            // 
-            // BookPublicationYear
-            // 
-            BookPublicationYear.HeaderText = "Год публ.";
-            BookPublicationYear.Name = "BookPublicationYear";
-            // 
-            // BookGenre
-            // 
-            BookGenre.HeaderText = "Жанр";
-            BookGenre.Name = "BookGenre";
             // 
             // tabPageStuff
             // 
@@ -482,6 +463,17 @@
             tabPageStuff.TabIndex = 1;
             tabPageStuff.Text = "Сотрудники";
             tabPageStuff.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditStuff
+            // 
+            buttonEditStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditStuff.Font = new Font("Segoe UI", 10F);
+            buttonEditStuff.Location = new Point(123, 461);
+            buttonEditStuff.Name = "buttonEditStuff";
+            buttonEditStuff.Size = new Size(123, 35);
+            buttonEditStuff.TabIndex = 10;
+            buttonEditStuff.Text = "Редактировать";
+            buttonEditStuff.UseVisualStyleBackColor = true;
             // 
             // groupBoxStuffFind
             // 
@@ -748,6 +740,17 @@
             tabPageCustomers.TabIndex = 2;
             tabPageCustomers.Text = "Клиенты";
             tabPageCustomers.UseVisualStyleBackColor = true;
+            // 
+            // buttonEditCustomer
+            // 
+            buttonEditCustomer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditCustomer.Font = new Font("Segoe UI", 10F);
+            buttonEditCustomer.Location = new Point(123, 461);
+            buttonEditCustomer.Name = "buttonEditCustomer";
+            buttonEditCustomer.Size = new Size(123, 35);
+            buttonEditCustomer.TabIndex = 13;
+            buttonEditCustomer.Text = "Редактировать";
+            buttonEditCustomer.UseVisualStyleBackColor = true;
             // 
             // groupBoxCustomerFind
             // 
@@ -1016,6 +1019,17 @@
             tabPageBookExchange.Text = "Операции";
             tabPageBookExchange.UseVisualStyleBackColor = true;
             // 
+            // buttonEditOperation
+            // 
+            buttonEditOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEditOperation.Font = new Font("Segoe UI", 10F);
+            buttonEditOperation.Location = new Point(123, 461);
+            buttonEditOperation.Name = "buttonEditOperation";
+            buttonEditOperation.Size = new Size(123, 35);
+            buttonEditOperation.TabIndex = 16;
+            buttonEditOperation.Text = "Редактировать";
+            buttonEditOperation.UseVisualStyleBackColor = true;
+            // 
             // groupBoxOperationFind
             // 
             groupBoxOperationFind.Controls.Add(labelOperationDate);
@@ -1219,49 +1233,51 @@
             OperationDate.HeaderText = "Дата операции";
             OperationDate.Name = "OperationDate";
             // 
-            // buttonEditBook
+            // bookBindingSource
             // 
-            buttonEditBook.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditBook.Font = new Font("Segoe UI", 10F);
-            buttonEditBook.Location = new Point(123, 461);
-            buttonEditBook.Name = "buttonEditBook";
-            buttonEditBook.Size = new Size(123, 35);
-            buttonEditBook.TabIndex = 7;
-            buttonEditBook.Text = "Редактировать";
-            buttonEditBook.UseVisualStyleBackColor = true;
+            bookBindingSource.DataSource = typeof(Data.Book);
             // 
-            // buttonEditStuff
+            // BookID
             // 
-            buttonEditStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditStuff.Font = new Font("Segoe UI", 10F);
-            buttonEditStuff.Location = new Point(123, 461);
-            buttonEditStuff.Name = "buttonEditStuff";
-            buttonEditStuff.Size = new Size(123, 35);
-            buttonEditStuff.TabIndex = 10;
-            buttonEditStuff.Text = "Редактировать";
-            buttonEditStuff.UseVisualStyleBackColor = true;
+            BookID.DataPropertyName = "Id";
+            BookID.HeaderText = "ID";
+            BookID.Name = "BookID";
             // 
-            // buttonEditCustomer
+            // BookInvNumber
             // 
-            buttonEditCustomer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditCustomer.Font = new Font("Segoe UI", 10F);
-            buttonEditCustomer.Location = new Point(123, 461);
-            buttonEditCustomer.Name = "buttonEditCustomer";
-            buttonEditCustomer.Size = new Size(123, 35);
-            buttonEditCustomer.TabIndex = 13;
-            buttonEditCustomer.Text = "Редактировать";
-            buttonEditCustomer.UseVisualStyleBackColor = true;
+            BookInvNumber.DataPropertyName = "InvNumber";
+            BookInvNumber.HeaderText = "Инв. номер";
+            BookInvNumber.Name = "BookInvNumber";
             // 
-            // buttonEditOperation
+            // BookName
             // 
-            buttonEditOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditOperation.Font = new Font("Segoe UI", 10F);
-            buttonEditOperation.Location = new Point(123, 461);
-            buttonEditOperation.Name = "buttonEditOperation";
-            buttonEditOperation.Size = new Size(123, 35);
-            buttonEditOperation.TabIndex = 16;
-            buttonEditOperation.Text = "Редактировать";
-            buttonEditOperation.UseVisualStyleBackColor = true;
+            BookName.DataPropertyName = "BookName";
+            BookName.HeaderText = "Назв. книги";
+            BookName.Name = "BookName";
+            // 
+            // BookAuthor
+            // 
+            BookAuthor.DataPropertyName = "BookAuthor";
+            BookAuthor.HeaderText = "Автор";
+            BookAuthor.Name = "BookAuthor";
+            // 
+            // BookPublisher
+            // 
+            BookPublisher.DataPropertyName = "BookPublisher";
+            BookPublisher.HeaderText = "Издатель";
+            BookPublisher.Name = "BookPublisher";
+            // 
+            // BookPublicationYear
+            // 
+            BookPublicationYear.DataPropertyName = "PublicationYear";
+            BookPublicationYear.HeaderText = "Год публ.";
+            BookPublicationYear.Name = "BookPublicationYear";
+            // 
+            // BookGenre
+            // 
+            BookGenre.DataPropertyName = "Genre";
+            BookGenre.HeaderText = "Жанр";
+            BookGenre.Name = "BookGenre";
             // 
             // FormLibrary
             // 
@@ -1295,6 +1311,7 @@
             groupBoxOperationFind.ResumeLayout(false);
             groupBoxOperationFind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bookBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1314,13 +1331,6 @@
         private TabPage tabPageBookExchange;
         private DataGridView dataGridBooks;
         private DataGridView dataGridStuff;
-        private DataGridViewTextBoxColumn BookID;
-        private DataGridViewTextBoxColumn BookInvNumber;
-        private DataGridViewTextBoxColumn BookName;
-        private DataGridViewTextBoxColumn BookAuthor;
-        private DataGridViewTextBoxColumn BookPublisher;
-        private DataGridViewTextBoxColumn BookPublicationYear;
-        private DataGridViewTextBoxColumn BookGenre;
         private Button buttonAddStuff;
         private Button buttonDeleteStuff;
         private DataGridViewTextBoxColumn StuffID;
@@ -1433,5 +1443,13 @@
         private Button buttonEditStuff;
         private Button buttonEditCustomer;
         private Button buttonEditOperation;
+        private DataGridViewTextBoxColumn BookID;
+        private DataGridViewTextBoxColumn BookInvNumber;
+        private DataGridViewTextBoxColumn BookName;
+        private DataGridViewTextBoxColumn BookAuthor;
+        private DataGridViewTextBoxColumn BookPublisher;
+        private DataGridViewTextBoxColumn BookPublicationYear;
+        private DataGridViewTextBoxColumn BookGenre;
+        private BindingSource bookBindingSource;
     }
 }
