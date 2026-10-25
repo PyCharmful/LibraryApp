@@ -1,4 +1,6 @@
 using LibraryWinFormsApp.Data;
+using System.Diagnostics;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace LibraryWinFormsApp
 {
@@ -186,6 +188,70 @@ namespace LibraryWinFormsApp
             FormAbout formAbout = new FormAbout();
             formAbout.Owner = this;
             formAbout.ShowDialog();
+        }
+
+        private void buttonBookFind_Click(object sender, EventArgs e)
+        {
+            var grid = this.dataGridBooks;
+            grid.ClearSelection();
+            grid.CurrentCell = null;
+            string idQuerry = textBoxBookID.Text;
+            string invQuerry = textBoxBookInvNumber.Text;
+            if (grid != null)
+            {
+                BookIdFound(grid);
+            }
+        }
+        // Поиск по ID
+        private void BookIdFound(DataGridView grid)
+        {
+            bool idFound = false;
+            for (int i = 0; i < grid.RowCount; i++)
+            {
+                grid.Rows[i].Selected = false;
+
+                for (int j = 0; j < 1; j++)
+                {
+                    if (grid.Rows[i].Cells[j].Value != null)
+                    {
+                        if (grid.Rows[i].Cells[j].Value.ToString().Contains(textBoxBookID.Text))
+                        {
+                            grid.Rows[i].Selected = true;
+                            idFound = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (!idFound)
+            {
+                MessageBox.Show("Ничего не найдено");
+            }
+        }
+        // Поиск по инвентарному номеру
+        private void InvNumberFound(DataGridView grid)
+        {
+            bool invFound = false;
+            for (int i = 0; i < grid.RowCount; i++)
+            {
+                grid.Rows[i].Selected = false;
+                for (int j = 1; j < 2; j++)
+                {
+                    if (grid.Rows[i].Cells[j].Value != null)
+                    {
+                        if (grid.Rows[i].Cells[j].Value.ToString().Contains(textBoxBookInvNumber.Text))
+                        {
+                            grid.Rows[i].Selected = true;
+                            invFound = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (!invFound)
+            {
+                MessageBox.Show("Ничего не найдено");
+            }
         }
     }
 }

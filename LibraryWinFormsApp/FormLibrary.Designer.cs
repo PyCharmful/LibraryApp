@@ -42,14 +42,6 @@
             buttonEditBook = new Button();
             groupBoxBookFind = new GroupBox();
             buttonBookFind = new Button();
-            textBoxBookGenre = new TextBox();
-            labelBookGenre = new Label();
-            textBoxBookPublicationYear = new TextBox();
-            labelBookPublicationYear = new Label();
-            textBoxBookPublisher = new TextBox();
-            labelBookPublisher = new Label();
-            textBoxBookAuthor = new TextBox();
-            labelBookAuthor = new Label();
             textBoxBookName = new TextBox();
             labelBookName = new Label();
             textBoxBookInvNumber = new TextBox();
@@ -57,6 +49,14 @@
             labelBookID = new Label();
             textBoxBookID = new TextBox();
             dataGridBooks = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            invNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookAuthorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookPublisherDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            publicationYearDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            genreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookBindingSource = new BindingSource(components);
             tabPageStuff = new TabPage();
             buttonEditStuff = new Button();
             groupBoxStuffFind = new GroupBox();
@@ -144,19 +144,12 @@
             OperationStuffID = new DataGridViewTextBoxColumn();
             OperationCustomerID = new DataGridViewTextBoxColumn();
             OperationDate = new DataGridViewTextBoxColumn();
-            bookBindingSource = new BindingSource(components);
-            BookID = new DataGridViewTextBoxColumn();
-            BookInvNumber = new DataGridViewTextBoxColumn();
-            BookName = new DataGridViewTextBoxColumn();
-            BookAuthor = new DataGridViewTextBoxColumn();
-            BookPublisher = new DataGridViewTextBoxColumn();
-            BookPublicationYear = new DataGridViewTextBoxColumn();
-            BookGenre = new DataGridViewTextBoxColumn();
             menuStripPanel.SuspendLayout();
             tabControlLibrary.SuspendLayout();
             tabPageBooks.SuspendLayout();
             groupBoxBookFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridBooks).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bookBindingSource).BeginInit();
             tabPageStuff.SuspendLayout();
             groupBoxStuffFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridStuff).BeginInit();
@@ -166,7 +159,6 @@
             tabPageBookExchange.SuspendLayout();
             groupBoxOperationFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)bookBindingSource).BeginInit();
             SuspendLayout();
             // 
             // buttonSave
@@ -280,14 +272,6 @@
             // groupBoxBookFind
             // 
             groupBoxBookFind.Controls.Add(buttonBookFind);
-            groupBoxBookFind.Controls.Add(textBoxBookGenre);
-            groupBoxBookFind.Controls.Add(labelBookGenre);
-            groupBoxBookFind.Controls.Add(textBoxBookPublicationYear);
-            groupBoxBookFind.Controls.Add(labelBookPublicationYear);
-            groupBoxBookFind.Controls.Add(textBoxBookPublisher);
-            groupBoxBookFind.Controls.Add(labelBookPublisher);
-            groupBoxBookFind.Controls.Add(textBoxBookAuthor);
-            groupBoxBookFind.Controls.Add(labelBookAuthor);
             groupBoxBookFind.Controls.Add(textBoxBookName);
             groupBoxBookFind.Controls.Add(labelBookName);
             groupBoxBookFind.Controls.Add(textBoxBookInvNumber);
@@ -297,91 +281,20 @@
             groupBoxBookFind.Font = new Font("Segoe UI", 12F);
             groupBoxBookFind.Location = new Point(895, 6);
             groupBoxBookFind.Name = "groupBoxBookFind";
-            groupBoxBookFind.Size = new Size(286, 490);
+            groupBoxBookFind.Size = new Size(286, 224);
             groupBoxBookFind.TabIndex = 6;
             groupBoxBookFind.TabStop = false;
             groupBoxBookFind.Text = "Поиск";
             // 
             // buttonBookFind
             // 
-            buttonBookFind.Location = new Point(24, 451);
+            buttonBookFind.Location = new Point(24, 181);
             buttonBookFind.Name = "buttonBookFind";
             buttonBookFind.Size = new Size(236, 33);
             buttonBookFind.TabIndex = 14;
             buttonBookFind.Text = "Найти";
             buttonBookFind.UseVisualStyleBackColor = true;
-            // 
-            // textBoxBookGenre
-            // 
-            textBoxBookGenre.Font = new Font("Segoe UI", 10F);
-            textBoxBookGenre.Location = new Point(24, 354);
-            textBoxBookGenre.Name = "textBoxBookGenre";
-            textBoxBookGenre.Size = new Size(236, 25);
-            textBoxBookGenre.TabIndex = 13;
-            // 
-            // labelBookGenre
-            // 
-            labelBookGenre.AutoSize = true;
-            labelBookGenre.Font = new Font("Segoe UI", 11F);
-            labelBookGenre.Location = new Point(24, 331);
-            labelBookGenre.Name = "labelBookGenre";
-            labelBookGenre.Size = new Size(48, 20);
-            labelBookGenre.TabIndex = 12;
-            labelBookGenre.Text = "Жанр";
-            // 
-            // textBoxBookPublicationYear
-            // 
-            textBoxBookPublicationYear.Font = new Font("Segoe UI", 10F);
-            textBoxBookPublicationYear.Location = new Point(24, 303);
-            textBoxBookPublicationYear.Name = "textBoxBookPublicationYear";
-            textBoxBookPublicationYear.Size = new Size(236, 25);
-            textBoxBookPublicationYear.TabIndex = 11;
-            // 
-            // labelBookPublicationYear
-            // 
-            labelBookPublicationYear.AutoSize = true;
-            labelBookPublicationYear.Font = new Font("Segoe UI", 11F);
-            labelBookPublicationYear.Location = new Point(24, 280);
-            labelBookPublicationYear.Name = "labelBookPublicationYear";
-            labelBookPublicationYear.Size = new Size(121, 20);
-            labelBookPublicationYear.TabIndex = 10;
-            labelBookPublicationYear.Text = "Год публикации";
-            // 
-            // textBoxBookPublisher
-            // 
-            textBoxBookPublisher.Font = new Font("Segoe UI", 10F);
-            textBoxBookPublisher.Location = new Point(24, 252);
-            textBoxBookPublisher.Name = "textBoxBookPublisher";
-            textBoxBookPublisher.Size = new Size(236, 25);
-            textBoxBookPublisher.TabIndex = 9;
-            // 
-            // labelBookPublisher
-            // 
-            labelBookPublisher.AutoSize = true;
-            labelBookPublisher.Font = new Font("Segoe UI", 11F);
-            labelBookPublisher.Location = new Point(24, 229);
-            labelBookPublisher.Name = "labelBookPublisher";
-            labelBookPublisher.Size = new Size(73, 20);
-            labelBookPublisher.TabIndex = 8;
-            labelBookPublisher.Text = "Издатель";
-            // 
-            // textBoxBookAuthor
-            // 
-            textBoxBookAuthor.Font = new Font("Segoe UI", 10F);
-            textBoxBookAuthor.Location = new Point(24, 201);
-            textBoxBookAuthor.Name = "textBoxBookAuthor";
-            textBoxBookAuthor.Size = new Size(236, 25);
-            textBoxBookAuthor.TabIndex = 7;
-            // 
-            // labelBookAuthor
-            // 
-            labelBookAuthor.AutoSize = true;
-            labelBookAuthor.Font = new Font("Segoe UI", 11F);
-            labelBookAuthor.Location = new Point(24, 178);
-            labelBookAuthor.Name = "labelBookAuthor";
-            labelBookAuthor.Size = new Size(51, 20);
-            labelBookAuthor.TabIndex = 6;
-            labelBookAuthor.Text = "Автор";
+            buttonBookFind.Click += buttonBookFind_Click;
             // 
             // textBoxBookName
             // 
@@ -441,13 +354,59 @@
             // 
             dataGridBooks.AutoGenerateColumns = false;
             dataGridBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridBooks.Columns.AddRange(new DataGridViewColumn[] { BookID, BookInvNumber, BookName, BookAuthor, BookPublisher, BookPublicationYear, BookGenre });
+            dataGridBooks.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, invNumberDataGridViewTextBoxColumn, bookNameDataGridViewTextBoxColumn, bookAuthorDataGridViewTextBoxColumn, bookPublisherDataGridViewTextBoxColumn, publicationYearDataGridViewTextBoxColumn, genreDataGridViewTextBoxColumn });
             dataGridBooks.DataSource = bookBindingSource;
             dataGridBooks.Location = new Point(6, 6);
             dataGridBooks.Name = "dataGridBooks";
             dataGridBooks.Size = new Size(883, 449);
             dataGridBooks.TabIndex = 5;
             dataGridBooks.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // invNumberDataGridViewTextBoxColumn
+            // 
+            invNumberDataGridViewTextBoxColumn.DataPropertyName = "InvNumber";
+            invNumberDataGridViewTextBoxColumn.HeaderText = "InvNumber";
+            invNumberDataGridViewTextBoxColumn.Name = "invNumberDataGridViewTextBoxColumn";
+            // 
+            // bookNameDataGridViewTextBoxColumn
+            // 
+            bookNameDataGridViewTextBoxColumn.DataPropertyName = "BookName";
+            bookNameDataGridViewTextBoxColumn.HeaderText = "BookName";
+            bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
+            // 
+            // bookAuthorDataGridViewTextBoxColumn
+            // 
+            bookAuthorDataGridViewTextBoxColumn.DataPropertyName = "BookAuthor";
+            bookAuthorDataGridViewTextBoxColumn.HeaderText = "BookAuthor";
+            bookAuthorDataGridViewTextBoxColumn.Name = "bookAuthorDataGridViewTextBoxColumn";
+            // 
+            // bookPublisherDataGridViewTextBoxColumn
+            // 
+            bookPublisherDataGridViewTextBoxColumn.DataPropertyName = "BookPublisher";
+            bookPublisherDataGridViewTextBoxColumn.HeaderText = "BookPublisher";
+            bookPublisherDataGridViewTextBoxColumn.Name = "bookPublisherDataGridViewTextBoxColumn";
+            // 
+            // publicationYearDataGridViewTextBoxColumn
+            // 
+            publicationYearDataGridViewTextBoxColumn.DataPropertyName = "PublicationYear";
+            publicationYearDataGridViewTextBoxColumn.HeaderText = "PublicationYear";
+            publicationYearDataGridViewTextBoxColumn.Name = "publicationYearDataGridViewTextBoxColumn";
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            genreDataGridViewTextBoxColumn.DataPropertyName = "Genre";
+            genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            // 
+            // bookBindingSource
+            // 
+            bookBindingSource.DataSource = typeof(Data.Book);
             // 
             // tabPageStuff
             // 
@@ -1233,52 +1192,6 @@
             OperationDate.HeaderText = "Дата операции";
             OperationDate.Name = "OperationDate";
             // 
-            // bookBindingSource
-            // 
-            bookBindingSource.DataSource = typeof(Data.Book);
-            // 
-            // BookID
-            // 
-            BookID.DataPropertyName = "Id";
-            BookID.HeaderText = "ID";
-            BookID.Name = "BookID";
-            // 
-            // BookInvNumber
-            // 
-            BookInvNumber.DataPropertyName = "InvNumber";
-            BookInvNumber.HeaderText = "Инв. номер";
-            BookInvNumber.Name = "BookInvNumber";
-            // 
-            // BookName
-            // 
-            BookName.DataPropertyName = "BookName";
-            BookName.HeaderText = "Назв. книги";
-            BookName.Name = "BookName";
-            // 
-            // BookAuthor
-            // 
-            BookAuthor.DataPropertyName = "BookAuthor";
-            BookAuthor.HeaderText = "Автор";
-            BookAuthor.Name = "BookAuthor";
-            // 
-            // BookPublisher
-            // 
-            BookPublisher.DataPropertyName = "BookPublisher";
-            BookPublisher.HeaderText = "Издатель";
-            BookPublisher.Name = "BookPublisher";
-            // 
-            // BookPublicationYear
-            // 
-            BookPublicationYear.DataPropertyName = "PublicationYear";
-            BookPublicationYear.HeaderText = "Год публ.";
-            BookPublicationYear.Name = "BookPublicationYear";
-            // 
-            // BookGenre
-            // 
-            BookGenre.DataPropertyName = "Genre";
-            BookGenre.HeaderText = "Жанр";
-            BookGenre.Name = "BookGenre";
-            // 
             // FormLibrary
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1288,6 +1201,7 @@
             Controls.Add(buttonSave);
             Controls.Add(menuStripPanel);
             MainMenuStrip = menuStripPanel;
+            MinimumSize = new Size(1218, 660);
             Name = "FormLibrary";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Библиотека";
@@ -1299,6 +1213,7 @@
             groupBoxBookFind.ResumeLayout(false);
             groupBoxBookFind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridBooks).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bookBindingSource).EndInit();
             tabPageStuff.ResumeLayout(false);
             groupBoxStuffFind.ResumeLayout(false);
             groupBoxStuffFind.PerformLayout();
@@ -1311,7 +1226,6 @@
             groupBoxOperationFind.ResumeLayout(false);
             groupBoxOperationFind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)bookBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1361,14 +1275,6 @@
         private Label labelBookName;
         private TextBox textBoxBookInvNumber;
         private Label labelBookInvNumber;
-        private TextBox textBoxBookGenre;
-        private Label labelBookGenre;
-        private TextBox textBoxBookPublicationYear;
-        private Label labelBookPublicationYear;
-        private TextBox textBoxBookPublisher;
-        private Label labelBookPublisher;
-        private TextBox textBoxBookAuthor;
-        private Label labelBookAuthor;
         private TextBox textBoxBookName;
         private Button buttonBookFind;
         private GroupBox groupBoxStuffFind;
@@ -1443,13 +1349,13 @@
         private Button buttonEditStuff;
         private Button buttonEditCustomer;
         private Button buttonEditOperation;
-        private DataGridViewTextBoxColumn BookID;
-        private DataGridViewTextBoxColumn BookInvNumber;
-        private DataGridViewTextBoxColumn BookName;
-        private DataGridViewTextBoxColumn BookAuthor;
-        private DataGridViewTextBoxColumn BookPublisher;
-        private DataGridViewTextBoxColumn BookPublicationYear;
-        private DataGridViewTextBoxColumn BookGenre;
         private BindingSource bookBindingSource;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn invNumberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bookAuthorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bookPublisherDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn publicationYearDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
     }
 }

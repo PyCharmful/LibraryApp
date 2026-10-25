@@ -251,6 +251,7 @@
             Controls.Add(buttonCancelAddStuff);
             Controls.Add(buttonConfirmAddStuff);
             Controls.Add(groupBoxAddStuff);
+            MinimumSize = new Size(532, 429);
             Name = "AddStuffForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление сотрудника";

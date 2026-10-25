@@ -21,5 +21,19 @@ namespace LibraryWinFormsApp
         {
             this.Close();
         }
+
+        private void AddBookForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonConfirmAddBook_Click(object sender, EventArgs e)
+        {
+         //   FormLibrary main = this.Owner as FormLibrary;
+         //   if (main != null)
+         //   {
+         //       DataRow rowBooks = main.booksDataSet.
+          //  }
+        }
     }
 }

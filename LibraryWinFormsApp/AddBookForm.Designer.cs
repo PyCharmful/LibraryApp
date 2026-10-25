@@ -164,6 +164,7 @@
             buttonConfirmAddBook.TabIndex = 28;
             buttonConfirmAddBook.Text = "Добавить";
             buttonConfirmAddBook.UseVisualStyleBackColor = true;
+            buttonConfirmAddBook.Click += buttonConfirmAddBook_Click;
             // 
             // buttonCancelAddBook
             // 
@@ -207,9 +208,11 @@
             Controls.Add(groupBoxAddBook);
             Controls.Add(buttonCancelAddBook);
             Controls.Add(buttonConfirmAddBook);
+            MinimumSize = new Size(474, 357);
             Name = "AddBookForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление книги";
+            Load += AddBookForm_Load;
             groupBoxAddBook.ResumeLayout(false);
             groupBoxAddBook.PerformLayout();
             ResumeLayout(false);

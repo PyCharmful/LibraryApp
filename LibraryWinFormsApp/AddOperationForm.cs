@@ -21,5 +21,10 @@ namespace LibraryWinFormsApp
         {
             this.Close();
         }
+
+        private void AddOperationForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

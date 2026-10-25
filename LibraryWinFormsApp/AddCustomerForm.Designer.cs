@@ -251,6 +251,7 @@
             Controls.Add(buttonCancelAddCustomer);
             Controls.Add(buttonConfirmAddCustomer);
             Controls.Add(groupBoxAddCustomer);
+            MinimumSize = new Size(525, 428);
             Name = "AddCustomerForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление клиента";

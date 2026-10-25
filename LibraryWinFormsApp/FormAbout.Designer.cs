@@ -86,11 +86,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Info;
             ClientSize = new Size(766, 335);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBoxURFUlogo);
             Controls.Add(buttonCloseAbout);
             Controls.Add(textBoxAbout);
+            MinimumSize = new Size(782, 374);
             Name = "FormAbout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "О программе";
