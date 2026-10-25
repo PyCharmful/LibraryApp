@@ -199,7 +199,20 @@ namespace LibraryWinFormsApp
             string invQuerry = textBoxBookInvNumber.Text;
             if (grid != null)
             {
-                BookIdFound(grid);
+                if (idQuerry == "")
+                {
+                    if (invQuerry != "")
+                    {
+                        InvNumberFound(grid);
+                    }
+                }
+                else if (invQuerry == "")
+                {
+                    if (idQuerry != "")
+                    {
+                        BookIdFound(grid);
+                    }
+                }
             }
         }
         // Поиск по ID
