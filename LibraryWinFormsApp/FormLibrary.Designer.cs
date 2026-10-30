@@ -125,6 +125,7 @@
             tabPageBookExchange = new TabPage();
             buttonEditOperation = new Button();
             groupBoxOperationFind = new GroupBox();
+            comboBoxOperationName = new ComboBox();
             labelOperationDate = new Label();
             textBoxOperationCustomerID = new TextBox();
             labelOperationCustomerID = new Label();
@@ -132,7 +133,6 @@
             labelOperationStuffID = new Label();
             textBoxOperationBookID = new TextBox();
             labelOperationBookID = new Label();
-            textBoxOperationName = new TextBox();
             dateTimePickerOperationDate = new DateTimePicker();
             button1 = new Button();
             labelOperationName = new Label();
@@ -1037,6 +1037,7 @@
             // 
             // groupBoxOperationFind
             // 
+            groupBoxOperationFind.Controls.Add(comboBoxOperationName);
             groupBoxOperationFind.Controls.Add(labelOperationDate);
             groupBoxOperationFind.Controls.Add(textBoxOperationCustomerID);
             groupBoxOperationFind.Controls.Add(labelOperationCustomerID);
@@ -1044,7 +1045,6 @@
             groupBoxOperationFind.Controls.Add(labelOperationStuffID);
             groupBoxOperationFind.Controls.Add(textBoxOperationBookID);
             groupBoxOperationFind.Controls.Add(labelOperationBookID);
-            groupBoxOperationFind.Controls.Add(textBoxOperationName);
             groupBoxOperationFind.Controls.Add(dateTimePickerOperationDate);
             groupBoxOperationFind.Controls.Add(button1);
             groupBoxOperationFind.Controls.Add(labelOperationName);
@@ -1057,6 +1057,16 @@
             groupBoxOperationFind.TabIndex = 15;
             groupBoxOperationFind.TabStop = false;
             groupBoxOperationFind.Text = "Поиск";
+            // 
+            // comboBoxOperationName
+            // 
+            comboBoxOperationName.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxOperationName.FormattingEnabled = true;
+            comboBoxOperationName.Items.AddRange(new object[] { "Выдача", "Возврат" });
+            comboBoxOperationName.Location = new Point(24, 95);
+            comboBoxOperationName.Name = "comboBoxOperationName";
+            comboBoxOperationName.Size = new Size(236, 29);
+            comboBoxOperationName.TabIndex = 24;
             // 
             // labelOperationDate
             // 
@@ -1121,14 +1131,6 @@
             labelOperationBookID.Size = new Size(68, 20);
             labelOperationBookID.TabIndex = 17;
             labelOperationBookID.Text = "ID книги";
-            // 
-            // textBoxOperationName
-            // 
-            textBoxOperationName.Font = new Font("Segoe UI", 10F);
-            textBoxOperationName.Location = new Point(24, 99);
-            textBoxOperationName.Name = "textBoxOperationName";
-            textBoxOperationName.Size = new Size(236, 25);
-            textBoxOperationName.TabIndex = 16;
             // 
             // dateTimePickerOperationDate
             // 
@@ -1395,7 +1397,6 @@
         private Label labelOperationID;
         private TextBox textBoxOperationID;
         private DateTimePicker dateTimePickerOperationDate;
-        private TextBox textBoxOperationName;
         private Label labelOperationBookID;
         private TextBox textBoxOperationStuffID;
         private Label labelOperationStuffID;
@@ -1443,5 +1444,6 @@
         private DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateOperationDataGridViewTextBoxColumn;
         private BindingSource bookExchangeBindingSource;
+        private ComboBox comboBoxOperationName;
     }
 }
