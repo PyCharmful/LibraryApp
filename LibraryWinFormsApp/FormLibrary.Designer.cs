@@ -34,6 +34,7 @@
             buttonDeleteBook = new Button();
             menuStripPanel = new MenuStrip();
             файлToolStripMenuItem = new ToolStripMenuItem();
+            выходToolStripMenuItem = new ToolStripMenuItem();
             видToolStripMenuItem = new ToolStripMenuItem();
             справкаToolStripMenuItem = new ToolStripMenuItem();
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
@@ -80,14 +81,15 @@
             buttonAddStuff = new Button();
             buttonDeleteStuff = new Button();
             dataGridStuff = new DataGridView();
-            StuffID = new DataGridViewTextBoxColumn();
-            StuffSecondName = new DataGridViewTextBoxColumn();
-            StuffFirstName = new DataGridViewTextBoxColumn();
-            StuffThirdName = new DataGridViewTextBoxColumn();
-            StuffBirthDate = new DataGridViewTextBoxColumn();
-            StuffJobRole = new DataGridViewTextBoxColumn();
-            StuffPhoneNumber = new DataGridViewTextBoxColumn();
-            StuffEmail = new DataGridViewTextBoxColumn();
+            idDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            secondNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            thirdNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            birthDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            jobRoleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            phoneNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            emailDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            stuffBindingSource = new BindingSource(components);
             tabPageCustomers = new TabPage();
             buttonEditCustomer = new Button();
             groupBoxCustomerFind = new GroupBox();
@@ -111,14 +113,15 @@
             buttonAddCustomer = new Button();
             buttonDeleteCustomer = new Button();
             dataGridCustomers = new DataGridView();
-            CustomerID = new DataGridViewTextBoxColumn();
-            CustomerSecondName = new DataGridViewTextBoxColumn();
-            CustomerFirstName = new DataGridViewTextBoxColumn();
-            CustometThirdName = new DataGridViewTextBoxColumn();
-            CustomerBirthDate = new DataGridViewTextBoxColumn();
-            CustomerAddress = new DataGridViewTextBoxColumn();
-            CustomerPhoneNumber = new DataGridViewTextBoxColumn();
-            CustomerEmail = new DataGridViewTextBoxColumn();
+            idDataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            secondNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            firstNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            thirdNameDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            birthDateDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            addressDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            phoneNumberDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            emailDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            customerBindingSource = new BindingSource(components);
             tabPageBookExchange = new TabPage();
             buttonEditOperation = new Button();
             groupBoxOperationFind = new GroupBox();
@@ -138,12 +141,16 @@
             buttonAddOperation = new Button();
             buttonDeleteOperation = new Button();
             dataGridView3 = new DataGridView();
-            OperationID = new DataGridViewTextBoxColumn();
-            OperationName = new DataGridViewTextBoxColumn();
-            OperationBookID = new DataGridViewTextBoxColumn();
-            OperationStuffID = new DataGridViewTextBoxColumn();
-            OperationCustomerID = new DataGridViewTextBoxColumn();
-            OperationDate = new DataGridViewTextBoxColumn();
+            idDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            operationNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            stuffIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            stuffDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            customerDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dateOperationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookExchangeBindingSource = new BindingSource(components);
             menuStripPanel.SuspendLayout();
             tabControlLibrary.SuspendLayout();
             tabPageBooks.SuspendLayout();
@@ -153,12 +160,15 @@
             tabPageStuff.SuspendLayout();
             groupBoxStuffFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridStuff).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)stuffBindingSource).BeginInit();
             tabPageCustomers.SuspendLayout();
             groupBoxCustomerFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridCustomers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)customerBindingSource).BeginInit();
             tabPageBookExchange.SuspendLayout();
             groupBoxOperationFind.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bookExchangeBindingSource).BeginInit();
             SuspendLayout();
             // 
             // buttonSave
@@ -206,9 +216,17 @@
             // 
             // файлToolStripMenuItem
             // 
+            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { выходToolStripMenuItem });
             файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             файлToolStripMenuItem.Size = new Size(48, 20);
             файлToolStripMenuItem.Text = "Файл";
+            // 
+            // выходToolStripMenuItem
+            // 
+            выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            выходToolStripMenuItem.Size = new Size(108, 22);
+            выходToolStripMenuItem.Text = "Выход";
+            выходToolStripMenuItem.Click += выходToolStripMenuItem_Click;
             // 
             // видToolStripMenuItem
             // 
@@ -639,52 +657,66 @@
             // 
             // dataGridStuff
             // 
+            dataGridStuff.AutoGenerateColumns = false;
             dataGridStuff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridStuff.Columns.AddRange(new DataGridViewColumn[] { StuffID, StuffSecondName, StuffFirstName, StuffThirdName, StuffBirthDate, StuffJobRole, StuffPhoneNumber, StuffEmail });
+            dataGridStuff.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, secondNameDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, thirdNameDataGridViewTextBoxColumn, birthDateDataGridViewTextBoxColumn, jobRoleDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn });
+            dataGridStuff.DataSource = stuffBindingSource;
             dataGridStuff.Location = new Point(6, 6);
             dataGridStuff.Name = "dataGridStuff";
             dataGridStuff.Size = new Size(883, 449);
             dataGridStuff.TabIndex = 6;
             // 
-            // StuffID
+            // idDataGridViewTextBoxColumn1
             // 
-            StuffID.HeaderText = "ID";
-            StuffID.Name = "StuffID";
+            idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
             // 
-            // StuffSecondName
+            // secondNameDataGridViewTextBoxColumn
             // 
-            StuffSecondName.HeaderText = "Фамилия";
-            StuffSecondName.Name = "StuffSecondName";
+            secondNameDataGridViewTextBoxColumn.DataPropertyName = "SecondName";
+            secondNameDataGridViewTextBoxColumn.HeaderText = "SecondName";
+            secondNameDataGridViewTextBoxColumn.Name = "secondNameDataGridViewTextBoxColumn";
             // 
-            // StuffFirstName
+            // firstNameDataGridViewTextBoxColumn
             // 
-            StuffFirstName.HeaderText = "Имя";
-            StuffFirstName.Name = "StuffFirstName";
+            firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
             // 
-            // StuffThirdName
+            // thirdNameDataGridViewTextBoxColumn
             // 
-            StuffThirdName.HeaderText = "Отчество";
-            StuffThirdName.Name = "StuffThirdName";
+            thirdNameDataGridViewTextBoxColumn.DataPropertyName = "ThirdName";
+            thirdNameDataGridViewTextBoxColumn.HeaderText = "ThirdName";
+            thirdNameDataGridViewTextBoxColumn.Name = "thirdNameDataGridViewTextBoxColumn";
             // 
-            // StuffBirthDate
+            // birthDateDataGridViewTextBoxColumn
             // 
-            StuffBirthDate.HeaderText = "Дата рожд.";
-            StuffBirthDate.Name = "StuffBirthDate";
+            birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
+            birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
             // 
-            // StuffJobRole
+            // jobRoleDataGridViewTextBoxColumn
             // 
-            StuffJobRole.HeaderText = "Должность";
-            StuffJobRole.Name = "StuffJobRole";
+            jobRoleDataGridViewTextBoxColumn.DataPropertyName = "JobRole";
+            jobRoleDataGridViewTextBoxColumn.HeaderText = "JobRole";
+            jobRoleDataGridViewTextBoxColumn.Name = "jobRoleDataGridViewTextBoxColumn";
             // 
-            // StuffPhoneNumber
+            // phoneNumberDataGridViewTextBoxColumn
             // 
-            StuffPhoneNumber.HeaderText = "Тел. номер";
-            StuffPhoneNumber.Name = "StuffPhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
             // 
-            // StuffEmail
+            // emailDataGridViewTextBoxColumn
             // 
-            StuffEmail.HeaderText = "Эл. почта";
-            StuffEmail.Name = "StuffEmail";
+            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // stuffBindingSource
+            // 
+            stuffBindingSource.DataSource = typeof(Data.Stuff);
             // 
             // tabPageCustomers
             // 
@@ -917,52 +949,66 @@
             // 
             // dataGridCustomers
             // 
+            dataGridCustomers.AutoGenerateColumns = false;
             dataGridCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { CustomerID, CustomerSecondName, CustomerFirstName, CustometThirdName, CustomerBirthDate, CustomerAddress, CustomerPhoneNumber, CustomerEmail });
+            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn2, secondNameDataGridViewTextBoxColumn1, firstNameDataGridViewTextBoxColumn1, thirdNameDataGridViewTextBoxColumn1, birthDateDataGridViewTextBoxColumn1, addressDataGridViewTextBoxColumn1, phoneNumberDataGridViewTextBoxColumn1, emailDataGridViewTextBoxColumn1 });
+            dataGridCustomers.DataSource = customerBindingSource;
             dataGridCustomers.Location = new Point(6, 6);
             dataGridCustomers.Name = "dataGridCustomers";
             dataGridCustomers.Size = new Size(883, 449);
             dataGridCustomers.TabIndex = 9;
             // 
-            // CustomerID
+            // idDataGridViewTextBoxColumn2
             // 
-            CustomerID.HeaderText = "ID";
-            CustomerID.Name = "CustomerID";
+            idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn2.HeaderText = "Id";
+            idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
             // 
-            // CustomerSecondName
+            // secondNameDataGridViewTextBoxColumn1
             // 
-            CustomerSecondName.HeaderText = "Фамилия";
-            CustomerSecondName.Name = "CustomerSecondName";
+            secondNameDataGridViewTextBoxColumn1.DataPropertyName = "SecondName";
+            secondNameDataGridViewTextBoxColumn1.HeaderText = "SecondName";
+            secondNameDataGridViewTextBoxColumn1.Name = "secondNameDataGridViewTextBoxColumn1";
             // 
-            // CustomerFirstName
+            // firstNameDataGridViewTextBoxColumn1
             // 
-            CustomerFirstName.HeaderText = "Имя";
-            CustomerFirstName.Name = "CustomerFirstName";
+            firstNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
+            firstNameDataGridViewTextBoxColumn1.HeaderText = "FirstName";
+            firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
             // 
-            // CustometThirdName
+            // thirdNameDataGridViewTextBoxColumn1
             // 
-            CustometThirdName.HeaderText = "Отчество";
-            CustometThirdName.Name = "CustometThirdName";
+            thirdNameDataGridViewTextBoxColumn1.DataPropertyName = "ThirdName";
+            thirdNameDataGridViewTextBoxColumn1.HeaderText = "ThirdName";
+            thirdNameDataGridViewTextBoxColumn1.Name = "thirdNameDataGridViewTextBoxColumn1";
             // 
-            // CustomerBirthDate
+            // birthDateDataGridViewTextBoxColumn1
             // 
-            CustomerBirthDate.HeaderText = "Дата рожд.";
-            CustomerBirthDate.Name = "CustomerBirthDate";
+            birthDateDataGridViewTextBoxColumn1.DataPropertyName = "BirthDate";
+            birthDateDataGridViewTextBoxColumn1.HeaderText = "BirthDate";
+            birthDateDataGridViewTextBoxColumn1.Name = "birthDateDataGridViewTextBoxColumn1";
             // 
-            // CustomerAddress
+            // addressDataGridViewTextBoxColumn1
             // 
-            CustomerAddress.HeaderText = "Адрес";
-            CustomerAddress.Name = "CustomerAddress";
+            addressDataGridViewTextBoxColumn1.DataPropertyName = "Address";
+            addressDataGridViewTextBoxColumn1.HeaderText = "Address";
+            addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
             // 
-            // CustomerPhoneNumber
+            // phoneNumberDataGridViewTextBoxColumn1
             // 
-            CustomerPhoneNumber.HeaderText = "Тел. номер";
-            CustomerPhoneNumber.Name = "CustomerPhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
             // 
-            // CustomerEmail
+            // emailDataGridViewTextBoxColumn1
             // 
-            CustomerEmail.HeaderText = "Эл. почта";
-            CustomerEmail.Name = "CustomerEmail";
+            emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            // 
+            // customerBindingSource
+            // 
+            customerBindingSource.DataSource = typeof(Data.Customer);
             // 
             // tabPageBookExchange
             // 
@@ -1154,43 +1200,73 @@
             // 
             // dataGridView3
             // 
+            dataGridView3.AutoGenerateColumns = false;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { OperationID, OperationName, OperationBookID, OperationStuffID, OperationCustomerID, OperationDate });
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, bookIdDataGridViewTextBoxColumn, bookDataGridViewTextBoxColumn, stuffIdDataGridViewTextBoxColumn, stuffDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, customerDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn });
+            dataGridView3.DataSource = bookExchangeBindingSource;
             dataGridView3.Location = new Point(6, 6);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.Size = new Size(883, 449);
             dataGridView3.TabIndex = 12;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
-            // OperationID
+            // idDataGridViewTextBoxColumn3
             // 
-            OperationID.HeaderText = "ID";
-            OperationID.Name = "OperationID";
+            idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn3.HeaderText = "Id";
+            idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
             // 
-            // OperationName
+            // operationNameDataGridViewTextBoxColumn
             // 
-            OperationName.HeaderText = "Операция";
-            OperationName.Name = "OperationName";
+            operationNameDataGridViewTextBoxColumn.DataPropertyName = "OperationName";
+            operationNameDataGridViewTextBoxColumn.HeaderText = "OperationName";
+            operationNameDataGridViewTextBoxColumn.Name = "operationNameDataGridViewTextBoxColumn";
             // 
-            // OperationBookID
+            // bookIdDataGridViewTextBoxColumn
             // 
-            OperationBookID.HeaderText = "ID книги";
-            OperationBookID.Name = "OperationBookID";
+            bookIdDataGridViewTextBoxColumn.DataPropertyName = "BookId";
+            bookIdDataGridViewTextBoxColumn.HeaderText = "BookId";
+            bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
             // 
-            // OperationStuffID
+            // bookDataGridViewTextBoxColumn
             // 
-            OperationStuffID.HeaderText = "ID сотрудника";
-            OperationStuffID.Name = "OperationStuffID";
+            bookDataGridViewTextBoxColumn.DataPropertyName = "Book";
+            bookDataGridViewTextBoxColumn.HeaderText = "Book";
+            bookDataGridViewTextBoxColumn.Name = "bookDataGridViewTextBoxColumn";
             // 
-            // OperationCustomerID
+            // stuffIdDataGridViewTextBoxColumn
             // 
-            OperationCustomerID.HeaderText = "ID клиента";
-            OperationCustomerID.Name = "OperationCustomerID";
+            stuffIdDataGridViewTextBoxColumn.DataPropertyName = "StuffId";
+            stuffIdDataGridViewTextBoxColumn.HeaderText = "StuffId";
+            stuffIdDataGridViewTextBoxColumn.Name = "stuffIdDataGridViewTextBoxColumn";
             // 
-            // OperationDate
+            // stuffDataGridViewTextBoxColumn
             // 
-            OperationDate.HeaderText = "Дата операции";
-            OperationDate.Name = "OperationDate";
+            stuffDataGridViewTextBoxColumn.DataPropertyName = "Stuff";
+            stuffDataGridViewTextBoxColumn.HeaderText = "Stuff";
+            stuffDataGridViewTextBoxColumn.Name = "stuffDataGridViewTextBoxColumn";
+            // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
+            customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
+            customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            // 
+            // customerDataGridViewTextBoxColumn
+            // 
+            customerDataGridViewTextBoxColumn.DataPropertyName = "Customer";
+            customerDataGridViewTextBoxColumn.HeaderText = "Customer";
+            customerDataGridViewTextBoxColumn.Name = "customerDataGridViewTextBoxColumn";
+            // 
+            // dateOperationDataGridViewTextBoxColumn
+            // 
+            dateOperationDataGridViewTextBoxColumn.DataPropertyName = "DateOperation";
+            dateOperationDataGridViewTextBoxColumn.HeaderText = "DateOperation";
+            dateOperationDataGridViewTextBoxColumn.Name = "dateOperationDataGridViewTextBoxColumn";
+            // 
+            // bookExchangeBindingSource
+            // 
+            bookExchangeBindingSource.DataSource = typeof(Data.BookExchange);
             // 
             // FormLibrary
             // 
@@ -1218,14 +1294,17 @@
             groupBoxStuffFind.ResumeLayout(false);
             groupBoxStuffFind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridStuff).EndInit();
+            ((System.ComponentModel.ISupportInitialize)stuffBindingSource).EndInit();
             tabPageCustomers.ResumeLayout(false);
             groupBoxCustomerFind.ResumeLayout(false);
             groupBoxCustomerFind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridCustomers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)customerBindingSource).EndInit();
             tabPageBookExchange.ResumeLayout(false);
             groupBoxOperationFind.ResumeLayout(false);
             groupBoxOperationFind.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bookExchangeBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1247,25 +1326,9 @@
         private DataGridView dataGridStuff;
         private Button buttonAddStuff;
         private Button buttonDeleteStuff;
-        private DataGridViewTextBoxColumn StuffID;
-        private DataGridViewTextBoxColumn StuffSecondName;
-        private DataGridViewTextBoxColumn StuffFirstName;
-        private DataGridViewTextBoxColumn StuffThirdName;
-        private DataGridViewTextBoxColumn StuffBirthDate;
-        private DataGridViewTextBoxColumn StuffJobRole;
-        private DataGridViewTextBoxColumn StuffPhoneNumber;
-        private DataGridViewTextBoxColumn StuffEmail;
         private Button buttonAddCustomer;
         private Button buttonDeleteCustomer;
         private DataGridView dataGridCustomers;
-        private DataGridViewTextBoxColumn CustomerID;
-        private DataGridViewTextBoxColumn CustomerSecondName;
-        private DataGridViewTextBoxColumn CustomerFirstName;
-        private DataGridViewTextBoxColumn CustometThirdName;
-        private DataGridViewTextBoxColumn CustomerBirthDate;
-        private DataGridViewTextBoxColumn CustomerAddress;
-        private DataGridViewTextBoxColumn CustomerPhoneNumber;
-        private DataGridViewTextBoxColumn CustomerEmail;
         private Button buttonAddOperation;
         private Button buttonDeleteOperation;
         private DataGridView dataGridView3;
@@ -1331,12 +1394,6 @@
         private Label labelOperationName;
         private Label labelOperationID;
         private TextBox textBoxOperationID;
-        private DataGridViewTextBoxColumn OperationID;
-        private DataGridViewTextBoxColumn OperationName;
-        private DataGridViewTextBoxColumn OperationBookID;
-        private DataGridViewTextBoxColumn OperationStuffID;
-        private DataGridViewTextBoxColumn OperationCustomerID;
-        private DataGridViewTextBoxColumn OperationDate;
         private DateTimePicker dateTimePickerOperationDate;
         private TextBox textBoxOperationName;
         private Label labelOperationBookID;
@@ -1357,5 +1414,34 @@
         private DataGridViewTextBoxColumn bookPublisherDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn publicationYearDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
+        private ToolStripMenuItem выходToolStripMenuItem;
+        private BindingSource stuffBindingSource;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn secondNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn thirdNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
+        private BindingSource customerBindingSource;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn secondNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn thirdNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn jobRoleDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn operationNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn bookDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn stuffIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn stuffDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn dateOperationDataGridViewTextBoxColumn;
+        private BindingSource bookExchangeBindingSource;
     }
 }

@@ -104,14 +104,14 @@ namespace LibraryWinFormsApp
 
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
-            AddBookForm addBook = new AddBookForm();
+            FormAddBook addBook = new FormAddBook();
             addBook.Owner = this;
             addBook.ShowDialog();
         }
 
         private void buttonAddStuff_Click(object sender, EventArgs e)
         {
-            AddStuffForm addStuff = new AddStuffForm();
+            FormAddStuff addStuff = new FormAddStuff();
             addStuff.Owner = this;
             addStuff.ShowDialog();
         }
@@ -161,14 +161,14 @@ namespace LibraryWinFormsApp
         // END OF Практическая работа №3
         private void buttonAddCustomer_Click(object sender, EventArgs e)
         {
-            AddCustomerForm addCustomer = new AddCustomerForm();
+            FormAddCustomer addCustomer = new FormAddCustomer();
             addCustomer.Owner = this;
             addCustomer.ShowDialog();
         }
 
         private void buttonAddOperation_Click(object sender, EventArgs e)
         {
-            AddOperationForm addOperation = new AddOperationForm();
+            FormAddOperation addOperation = new FormAddOperation();
             addOperation.Owner = this;
             addOperation.ShowDialog();
         }
@@ -265,6 +265,11 @@ namespace LibraryWinFormsApp
             {
                 MessageBox.Show("Ничего не найдено");
             }
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
