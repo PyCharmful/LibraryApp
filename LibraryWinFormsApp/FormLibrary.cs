@@ -7,71 +7,15 @@ namespace LibraryWinFormsApp
     public partial class FormLibrary : Form
     {
         private List<Book> _books;
+        // Практическая работа №4
         public FormLibrary()
         {
             InitializeComponent();
-
+            // Практическая работа №4
+            using var context = new LibraryContext();
+            var books = context.Books.ToList();
+            bookBindingSource.DataSource = books;
         }
-        // Практическая работа №2
-        // Закомментировано до выяснения надобности
-        /*public void BookAddCrud()
-        {
-            using (var context = new LibraryContext())
-            {
-                var book = new Book
-                {
-                    InvNumber = 205,
-                    BookName = "Ты",
-                    BookAuthor = "К. Кэпнес",
-                    BookPublisher = "Эксмо",
-                    PublicationYear = "2019",
-                    Genre = "Триллер"
-                };
-                context.Books.Add(book);
-                context.SaveChanges();
-            }
-        }
-        public void BookRemoveCrud()
-        {
-            using (var context = new LibraryContext())
-            {
-                var books = context.Books.ToList();
-
-                foreach (var s in books)
-                {
-                    Console.WriteLine(s.BookName);
-                }
-            }
-        }
-        public void BookUpdateCrud()
-        {
-            using (var context = new LibraryContext())
-            {
-                var book = context.Books.FirstOrDefault();
-
-                if (book != null)
-                {
-                    book.InvNumber = 6;
-                    context.SaveChanges();
-                }
-            }
-        }
-        public void BookDeleteCrud()
-        {
-            using (var context = new LibraryContext())
-            {
-                var book = context.Books.FirstOrDefault();
-
-                if (book != null)
-                {
-                    context.Books.Remove(book);
-                    context.SaveChanges();
-
-                }
-
-            }
-        }*/
-
         private void labelBookName_Click(object sender, EventArgs e)
         {
 
@@ -128,36 +72,36 @@ namespace LibraryWinFormsApp
         // Практическая работа №3
         private void FormLibrary_Load(object sender, EventArgs e)
         {
-            InitializeTestData();
-            dataGridBooks.DataSource = _books; // Таблица с книгами
+            //InitializeTestData();
+            //dataGridBooks.DataSource = _books; // Таблица с книгами
         }
-        private void InitializeTestData()
-        {
-            _books = new List<Book>
-            {
-                new Book
-                {
-                    Id = 1,
-                    InvNumber = 205,
-                    BookName = "Ты",
-                    BookAuthor = "К. Кэпнес",
-                    BookPublisher = "Эксмо",
-                    PublicationYear = "2019",
-                    Genre = "Триллер"
-                },
-                new Book
-                {
-                    Id = 2,
-                    InvNumber = 126,
-                    BookName = "Преступление и наказание",
-                    BookAuthor = "Ф. М. Досоевский",
-                    BookPublisher = "АСТ",
-                    PublicationYear = "2015",
-                    Genre = "Роман"
-                }
+        //private void InitializeTestData()
+        //{
+        //    _books = new List<Book>
+        //    {
+        //        new Book
+        //        {
+        //            Id = 1,
+        //            InvNumber = 205,
+        //            BookName = "Ты",
+        //            BookAuthor = "К. Кэпнес",
+        //            BookPublisher = "Эксмо",
+        //            PublicationYear = "2019",
+        //            Genre = "Триллер"
+        //        },
+        //        new Book
+        //        {
+        //            Id = 2,
+        //            InvNumber = 126,
+        //            BookName = "Преступление и наказание",
+        //            BookAuthor = "Ф. М. Досоевский",
+        //            BookPublisher = "АСТ",
+        //            PublicationYear = "2015",
+        //            Genre = "Роман"
+        //        }
 
-            };
-        }
+        //    };
+        //}
         // END OF Практическая работа №3
         private void buttonAddCustomer_Click(object sender, EventArgs e)
         {
