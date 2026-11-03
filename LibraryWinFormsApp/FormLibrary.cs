@@ -1,4 +1,5 @@
 using LibraryWinFormsApp.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -7,14 +8,12 @@ namespace LibraryWinFormsApp
     public partial class FormLibrary : Form
     {
         private List<Book> _books;
+        private LibraryContext _context;
         // Практическая работа №4
         public FormLibrary()
         {
             InitializeComponent();
-            // Практическая работа №4
-            using var context = new LibraryContext();
-            var books = context.Books.ToList();
-            bookBindingSource.DataSource = books;
+            _context = new LibraryContext();
         }
         private void labelBookName_Click(object sender, EventArgs e)
         {
@@ -48,9 +47,14 @@ namespace LibraryWinFormsApp
 
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
-            FormAddBook addBook = new FormAddBook();
-            addBook.Owner = this;
-            addBook.ShowDialog();
+            //FormAddBook addBook = new FormAddBook(_context);
+            //addBook.Owner = this;
+            //addBook.ShowDialog();
+            var form = new FormAddBook(_context); 
+            if (form.ShowDialog() == DialogResult.OK) 
+            { 
+                LoadBooks(); 
+            }
         }
 
         private void buttonAddStuff_Click(object sender, EventArgs e)
@@ -72,8 +76,26 @@ namespace LibraryWinFormsApp
         // Практическая работа №3
         private void FormLibrary_Load(object sender, EventArgs e)
         {
-            //InitializeTestData();
-            //dataGridBooks.DataSource = _books; // Таблица с книгами
+            LoadBooks();
+            LoadStuff();
+            LoadCustomers();
+            LoadBookExchange();
+        }
+        private void LoadBooks()
+        {
+            bookBindingSource.DataSource = _context.Books.ToList();
+        }
+        private void LoadCustomers()
+        {
+            customerBindingSource.DataSource = _context.Customers.ToList();
+        }
+        private void LoadStuff()
+        {
+            stuffBindingSource.DataSource = _context.Stuff.ToList();
+        }
+        private void LoadBookExchange()
+        {
+            bookExchangeBindingSource.DataSource = _context.BookExchange.ToList();
         }
         //private void InitializeTestData()
         //{
@@ -214,6 +236,11 @@ namespace LibraryWinFormsApp
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FormLibrary_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _context.Dispose();
         }
     }
 }
