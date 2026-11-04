@@ -141,13 +141,13 @@
             buttonAddOperation = new Button();
             buttonDeleteOperation = new Button();
             dataGridView3 = new DataGridView();
-            bookExchangeBindingSource = new BindingSource(components);
             idDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             operationNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             bookIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             stuffIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dateOperationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookExchangeBindingSource = new BindingSource(components);
             menuStripPanel.SuspendLayout();
             tabControlLibrary.SuspendLayout();
             tabPageBooks.SuspendLayout();
@@ -178,6 +178,7 @@
             buttonSave.TabIndex = 2;
             buttonSave.Text = "Сохранить";
             buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
             // 
             // buttonAddBook
             // 
@@ -201,6 +202,7 @@
             buttonDeleteBook.TabIndex = 4;
             buttonDeleteBook.Text = "Удалить";
             buttonDeleteBook.UseVisualStyleBackColor = true;
+            buttonDeleteBook.Click += buttonDeleteBook_Click;
             // 
             // menuStripPanel
             // 
@@ -1209,10 +1211,6 @@
             dataGridView3.TabIndex = 12;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
-            // bookExchangeBindingSource
-            // 
-            bookExchangeBindingSource.DataSource = typeof(Data.BookExchange);
-            // 
             // idDataGridViewTextBoxColumn3
             // 
             idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
@@ -1248,6 +1246,10 @@
             dateOperationDataGridViewTextBoxColumn.DataPropertyName = "DateOperation";
             dateOperationDataGridViewTextBoxColumn.HeaderText = "DateOperation";
             dateOperationDataGridViewTextBoxColumn.Name = "dateOperationDataGridViewTextBoxColumn";
+            // 
+            // bookExchangeBindingSource
+            // 
+            bookExchangeBindingSource.DataSource = typeof(Data.BookExchange);
             // 
             // FormLibrary
             // 

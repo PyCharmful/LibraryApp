@@ -34,26 +34,15 @@ namespace LibraryWinFormsApp
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
             //FormAddBook addBook = new FormAddBook(_context);
             //addBook.Owner = this;
             //addBook.ShowDialog();
-            var form = new FormAddBook(_context); 
-            if (form.ShowDialog() == DialogResult.OK) 
-            { 
-                LoadBooks(); 
+            var form = new FormAddBook(_context);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadBooks();
             }
         }
 
@@ -97,34 +86,6 @@ namespace LibraryWinFormsApp
         {
             bookExchangeBindingSource.DataSource = _context.BookExchange.ToList();
         }
-        //private void InitializeTestData()
-        //{
-        //    _books = new List<Book>
-        //    {
-        //        new Book
-        //        {
-        //            Id = 1,
-        //            InvNumber = 205,
-        //            BookName = "Ты",
-        //            BookAuthor = "К. Кэпнес",
-        //            BookPublisher = "Эксмо",
-        //            PublicationYear = "2019",
-        //            Genre = "Триллер"
-        //        },
-        //        new Book
-        //        {
-        //            Id = 2,
-        //            InvNumber = 126,
-        //            BookName = "Преступление и наказание",
-        //            BookAuthor = "Ф. М. Досоевский",
-        //            BookPublisher = "АСТ",
-        //            PublicationYear = "2015",
-        //            Genre = "Роман"
-        //        }
-
-        //    };
-        //}
-        // END OF Практическая работа №3
         private void buttonAddCustomer_Click(object sender, EventArgs e)
         {
             FormAddCustomer addCustomer = new FormAddCustomer();
@@ -241,6 +202,26 @@ namespace LibraryWinFormsApp
         private void FormLibrary_FormClosing(object sender, FormClosingEventArgs e)
         {
             _context.Dispose();
+        }
+
+        private void buttonDeleteBook_Click(object sender, EventArgs e)
+        {
+            if (bookBindingSource.Current == null)
+            {
+                MessageBox.Show("Выберите запись для удаления."); 
+                return;
+            }
+            var result = MessageBox.Show(
+                "Удалить выбранную запись", 
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result != DialogResult.Yes)
+                return;
+            var book = (Book)bookBindingSource.Current; 
+            _context.Books.Remove(book); 
+            _context.SaveChanges(); 
+            LoadBooks();
         }
     }
 }
