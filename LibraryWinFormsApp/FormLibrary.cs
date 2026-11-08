@@ -29,11 +29,6 @@ namespace LibraryWinFormsApp
         {
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private void buttonAddBook_Click(object sender, EventArgs e)
         {
             //FormAddBook addBook = new FormAddBook(_context);
@@ -48,9 +43,11 @@ namespace LibraryWinFormsApp
 
         private void buttonAddStuff_Click(object sender, EventArgs e)
         {
-            FormAddStuff addStuff = new FormAddStuff();
-            addStuff.Owner = this;
-            addStuff.ShowDialog();
+            var form = new FormAddStuff(_context);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadStuff();
+            }
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -88,26 +85,60 @@ namespace LibraryWinFormsApp
         }
         private void buttonAddCustomer_Click(object sender, EventArgs e)
         {
-            FormAddCustomer addCustomer = new FormAddCustomer();
-            addCustomer.Owner = this;
-            addCustomer.ShowDialog();
+            var form = new FormAddCustomer(_context);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadCustomers();
+            }
         }
 
         private void buttonAddOperation_Click(object sender, EventArgs e)
         {
-            FormAddOperation addOperation = new FormAddOperation();
-            addOperation.Owner = this;
-            addOperation.ShowDialog();
+            var form = new FormAddOperation(_context);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadBookExchange();
+            }
         }
 
         private void buttonDeleteCustomer_Click(object sender, EventArgs e)
         {
-
+            if (customerBindingSource.Current == null)
+            {
+                MessageBox.Show("Выберите запись для удаления.");
+                return;
+            }
+            var result = MessageBox.Show(
+                "Удалить выбранную запись",
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result != DialogResult.Yes)
+                return;
+            var stuff = (Customer)customerBindingSource.Current;
+            _context.Customers.Remove(stuff);
+            _context.SaveChanges();
+            LoadCustomers();
         }
 
         private void buttonDeleteOperation_Click(object sender, EventArgs e)
         {
-
+            if (bookExchangeBindingSource.Current == null)
+            {
+                MessageBox.Show("Выберите запись для удаления.");
+                return;
+            }
+            var result = MessageBox.Show(
+                "Удалить выбранную запись",
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result != DialogResult.Yes)
+                return;
+            var bookEx = (BookExchange)customerBindingSource.Current;
+            _context.BookExchange.Remove(bookEx);
+            _context.SaveChanges();
+            LoadBookExchange();
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,20 +239,106 @@ namespace LibraryWinFormsApp
         {
             if (bookBindingSource.Current == null)
             {
-                MessageBox.Show("Выберите запись для удаления."); 
+                MessageBox.Show("Выберите запись для удаления.");
                 return;
             }
             var result = MessageBox.Show(
-                "Удалить выбранную запись", 
+                "Удалить выбранную запись",
                 "Подтверждение удаления",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
             if (result != DialogResult.Yes)
                 return;
-            var book = (Book)bookBindingSource.Current; 
-            _context.Books.Remove(book); 
-            _context.SaveChanges(); 
+            var book = (Book)bookBindingSource.Current;
+            _context.Books.Remove(book);
+            _context.SaveChanges();
             LoadBooks();
+        }
+
+        private void dataGridStuff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            var stuff = (Stuff)stuffBindingSource[e.RowIndex];
+            var formAdd = new FormEditStuff(_context, stuff.Id);
+            if (dataGridStuff.Columns[e.RowIndex].Name == "ActionEditStuff")
+            {
+                if (formAdd.ShowDialog() == DialogResult.OK)
+                {
+                    LoadStuff();
+                }
+            }
+            if (dataGridStuff.Columns[e.ColumnIndex].Name == "ActionEditStuff")
+            {
+                formAdd.Owner = this;
+                formAdd.ShowDialog();
+            }
+        }
+
+        private void dataGridCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            var customer = (Customer)customerBindingSource[e.RowIndex];
+            var formAdd = new FormEditCustomer(_context, customer.Id);
+            if (dataGridCustomers.Columns[e.RowIndex].Name == "ActionEditCustomer")
+            {
+                if (formAdd.ShowDialog() == DialogResult.OK)
+                {
+                    LoadCustomers();
+                }
+            }
+            if (dataGridCustomers.Columns[e.ColumnIndex].Name == "ActionEditCustomer")
+            {
+                formAdd.Owner = this;
+                formAdd.ShowDialog();
+            }
+        }
+
+        private void dataGridBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            var book = (Book)bookBindingSource[e.RowIndex];
+            var formAdd = new FormEditBook(_context, book.Id);
+            if (dataGridBooks.Columns[e.RowIndex].Name == "ActionEditBook")
+            {
+                if (formAdd.ShowDialog() == DialogResult.OK)
+                {
+                    LoadBooks();
+                }
+            }
+            if (dataGridBooks.Columns[e.ColumnIndex].Name == "ActionEditBook")
+            {
+                formAdd.Owner = this;
+                formAdd.ShowDialog();
+            }
+        }
+
+        private void buttonDeleteStuff_Click(object sender, EventArgs e)
+        {
+            if (stuffBindingSource.Current == null)
+            {
+                MessageBox.Show("Выберите запись для удаления.");
+                return;
+            }
+            var result = MessageBox.Show(
+                "Удалить выбранную запись",
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result != DialogResult.Yes)
+                return;
+            var stuff = (Stuff)stuffBindingSource.Current;
+            _context.Stuff.Remove(stuff);
+            _context.SaveChanges();
+            LoadStuff();
         }
     }
 }

@@ -40,7 +40,6 @@
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
             tabControlLibrary = new TabControl();
             tabPageBooks = new TabPage();
-            buttonEditBook = new Button();
             groupBoxBookFind = new GroupBox();
             buttonBookFind = new Button();
             textBoxBookName = new TextBox();
@@ -57,9 +56,9 @@
             bookPublisherDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             publicationYearDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             genreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ActionEditBook = new DataGridViewLinkColumn();
             bookBindingSource = new BindingSource(components);
             tabPageStuff = new TabPage();
-            buttonEditStuff = new Button();
             groupBoxStuffFind = new GroupBox();
             textBoxStuffEmail = new TextBox();
             labelStuffEmail = new Label();
@@ -89,9 +88,9 @@
             jobRoleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             phoneNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             emailDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ActionEditStuff = new DataGridViewLinkColumn();
             stuffBindingSource = new BindingSource(components);
             tabPageCustomers = new TabPage();
-            buttonEditCustomer = new Button();
             groupBoxCustomerFind = new GroupBox();
             textBoxCustomerEmail = new TextBox();
             labelCustomerEmail = new Label();
@@ -121,9 +120,9 @@
             addressDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             phoneNumberDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             emailDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            ActionEditCustomer = new DataGridViewLinkColumn();
             customerBindingSource = new BindingSource(components);
             tabPageBookExchange = new TabPage();
-            buttonEditOperation = new Button();
             groupBoxOperationFind = new GroupBox();
             comboBoxOperationName = new ComboBox();
             labelOperationDate = new Label();
@@ -147,6 +146,7 @@
             stuffIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dateOperationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ActionEditOperation = new DataGridViewLinkColumn();
             bookExchangeBindingSource = new BindingSource(components);
             menuStripPanel.SuspendLayout();
             tabControlLibrary.SuspendLayout();
@@ -196,7 +196,7 @@
             // 
             buttonDeleteBook.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteBook.Font = new Font("Segoe UI", 10F);
-            buttonDeleteBook.Location = new Point(252, 461);
+            buttonDeleteBook.Location = new Point(123, 461);
             buttonDeleteBook.Name = "buttonDeleteBook";
             buttonDeleteBook.Size = new Size(109, 35);
             buttonDeleteBook.TabIndex = 4;
@@ -261,7 +261,6 @@
             // 
             // tabPageBooks
             // 
-            tabPageBooks.Controls.Add(buttonEditBook);
             tabPageBooks.Controls.Add(groupBoxBookFind);
             tabPageBooks.Controls.Add(dataGridBooks);
             tabPageBooks.Controls.Add(buttonAddBook);
@@ -274,17 +273,6 @@
             tabPageBooks.Text = "Книги";
             tabPageBooks.UseVisualStyleBackColor = true;
             tabPageBooks.Click += tabPageBooks_Click;
-            // 
-            // buttonEditBook
-            // 
-            buttonEditBook.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditBook.Font = new Font("Segoe UI", 10F);
-            buttonEditBook.Location = new Point(123, 461);
-            buttonEditBook.Name = "buttonEditBook";
-            buttonEditBook.Size = new Size(123, 35);
-            buttonEditBook.TabIndex = 7;
-            buttonEditBook.Text = "Редактировать";
-            buttonEditBook.UseVisualStyleBackColor = true;
             // 
             // groupBoxBookFind
             // 
@@ -371,13 +359,13 @@
             // 
             dataGridBooks.AutoGenerateColumns = false;
             dataGridBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridBooks.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, invNumberDataGridViewTextBoxColumn, bookNameDataGridViewTextBoxColumn, bookAuthorDataGridViewTextBoxColumn, bookPublisherDataGridViewTextBoxColumn, publicationYearDataGridViewTextBoxColumn, genreDataGridViewTextBoxColumn });
+            dataGridBooks.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, invNumberDataGridViewTextBoxColumn, bookNameDataGridViewTextBoxColumn, bookAuthorDataGridViewTextBoxColumn, bookPublisherDataGridViewTextBoxColumn, publicationYearDataGridViewTextBoxColumn, genreDataGridViewTextBoxColumn, ActionEditBook });
             dataGridBooks.DataSource = bookBindingSource;
             dataGridBooks.Location = new Point(6, 6);
             dataGridBooks.Name = "dataGridBooks";
             dataGridBooks.Size = new Size(883, 449);
             dataGridBooks.TabIndex = 5;
-            dataGridBooks.CellContentClick += dataGridView1_CellContentClick;
+            dataGridBooks.CellContentClick += dataGridBooks_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -421,13 +409,21 @@
             genreDataGridViewTextBoxColumn.HeaderText = "Genre";
             genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
             // 
+            // ActionEditBook
+            // 
+            ActionEditBook.DataPropertyName = "Id";
+            ActionEditBook.HeaderText = "Редактирование";
+            ActionEditBook.Name = "ActionEditBook";
+            ActionEditBook.Text = "Редактировать";
+            ActionEditBook.UseColumnTextForLinkValue = true;
+            ActionEditBook.Width = 105;
+            // 
             // bookBindingSource
             // 
             bookBindingSource.DataSource = typeof(Data.Book);
             // 
             // tabPageStuff
             // 
-            tabPageStuff.Controls.Add(buttonEditStuff);
             tabPageStuff.Controls.Add(groupBoxStuffFind);
             tabPageStuff.Controls.Add(buttonAddStuff);
             tabPageStuff.Controls.Add(buttonDeleteStuff);
@@ -439,17 +435,6 @@
             tabPageStuff.TabIndex = 1;
             tabPageStuff.Text = "Сотрудники";
             tabPageStuff.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditStuff
-            // 
-            buttonEditStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditStuff.Font = new Font("Segoe UI", 10F);
-            buttonEditStuff.Location = new Point(123, 461);
-            buttonEditStuff.Name = "buttonEditStuff";
-            buttonEditStuff.Size = new Size(123, 35);
-            buttonEditStuff.TabIndex = 10;
-            buttonEditStuff.Text = "Редактировать";
-            buttonEditStuff.UseVisualStyleBackColor = true;
             // 
             // groupBoxStuffFind
             // 
@@ -647,23 +632,25 @@
             // 
             buttonDeleteStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteStuff.Font = new Font("Segoe UI", 10F);
-            buttonDeleteStuff.Location = new Point(252, 461);
+            buttonDeleteStuff.Location = new Point(123, 461);
             buttonDeleteStuff.Name = "buttonDeleteStuff";
             buttonDeleteStuff.Size = new Size(109, 35);
             buttonDeleteStuff.TabIndex = 8;
             buttonDeleteStuff.Text = "Удалить";
             buttonDeleteStuff.UseVisualStyleBackColor = true;
+            buttonDeleteStuff.Click += buttonDeleteStuff_Click;
             // 
             // dataGridStuff
             // 
             dataGridStuff.AutoGenerateColumns = false;
             dataGridStuff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridStuff.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, secondNameDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, thirdNameDataGridViewTextBoxColumn, birthDateDataGridViewTextBoxColumn, jobRoleDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn });
+            dataGridStuff.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, secondNameDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, thirdNameDataGridViewTextBoxColumn, birthDateDataGridViewTextBoxColumn, jobRoleDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, ActionEditStuff });
             dataGridStuff.DataSource = stuffBindingSource;
             dataGridStuff.Location = new Point(6, 6);
             dataGridStuff.Name = "dataGridStuff";
             dataGridStuff.Size = new Size(883, 449);
             dataGridStuff.TabIndex = 6;
+            dataGridStuff.CellContentClick += dataGridStuff_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -713,13 +700,21 @@
             emailDataGridViewTextBoxColumn.HeaderText = "Email";
             emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
+            // ActionEditStuff
+            // 
+            ActionEditStuff.DataPropertyName = "Id";
+            ActionEditStuff.HeaderText = "Редактирование";
+            ActionEditStuff.Name = "ActionEditStuff";
+            ActionEditStuff.Text = "Редактировать";
+            ActionEditStuff.UseColumnTextForLinkValue = true;
+            ActionEditStuff.Width = 105;
+            // 
             // stuffBindingSource
             // 
             stuffBindingSource.DataSource = typeof(Data.Stuff);
             // 
             // tabPageCustomers
             // 
-            tabPageCustomers.Controls.Add(buttonEditCustomer);
             tabPageCustomers.Controls.Add(groupBoxCustomerFind);
             tabPageCustomers.Controls.Add(buttonAddCustomer);
             tabPageCustomers.Controls.Add(buttonDeleteCustomer);
@@ -730,17 +725,6 @@
             tabPageCustomers.TabIndex = 2;
             tabPageCustomers.Text = "Клиенты";
             tabPageCustomers.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditCustomer
-            // 
-            buttonEditCustomer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditCustomer.Font = new Font("Segoe UI", 10F);
-            buttonEditCustomer.Location = new Point(123, 461);
-            buttonEditCustomer.Name = "buttonEditCustomer";
-            buttonEditCustomer.Size = new Size(123, 35);
-            buttonEditCustomer.TabIndex = 13;
-            buttonEditCustomer.Text = "Редактировать";
-            buttonEditCustomer.UseVisualStyleBackColor = true;
             // 
             // groupBoxCustomerFind
             // 
@@ -938,7 +922,7 @@
             // 
             buttonDeleteCustomer.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteCustomer.Font = new Font("Segoe UI", 10F);
-            buttonDeleteCustomer.Location = new Point(252, 461);
+            buttonDeleteCustomer.Location = new Point(123, 461);
             buttonDeleteCustomer.Name = "buttonDeleteCustomer";
             buttonDeleteCustomer.Size = new Size(109, 35);
             buttonDeleteCustomer.TabIndex = 11;
@@ -950,12 +934,13 @@
             // 
             dataGridCustomers.AutoGenerateColumns = false;
             dataGridCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn2, secondNameDataGridViewTextBoxColumn1, firstNameDataGridViewTextBoxColumn1, thirdNameDataGridViewTextBoxColumn1, birthDateDataGridViewTextBoxColumn1, addressDataGridViewTextBoxColumn1, phoneNumberDataGridViewTextBoxColumn1, emailDataGridViewTextBoxColumn1 });
+            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn2, secondNameDataGridViewTextBoxColumn1, firstNameDataGridViewTextBoxColumn1, thirdNameDataGridViewTextBoxColumn1, birthDateDataGridViewTextBoxColumn1, addressDataGridViewTextBoxColumn1, phoneNumberDataGridViewTextBoxColumn1, emailDataGridViewTextBoxColumn1, ActionEditCustomer });
             dataGridCustomers.DataSource = customerBindingSource;
             dataGridCustomers.Location = new Point(6, 6);
             dataGridCustomers.Name = "dataGridCustomers";
             dataGridCustomers.Size = new Size(883, 449);
             dataGridCustomers.TabIndex = 9;
+            dataGridCustomers.CellContentClick += dataGridCustomers_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn2
             // 
@@ -1005,13 +990,21 @@
             emailDataGridViewTextBoxColumn1.HeaderText = "Email";
             emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
             // 
+            // ActionEditCustomer
+            // 
+            ActionEditCustomer.DataPropertyName = "Id";
+            ActionEditCustomer.HeaderText = "Редактирование";
+            ActionEditCustomer.Name = "ActionEditCustomer";
+            ActionEditCustomer.Text = "Редактировать";
+            ActionEditCustomer.UseColumnTextForLinkValue = true;
+            ActionEditCustomer.Width = 105;
+            // 
             // customerBindingSource
             // 
             customerBindingSource.DataSource = typeof(Data.Customer);
             // 
             // tabPageBookExchange
             // 
-            tabPageBookExchange.Controls.Add(buttonEditOperation);
             tabPageBookExchange.Controls.Add(groupBoxOperationFind);
             tabPageBookExchange.Controls.Add(buttonAddOperation);
             tabPageBookExchange.Controls.Add(buttonDeleteOperation);
@@ -1022,17 +1015,6 @@
             tabPageBookExchange.TabIndex = 3;
             tabPageBookExchange.Text = "Операции";
             tabPageBookExchange.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditOperation
-            // 
-            buttonEditOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonEditOperation.Font = new Font("Segoe UI", 10F);
-            buttonEditOperation.Location = new Point(123, 461);
-            buttonEditOperation.Name = "buttonEditOperation";
-            buttonEditOperation.Size = new Size(123, 35);
-            buttonEditOperation.TabIndex = 16;
-            buttonEditOperation.Text = "Редактировать";
-            buttonEditOperation.UseVisualStyleBackColor = true;
             // 
             // groupBoxOperationFind
             // 
@@ -1191,7 +1173,7 @@
             // 
             buttonDeleteOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             buttonDeleteOperation.Font = new Font("Segoe UI", 10F);
-            buttonDeleteOperation.Location = new Point(252, 461);
+            buttonDeleteOperation.Location = new Point(123, 461);
             buttonDeleteOperation.Name = "buttonDeleteOperation";
             buttonDeleteOperation.Size = new Size(109, 35);
             buttonDeleteOperation.TabIndex = 14;
@@ -1203,11 +1185,11 @@
             // 
             dataGridView3.AutoGenerateColumns = false;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, bookIdDataGridViewTextBoxColumn, stuffIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn });
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, bookIdDataGridViewTextBoxColumn, stuffIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn, ActionEditOperation });
             dataGridView3.DataSource = bookExchangeBindingSource;
-            dataGridView3.Location = new Point(6, 3);
+            dataGridView3.Location = new Point(6, 6);
             dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(883, 452);
+            dataGridView3.Size = new Size(883, 449);
             dataGridView3.TabIndex = 12;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
@@ -1247,6 +1229,15 @@
             dateOperationDataGridViewTextBoxColumn.HeaderText = "DateOperation";
             dateOperationDataGridViewTextBoxColumn.Name = "dateOperationDataGridViewTextBoxColumn";
             // 
+            // ActionEditOperation
+            // 
+            ActionEditOperation.DataPropertyName = "Id";
+            ActionEditOperation.HeaderText = "Редактирование";
+            ActionEditOperation.Name = "ActionEditOperation";
+            ActionEditOperation.Text = "Редактировать";
+            ActionEditOperation.UseColumnTextForLinkValue = true;
+            ActionEditOperation.Width = 105;
+            // 
             // bookExchangeBindingSource
             // 
             bookExchangeBindingSource.DataSource = typeof(Data.BookExchange);
@@ -1260,6 +1251,7 @@
             Controls.Add(buttonSave);
             Controls.Add(menuStripPanel);
             MainMenuStrip = menuStripPanel;
+            MaximumSize = new Size(1218, 660);
             MinimumSize = new Size(1218, 660);
             Name = "FormLibrary";
             StartPosition = FormStartPosition.CenterScreen;
@@ -1385,11 +1377,12 @@
         private Label labelOperationCustomerID;
         private TextBox textBoxOperationCustomerID;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private Button buttonEditBook;
-        private Button buttonEditStuff;
-        private Button buttonEditCustomer;
-        private Button buttonEditOperation;
         private BindingSource bookBindingSource;
+        private ToolStripMenuItem выходToolStripMenuItem;
+        private BindingSource stuffBindingSource;
+        private BindingSource customerBindingSource;
+        private BindingSource bookExchangeBindingSource;
+        private ComboBox comboBoxOperationName;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn invNumberDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
@@ -1397,17 +1390,7 @@
         private DataGridViewTextBoxColumn bookPublisherDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn publicationYearDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
-        private ToolStripMenuItem выходToolStripMenuItem;
-        private BindingSource stuffBindingSource;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn secondNameDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn thirdNameDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
-        private BindingSource customerBindingSource;
+        private DataGridViewLinkColumn ActionEditBook;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn secondNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
@@ -1416,13 +1399,22 @@
         private DataGridViewTextBoxColumn jobRoleDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private BindingSource bookExchangeBindingSource;
-        private ComboBox comboBoxOperationName;
+        private DataGridViewLinkColumn ActionEditStuff;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn secondNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn thirdNameDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
+        private DataGridViewLinkColumn ActionEditCustomer;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn operationNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn stuffIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateOperationDataGridViewTextBoxColumn;
+        private DataGridViewLinkColumn ActionEditOperation;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LibraryWinFormsApp.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +14,38 @@ namespace LibraryWinFormsApp
 {
     public partial class FormAddStuff : Form
     {
-        public FormAddStuff()
+        private LibraryContext _context;
+        public FormAddStuff(LibraryContext context)
         {
             InitializeComponent();
+            _context = context;
         }
 
         private void buttonCancelAddStuff_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void FormAddStuff_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonConfirmAddStuff_Click(object sender, EventArgs e)
+        {
+            var stuff = new Stuff
+            {
+                SecondName = textBoxStuffSecondName.Text,
+                FirstName = textBoxStuffFirstName.Text,
+                ThirdName = textBoxStuffThirdName.Text,
+                BirthDate = textBoxStuffBirthDate.Text,
+                JobRole = textBoxStuffJobRole.Text,
+                PhoneNumber = textBoxStuffPhoneNumber.Text,
+                Email = textBoxStuffEmail.Text
+            };
+            _context.Stuff.Add(stuff);
+            _context.SaveChanges();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

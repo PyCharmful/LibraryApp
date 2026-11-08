@@ -1025,3 +1025,6 @@ C:\Users\K.I.Malakhov\Desktop\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-win
 C:\Users\K.I.Malakhov\Desktop\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-windows\LibraryWinFormsApp.pdb
 C:\Users\K.I.Malakhov\Desktop\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-windows\LibraryWinFormsApp.genruntimeconfig.cache
 C:\Users\K.I.Malakhov\Desktop\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-windows\ref\LibraryWinFormsApp.dll
+D:\Программирование\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-windows\LibraryWinFormsApp.FormEditBook.resources
+D:\Программирование\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-windows\LibraryWinFormsApp.FormEditStuff.resources
+D:\Программирование\LibraryApp\LibraryWinFormsApp\obj\Debug\net8.0-windows\LibraryWinFormsApp.FormEditCustomer.resources

@@ -16,6 +16,15 @@
     <Compile Update="FormAddStuff.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormEditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEditStuff.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormLibrary.cs">
       <SubType>Form</SubType>
     </Compile>
