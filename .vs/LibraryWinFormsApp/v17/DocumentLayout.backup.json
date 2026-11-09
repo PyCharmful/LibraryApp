@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\",
+  "WorkspaceRootPath": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp\\librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formaddoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formaddoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formaddoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formaddoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp\\librarywinformsapp\\data\\librarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\data\\librarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp\\librarywinformsapp\\data\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\data\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp\\librarywinformsapp\\data\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\data\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\data\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp\\librarywinformsapp\\data\\bookexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\data\\bookexchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formaddcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formaddcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp\\librarywinformsapp\\data\\stuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\data\\stuff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formaddcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formaddcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|c:\\users\\k.i.malakhov\\desktop\\libraryapp-master\\librarywinformsapp\\formaddbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9B748C8-DB04-4F7E-BD12-3EA8CBEEF859}|LibraryWinFormsApp\\LibraryWinFormsApp.csproj|solutionrelative:librarywinformsapp\\formaddbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,88 +46,104 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LibraryContext.cs",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\LibraryContext.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\Data\\LibraryContext.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\LibraryContext.cs",
-              "RelativeToolTip": "LibraryWinFormsApp\\Data\\LibraryContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:01:20.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Customers.cs",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\Customers.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\Data\\Customers.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\Customers.cs",
-              "RelativeToolTip": "LibraryWinFormsApp\\Data\\Customers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:01:18.159Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormLibrary.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormLibrary.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs [Design]",
-              "RelativeToolTip": "LibraryWinFormsApp\\FormLibrary.cs [Design]",
+              "Title": "FormAddOperation.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddOperation.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormAddOperation.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddOperation.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormAddOperation.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T11:10:07.025Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLibrary.cs",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormLibrary.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\FormLibrary.cs",
-              "RelativeToolTip": "LibraryWinFormsApp\\FormLibrary.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T11:17:59.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T11:58:00.39Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Books.cs",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\Books.cs",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\Data\\Books.cs",
               "RelativeDocumentMoniker": "LibraryWinFormsApp\\Data\\Books.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\Books.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\Data\\Books.cs",
               "RelativeToolTip": "LibraryWinFormsApp\\Data\\Books.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:01:13.304Z"
+              "WhenOpened": "2026-11-09T11:40:04.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormLibrary.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormLibrary.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormLibrary.cs",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormLibrary.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAASwAEBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T11:37:12.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormAddOperation.cs",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddOperation.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormAddOperation.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddOperation.cs",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormAddOperation.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAASwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T11:29:25.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormLibrary.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormLibrary.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormLibrary.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormLibrary.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormLibrary.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T11:28:17.156Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BookExchange.cs",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\BookExchange.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\Data\\BookExchange.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\BookExchange.cs",
-              "RelativeToolTip": "LibraryWinFormsApp\\Data\\BookExchange.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Title": "FormAddCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddCustomer.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormAddCustomer.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddCustomer.cs",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormAddCustomer.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIAwwDMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-02T12:01:04.293Z"
+              "WhenOpened": "2026-11-09T11:27:20.365Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Stuff.cs",
-              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\Stuff.cs",
-              "RelativeDocumentMoniker": "LibraryWinFormsApp\\Data\\Stuff.cs",
-              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp\\LibraryWinFormsApp\\Data\\Stuff.cs",
-              "RelativeToolTip": "LibraryWinFormsApp\\Data\\Stuff.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FormAddCustomer.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddCustomer.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormAddCustomer.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddCustomer.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormAddCustomer.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-26T11:56:08.692Z"
+              "WhenOpened": "2026-11-09T11:27:18.865Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormAddBook.cs",
+              "DocumentMoniker": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddBook.cs",
+              "RelativeDocumentMoniker": "LibraryWinFormsApp\\FormAddBook.cs",
+              "ToolTip": "C:\\Users\\K.I.Malakhov\\Desktop\\LibraryApp-master\\LibraryWinFormsApp\\FormAddBook.cs",
+              "RelativeToolTip": "LibraryWinFormsApp\\FormAddBook.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAMwDQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T11:24:41.729Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -48,5 +48,9 @@ namespace LibraryWinFormsApp
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+        ~FormAddBook()
+        {
+            _context.Dispose();
+        }
     }
 }

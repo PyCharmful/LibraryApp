@@ -41,13 +41,19 @@
             tabControlLibrary = new TabControl();
             tabPageBooks = new TabPage();
             groupBoxBookFind = new GroupBox();
+            textBoxGenre = new TextBox();
+            labelGenre = new Label();
+            textBoxPublicationYear = new TextBox();
+            labelPublicationYear = new Label();
+            textBoxBookPublisher = new TextBox();
+            labelBookPublisher = new Label();
+            textBoxBookAuthor = new TextBox();
+            labelBookAuthor = new Label();
             buttonBookFind = new Button();
             textBoxBookName = new TextBox();
             labelBookName = new Label();
             textBoxBookInvNumber = new TextBox();
             labelBookInvNumber = new Label();
-            labelBookID = new Label();
-            textBoxBookID = new TextBox();
             dataGridBooks = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             invNumberDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -75,8 +81,6 @@
             labelStuffFirstName = new Label();
             textBoxStuffSecondName = new TextBox();
             labelStuffSecondName = new Label();
-            labelStuffID = new Label();
-            textBoxStuffID = new TextBox();
             buttonAddStuff = new Button();
             buttonDeleteStuff = new Button();
             dataGridStuff = new DataGridView();
@@ -107,8 +111,6 @@
             labelCustomerFirstName = new Label();
             textBoxCustomerSecondName = new TextBox();
             labelCustomerSecondName = new Label();
-            labelCustomerID = new Label();
-            textBoxCustomerID = new TextBox();
             buttonAddCustomer = new Button();
             buttonDeleteCustomer = new Button();
             dataGridCustomers = new DataGridView();
@@ -139,7 +141,7 @@
             textBoxOperationID = new TextBox();
             buttonAddOperation = new Button();
             buttonDeleteOperation = new Button();
-            dataGridView3 = new DataGridView();
+            dataGridOperations = new DataGridView();
             idDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             operationNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             bookIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -164,7 +166,7 @@
             ((System.ComponentModel.ISupportInitialize)customerBindingSource).BeginInit();
             tabPageBookExchange.SuspendLayout();
             groupBoxOperationFind.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridOperations).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bookExchangeBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -276,24 +278,102 @@
             // 
             // groupBoxBookFind
             // 
+            groupBoxBookFind.Controls.Add(textBoxGenre);
+            groupBoxBookFind.Controls.Add(labelGenre);
+            groupBoxBookFind.Controls.Add(textBoxPublicationYear);
+            groupBoxBookFind.Controls.Add(labelPublicationYear);
+            groupBoxBookFind.Controls.Add(textBoxBookPublisher);
+            groupBoxBookFind.Controls.Add(labelBookPublisher);
+            groupBoxBookFind.Controls.Add(textBoxBookAuthor);
+            groupBoxBookFind.Controls.Add(labelBookAuthor);
             groupBoxBookFind.Controls.Add(buttonBookFind);
             groupBoxBookFind.Controls.Add(textBoxBookName);
             groupBoxBookFind.Controls.Add(labelBookName);
             groupBoxBookFind.Controls.Add(textBoxBookInvNumber);
             groupBoxBookFind.Controls.Add(labelBookInvNumber);
-            groupBoxBookFind.Controls.Add(labelBookID);
-            groupBoxBookFind.Controls.Add(textBoxBookID);
             groupBoxBookFind.Font = new Font("Segoe UI", 12F);
             groupBoxBookFind.Location = new Point(895, 6);
             groupBoxBookFind.Name = "groupBoxBookFind";
-            groupBoxBookFind.Size = new Size(286, 237);
+            groupBoxBookFind.Size = new Size(286, 449);
             groupBoxBookFind.TabIndex = 6;
             groupBoxBookFind.TabStop = false;
             groupBoxBookFind.Text = "Поиск";
             // 
+            // textBoxGenre
+            // 
+            textBoxGenre.Font = new Font("Segoe UI", 10F);
+            textBoxGenre.Location = new Point(24, 303);
+            textBoxGenre.Name = "textBoxGenre";
+            textBoxGenre.Size = new Size(236, 25);
+            textBoxGenre.TabIndex = 22;
+            // 
+            // labelGenre
+            // 
+            labelGenre.AutoSize = true;
+            labelGenre.Font = new Font("Segoe UI", 11F);
+            labelGenre.Location = new Point(24, 280);
+            labelGenre.Name = "labelGenre";
+            labelGenre.Size = new Size(48, 20);
+            labelGenre.TabIndex = 21;
+            labelGenre.Text = "Жанр";
+            // 
+            // textBoxPublicationYear
+            // 
+            textBoxPublicationYear.Font = new Font("Segoe UI", 10F);
+            textBoxPublicationYear.Location = new Point(24, 252);
+            textBoxPublicationYear.Name = "textBoxPublicationYear";
+            textBoxPublicationYear.Size = new Size(236, 25);
+            textBoxPublicationYear.TabIndex = 20;
+            // 
+            // labelPublicationYear
+            // 
+            labelPublicationYear.AutoSize = true;
+            labelPublicationYear.Font = new Font("Segoe UI", 11F);
+            labelPublicationYear.Location = new Point(24, 229);
+            labelPublicationYear.Name = "labelPublicationYear";
+            labelPublicationYear.Size = new Size(121, 20);
+            labelPublicationYear.TabIndex = 19;
+            labelPublicationYear.Text = "Год публикации";
+            // 
+            // textBoxBookPublisher
+            // 
+            textBoxBookPublisher.Font = new Font("Segoe UI", 10F);
+            textBoxBookPublisher.Location = new Point(24, 201);
+            textBoxBookPublisher.Name = "textBoxBookPublisher";
+            textBoxBookPublisher.Size = new Size(236, 25);
+            textBoxBookPublisher.TabIndex = 18;
+            // 
+            // labelBookPublisher
+            // 
+            labelBookPublisher.AutoSize = true;
+            labelBookPublisher.Font = new Font("Segoe UI", 11F);
+            labelBookPublisher.Location = new Point(24, 178);
+            labelBookPublisher.Name = "labelBookPublisher";
+            labelBookPublisher.Size = new Size(103, 20);
+            labelBookPublisher.TabIndex = 17;
+            labelBookPublisher.Text = "Издательство";
+            // 
+            // textBoxBookAuthor
+            // 
+            textBoxBookAuthor.Font = new Font("Segoe UI", 10F);
+            textBoxBookAuthor.Location = new Point(24, 150);
+            textBoxBookAuthor.Name = "textBoxBookAuthor";
+            textBoxBookAuthor.Size = new Size(236, 25);
+            textBoxBookAuthor.TabIndex = 16;
+            // 
+            // labelBookAuthor
+            // 
+            labelBookAuthor.AutoSize = true;
+            labelBookAuthor.Font = new Font("Segoe UI", 11F);
+            labelBookAuthor.Location = new Point(24, 127);
+            labelBookAuthor.Name = "labelBookAuthor";
+            labelBookAuthor.Size = new Size(95, 20);
+            labelBookAuthor.TabIndex = 15;
+            labelBookAuthor.Text = "Автор книги";
+            // 
             // buttonBookFind
             // 
-            buttonBookFind.Location = new Point(24, 198);
+            buttonBookFind.Location = new Point(24, 410);
             buttonBookFind.Name = "buttonBookFind";
             buttonBookFind.Size = new Size(236, 33);
             buttonBookFind.TabIndex = 14;
@@ -304,7 +384,7 @@
             // textBoxBookName
             // 
             textBoxBookName.Font = new Font("Segoe UI", 10F);
-            textBoxBookName.Location = new Point(24, 150);
+            textBoxBookName.Location = new Point(24, 99);
             textBoxBookName.Name = "textBoxBookName";
             textBoxBookName.Size = new Size(236, 25);
             textBoxBookName.TabIndex = 5;
@@ -313,7 +393,7 @@
             // 
             labelBookName.AutoSize = true;
             labelBookName.Font = new Font("Segoe UI", 11F);
-            labelBookName.Location = new Point(24, 127);
+            labelBookName.Location = new Point(24, 76);
             labelBookName.Name = "labelBookName";
             labelBookName.Size = new Size(90, 20);
             labelBookName.TabIndex = 4;
@@ -322,7 +402,7 @@
             // textBoxBookInvNumber
             // 
             textBoxBookInvNumber.Font = new Font("Segoe UI", 10F);
-            textBoxBookInvNumber.Location = new Point(24, 99);
+            textBoxBookInvNumber.Location = new Point(24, 48);
             textBoxBookInvNumber.Name = "textBoxBookInvNumber";
             textBoxBookInvNumber.Size = new Size(236, 25);
             textBoxBookInvNumber.TabIndex = 3;
@@ -331,29 +411,11 @@
             // 
             labelBookInvNumber.AutoSize = true;
             labelBookInvNumber.Font = new Font("Segoe UI", 11F);
-            labelBookInvNumber.Location = new Point(24, 76);
+            labelBookInvNumber.Location = new Point(24, 25);
             labelBookInvNumber.Name = "labelBookInvNumber";
             labelBookInvNumber.Size = new Size(90, 20);
             labelBookInvNumber.TabIndex = 2;
             labelBookInvNumber.Text = "Инв. номер";
-            // 
-            // labelBookID
-            // 
-            labelBookID.AutoSize = true;
-            labelBookID.Font = new Font("Segoe UI", 11F);
-            labelBookID.Location = new Point(24, 25);
-            labelBookID.Name = "labelBookID";
-            labelBookID.Size = new Size(68, 20);
-            labelBookID.TabIndex = 1;
-            labelBookID.Text = "ID книги";
-            // 
-            // textBoxBookID
-            // 
-            textBoxBookID.Font = new Font("Segoe UI", 10F);
-            textBoxBookID.Location = new Point(24, 48);
-            textBoxBookID.Name = "textBoxBookID";
-            textBoxBookID.Size = new Size(236, 25);
-            textBoxBookID.TabIndex = 0;
             // 
             // dataGridBooks
             // 
@@ -453,12 +515,10 @@
             groupBoxStuffFind.Controls.Add(labelStuffFirstName);
             groupBoxStuffFind.Controls.Add(textBoxStuffSecondName);
             groupBoxStuffFind.Controls.Add(labelStuffSecondName);
-            groupBoxStuffFind.Controls.Add(labelStuffID);
-            groupBoxStuffFind.Controls.Add(textBoxStuffID);
             groupBoxStuffFind.Font = new Font("Segoe UI", 12F);
             groupBoxStuffFind.Location = new Point(895, 6);
             groupBoxStuffFind.Name = "groupBoxStuffFind";
-            groupBoxStuffFind.Size = new Size(286, 490);
+            groupBoxStuffFind.Size = new Size(286, 449);
             groupBoxStuffFind.TabIndex = 9;
             groupBoxStuffFind.TabStop = false;
             groupBoxStuffFind.Text = "Поиск";
@@ -466,7 +526,7 @@
             // textBoxStuffEmail
             // 
             textBoxStuffEmail.Font = new Font("Segoe UI", 10F);
-            textBoxStuffEmail.Location = new Point(24, 405);
+            textBoxStuffEmail.Location = new Point(24, 354);
             textBoxStuffEmail.Name = "textBoxStuffEmail";
             textBoxStuffEmail.Size = new Size(236, 25);
             textBoxStuffEmail.TabIndex = 16;
@@ -475,7 +535,7 @@
             // 
             labelStuffEmail.AutoSize = true;
             labelStuffEmail.Font = new Font("Segoe UI", 11F);
-            labelStuffEmail.Location = new Point(24, 382);
+            labelStuffEmail.Location = new Point(24, 331);
             labelStuffEmail.Name = "labelStuffEmail";
             labelStuffEmail.Size = new Size(143, 20);
             labelStuffEmail.TabIndex = 15;
@@ -483,17 +543,18 @@
             // 
             // buttonStuffFind
             // 
-            buttonStuffFind.Location = new Point(24, 451);
+            buttonStuffFind.Location = new Point(23, 410);
             buttonStuffFind.Name = "buttonStuffFind";
             buttonStuffFind.Size = new Size(236, 33);
             buttonStuffFind.TabIndex = 14;
             buttonStuffFind.Text = "Найти";
             buttonStuffFind.UseVisualStyleBackColor = true;
+            buttonStuffFind.Click += buttonStuffFind_Click;
             // 
             // textBoxStuffPhoneNumber
             // 
             textBoxStuffPhoneNumber.Font = new Font("Segoe UI", 10F);
-            textBoxStuffPhoneNumber.Location = new Point(24, 354);
+            textBoxStuffPhoneNumber.Location = new Point(23, 303);
             textBoxStuffPhoneNumber.Name = "textBoxStuffPhoneNumber";
             textBoxStuffPhoneNumber.Size = new Size(236, 25);
             textBoxStuffPhoneNumber.TabIndex = 13;
@@ -502,7 +563,7 @@
             // 
             labelStuffPhoneNumber.AutoSize = true;
             labelStuffPhoneNumber.Font = new Font("Segoe UI", 11F);
-            labelStuffPhoneNumber.Location = new Point(24, 331);
+            labelStuffPhoneNumber.Location = new Point(23, 280);
             labelStuffPhoneNumber.Name = "labelStuffPhoneNumber";
             labelStuffPhoneNumber.Size = new Size(148, 20);
             labelStuffPhoneNumber.TabIndex = 12;
@@ -511,7 +572,7 @@
             // textBoxStuffJobRole
             // 
             textBoxStuffJobRole.Font = new Font("Segoe UI", 10F);
-            textBoxStuffJobRole.Location = new Point(24, 303);
+            textBoxStuffJobRole.Location = new Point(23, 252);
             textBoxStuffJobRole.Name = "textBoxStuffJobRole";
             textBoxStuffJobRole.Size = new Size(236, 25);
             textBoxStuffJobRole.TabIndex = 11;
@@ -520,7 +581,7 @@
             // 
             labelStuffJobRole.AutoSize = true;
             labelStuffJobRole.Font = new Font("Segoe UI", 11F);
-            labelStuffJobRole.Location = new Point(24, 280);
+            labelStuffJobRole.Location = new Point(23, 229);
             labelStuffJobRole.Name = "labelStuffJobRole";
             labelStuffJobRole.Size = new Size(86, 20);
             labelStuffJobRole.TabIndex = 10;
@@ -529,7 +590,7 @@
             // textBoxStuffBirthDate
             // 
             textBoxStuffBirthDate.Font = new Font("Segoe UI", 10F);
-            textBoxStuffBirthDate.Location = new Point(24, 252);
+            textBoxStuffBirthDate.Location = new Point(23, 201);
             textBoxStuffBirthDate.Name = "textBoxStuffBirthDate";
             textBoxStuffBirthDate.Size = new Size(236, 25);
             textBoxStuffBirthDate.TabIndex = 9;
@@ -538,7 +599,7 @@
             // 
             labelStuffBirthDate.AutoSize = true;
             labelStuffBirthDate.Font = new Font("Segoe UI", 11F);
-            labelStuffBirthDate.Location = new Point(24, 229);
+            labelStuffBirthDate.Location = new Point(23, 178);
             labelStuffBirthDate.Name = "labelStuffBirthDate";
             labelStuffBirthDate.Size = new Size(116, 20);
             labelStuffBirthDate.TabIndex = 8;
@@ -547,7 +608,7 @@
             // textBoxStuffThirdName
             // 
             textBoxStuffThirdName.Font = new Font("Segoe UI", 10F);
-            textBoxStuffThirdName.Location = new Point(24, 201);
+            textBoxStuffThirdName.Location = new Point(23, 150);
             textBoxStuffThirdName.Name = "textBoxStuffThirdName";
             textBoxStuffThirdName.Size = new Size(236, 25);
             textBoxStuffThirdName.TabIndex = 7;
@@ -556,7 +617,7 @@
             // 
             labelStuffThirdName.AutoSize = true;
             labelStuffThirdName.Font = new Font("Segoe UI", 11F);
-            labelStuffThirdName.Location = new Point(24, 178);
+            labelStuffThirdName.Location = new Point(23, 127);
             labelStuffThirdName.Name = "labelStuffThirdName";
             labelStuffThirdName.Size = new Size(72, 20);
             labelStuffThirdName.TabIndex = 6;
@@ -565,7 +626,7 @@
             // textBoxStuffFirstName
             // 
             textBoxStuffFirstName.Font = new Font("Segoe UI", 10F);
-            textBoxStuffFirstName.Location = new Point(24, 150);
+            textBoxStuffFirstName.Location = new Point(23, 99);
             textBoxStuffFirstName.Name = "textBoxStuffFirstName";
             textBoxStuffFirstName.Size = new Size(236, 25);
             textBoxStuffFirstName.TabIndex = 5;
@@ -574,7 +635,7 @@
             // 
             labelStuffFirstName.AutoSize = true;
             labelStuffFirstName.Font = new Font("Segoe UI", 11F);
-            labelStuffFirstName.Location = new Point(24, 127);
+            labelStuffFirstName.Location = new Point(23, 76);
             labelStuffFirstName.Name = "labelStuffFirstName";
             labelStuffFirstName.Size = new Size(39, 20);
             labelStuffFirstName.TabIndex = 4;
@@ -583,7 +644,7 @@
             // textBoxStuffSecondName
             // 
             textBoxStuffSecondName.Font = new Font("Segoe UI", 10F);
-            textBoxStuffSecondName.Location = new Point(24, 99);
+            textBoxStuffSecondName.Location = new Point(23, 48);
             textBoxStuffSecondName.Name = "textBoxStuffSecondName";
             textBoxStuffSecondName.Size = new Size(236, 25);
             textBoxStuffSecondName.TabIndex = 3;
@@ -592,29 +653,11 @@
             // 
             labelStuffSecondName.AutoSize = true;
             labelStuffSecondName.Font = new Font("Segoe UI", 11F);
-            labelStuffSecondName.Location = new Point(24, 76);
+            labelStuffSecondName.Location = new Point(23, 25);
             labelStuffSecondName.Name = "labelStuffSecondName";
             labelStuffSecondName.Size = new Size(73, 20);
             labelStuffSecondName.TabIndex = 2;
             labelStuffSecondName.Text = "Фамилия";
-            // 
-            // labelStuffID
-            // 
-            labelStuffID.AutoSize = true;
-            labelStuffID.Font = new Font("Segoe UI", 11F);
-            labelStuffID.Location = new Point(24, 25);
-            labelStuffID.Name = "labelStuffID";
-            labelStuffID.Size = new Size(107, 20);
-            labelStuffID.TabIndex = 1;
-            labelStuffID.Text = "ID сотрудника";
-            // 
-            // textBoxStuffID
-            // 
-            textBoxStuffID.Font = new Font("Segoe UI", 10F);
-            textBoxStuffID.Location = new Point(24, 48);
-            textBoxStuffID.Name = "textBoxStuffID";
-            textBoxStuffID.Size = new Size(236, 25);
-            textBoxStuffID.TabIndex = 0;
             // 
             // buttonAddStuff
             // 
@@ -743,12 +786,10 @@
             groupBoxCustomerFind.Controls.Add(labelCustomerFirstName);
             groupBoxCustomerFind.Controls.Add(textBoxCustomerSecondName);
             groupBoxCustomerFind.Controls.Add(labelCustomerSecondName);
-            groupBoxCustomerFind.Controls.Add(labelCustomerID);
-            groupBoxCustomerFind.Controls.Add(textBoxCustomerID);
             groupBoxCustomerFind.Font = new Font("Segoe UI", 12F);
             groupBoxCustomerFind.Location = new Point(895, 6);
             groupBoxCustomerFind.Name = "groupBoxCustomerFind";
-            groupBoxCustomerFind.Size = new Size(286, 490);
+            groupBoxCustomerFind.Size = new Size(286, 449);
             groupBoxCustomerFind.TabIndex = 12;
             groupBoxCustomerFind.TabStop = false;
             groupBoxCustomerFind.Text = "Поиск";
@@ -756,7 +797,7 @@
             // textBoxCustomerEmail
             // 
             textBoxCustomerEmail.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerEmail.Location = new Point(24, 405);
+            textBoxCustomerEmail.Location = new Point(23, 354);
             textBoxCustomerEmail.Name = "textBoxCustomerEmail";
             textBoxCustomerEmail.Size = new Size(236, 25);
             textBoxCustomerEmail.TabIndex = 16;
@@ -765,7 +806,7 @@
             // 
             labelCustomerEmail.AutoSize = true;
             labelCustomerEmail.Font = new Font("Segoe UI", 11F);
-            labelCustomerEmail.Location = new Point(24, 382);
+            labelCustomerEmail.Location = new Point(23, 331);
             labelCustomerEmail.Name = "labelCustomerEmail";
             labelCustomerEmail.Size = new Size(143, 20);
             labelCustomerEmail.TabIndex = 15;
@@ -773,17 +814,18 @@
             // 
             // buttonCustomerFind
             // 
-            buttonCustomerFind.Location = new Point(24, 451);
+            buttonCustomerFind.Location = new Point(23, 410);
             buttonCustomerFind.Name = "buttonCustomerFind";
             buttonCustomerFind.Size = new Size(236, 33);
             buttonCustomerFind.TabIndex = 14;
             buttonCustomerFind.Text = "Найти";
             buttonCustomerFind.UseVisualStyleBackColor = true;
+            buttonCustomerFind.Click += buttonCustomerFind_Click;
             // 
             // textBoxCustomerPhoneNumber
             // 
             textBoxCustomerPhoneNumber.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerPhoneNumber.Location = new Point(24, 354);
+            textBoxCustomerPhoneNumber.Location = new Point(23, 303);
             textBoxCustomerPhoneNumber.Name = "textBoxCustomerPhoneNumber";
             textBoxCustomerPhoneNumber.Size = new Size(236, 25);
             textBoxCustomerPhoneNumber.TabIndex = 13;
@@ -792,7 +834,7 @@
             // 
             labelCustomerPhoneNumber.AutoSize = true;
             labelCustomerPhoneNumber.Font = new Font("Segoe UI", 11F);
-            labelCustomerPhoneNumber.Location = new Point(24, 331);
+            labelCustomerPhoneNumber.Location = new Point(23, 280);
             labelCustomerPhoneNumber.Name = "labelCustomerPhoneNumber";
             labelCustomerPhoneNumber.Size = new Size(148, 20);
             labelCustomerPhoneNumber.TabIndex = 12;
@@ -801,7 +843,7 @@
             // textBoxCustomerAddress
             // 
             textBoxCustomerAddress.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerAddress.Location = new Point(24, 303);
+            textBoxCustomerAddress.Location = new Point(23, 252);
             textBoxCustomerAddress.Name = "textBoxCustomerAddress";
             textBoxCustomerAddress.Size = new Size(236, 25);
             textBoxCustomerAddress.TabIndex = 11;
@@ -810,7 +852,7 @@
             // 
             labelCustomerAddress.AutoSize = true;
             labelCustomerAddress.Font = new Font("Segoe UI", 11F);
-            labelCustomerAddress.Location = new Point(24, 280);
+            labelCustomerAddress.Location = new Point(24, 229);
             labelCustomerAddress.Name = "labelCustomerAddress";
             labelCustomerAddress.Size = new Size(51, 20);
             labelCustomerAddress.TabIndex = 10;
@@ -819,7 +861,7 @@
             // textBoxCustomerBirthDate
             // 
             textBoxCustomerBirthDate.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerBirthDate.Location = new Point(24, 252);
+            textBoxCustomerBirthDate.Location = new Point(23, 201);
             textBoxCustomerBirthDate.Name = "textBoxCustomerBirthDate";
             textBoxCustomerBirthDate.Size = new Size(236, 25);
             textBoxCustomerBirthDate.TabIndex = 9;
@@ -828,7 +870,7 @@
             // 
             labelCustomerBirthDate.AutoSize = true;
             labelCustomerBirthDate.Font = new Font("Segoe UI", 11F);
-            labelCustomerBirthDate.Location = new Point(24, 229);
+            labelCustomerBirthDate.Location = new Point(23, 178);
             labelCustomerBirthDate.Name = "labelCustomerBirthDate";
             labelCustomerBirthDate.Size = new Size(116, 20);
             labelCustomerBirthDate.TabIndex = 8;
@@ -837,7 +879,7 @@
             // textBoxCustomerThirdName
             // 
             textBoxCustomerThirdName.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerThirdName.Location = new Point(24, 201);
+            textBoxCustomerThirdName.Location = new Point(23, 150);
             textBoxCustomerThirdName.Name = "textBoxCustomerThirdName";
             textBoxCustomerThirdName.Size = new Size(236, 25);
             textBoxCustomerThirdName.TabIndex = 7;
@@ -846,7 +888,7 @@
             // 
             labelCustomerThirdName.AutoSize = true;
             labelCustomerThirdName.Font = new Font("Segoe UI", 11F);
-            labelCustomerThirdName.Location = new Point(24, 178);
+            labelCustomerThirdName.Location = new Point(23, 127);
             labelCustomerThirdName.Name = "labelCustomerThirdName";
             labelCustomerThirdName.Size = new Size(72, 20);
             labelCustomerThirdName.TabIndex = 6;
@@ -855,7 +897,7 @@
             // textBoxCustomerFirstName
             // 
             textBoxCustomerFirstName.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerFirstName.Location = new Point(24, 150);
+            textBoxCustomerFirstName.Location = new Point(23, 99);
             textBoxCustomerFirstName.Name = "textBoxCustomerFirstName";
             textBoxCustomerFirstName.Size = new Size(236, 25);
             textBoxCustomerFirstName.TabIndex = 5;
@@ -864,7 +906,7 @@
             // 
             labelCustomerFirstName.AutoSize = true;
             labelCustomerFirstName.Font = new Font("Segoe UI", 11F);
-            labelCustomerFirstName.Location = new Point(24, 127);
+            labelCustomerFirstName.Location = new Point(23, 76);
             labelCustomerFirstName.Name = "labelCustomerFirstName";
             labelCustomerFirstName.Size = new Size(39, 20);
             labelCustomerFirstName.TabIndex = 4;
@@ -873,7 +915,7 @@
             // textBoxCustomerSecondName
             // 
             textBoxCustomerSecondName.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerSecondName.Location = new Point(24, 99);
+            textBoxCustomerSecondName.Location = new Point(23, 48);
             textBoxCustomerSecondName.Name = "textBoxCustomerSecondName";
             textBoxCustomerSecondName.Size = new Size(236, 25);
             textBoxCustomerSecondName.TabIndex = 3;
@@ -882,29 +924,11 @@
             // 
             labelCustomerSecondName.AutoSize = true;
             labelCustomerSecondName.Font = new Font("Segoe UI", 11F);
-            labelCustomerSecondName.Location = new Point(24, 76);
+            labelCustomerSecondName.Location = new Point(23, 25);
             labelCustomerSecondName.Name = "labelCustomerSecondName";
             labelCustomerSecondName.Size = new Size(73, 20);
             labelCustomerSecondName.TabIndex = 2;
             labelCustomerSecondName.Text = "Фамилия";
-            // 
-            // labelCustomerID
-            // 
-            labelCustomerID.AutoSize = true;
-            labelCustomerID.Font = new Font("Segoe UI", 11F);
-            labelCustomerID.Location = new Point(24, 25);
-            labelCustomerID.Name = "labelCustomerID";
-            labelCustomerID.Size = new Size(83, 20);
-            labelCustomerID.TabIndex = 1;
-            labelCustomerID.Text = "ID клиента";
-            // 
-            // textBoxCustomerID
-            // 
-            textBoxCustomerID.Font = new Font("Segoe UI", 10F);
-            textBoxCustomerID.Location = new Point(24, 48);
-            textBoxCustomerID.Name = "textBoxCustomerID";
-            textBoxCustomerID.Size = new Size(236, 25);
-            textBoxCustomerID.TabIndex = 0;
             // 
             // buttonAddCustomer
             // 
@@ -1008,7 +1032,7 @@
             tabPageBookExchange.Controls.Add(groupBoxOperationFind);
             tabPageBookExchange.Controls.Add(buttonAddOperation);
             tabPageBookExchange.Controls.Add(buttonDeleteOperation);
-            tabPageBookExchange.Controls.Add(dataGridView3);
+            tabPageBookExchange.Controls.Add(dataGridOperations);
             tabPageBookExchange.Location = new Point(4, 24);
             tabPageBookExchange.Name = "tabPageBookExchange";
             tabPageBookExchange.Size = new Size(1187, 502);
@@ -1181,17 +1205,17 @@
             buttonDeleteOperation.UseVisualStyleBackColor = true;
             buttonDeleteOperation.Click += buttonDeleteOperation_Click;
             // 
-            // dataGridView3
+            // dataGridOperations
             // 
-            dataGridView3.AutoGenerateColumns = false;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, bookIdDataGridViewTextBoxColumn, stuffIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn, ActionEditOperation });
-            dataGridView3.DataSource = bookExchangeBindingSource;
-            dataGridView3.Location = new Point(6, 6);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.Size = new Size(883, 449);
-            dataGridView3.TabIndex = 12;
-            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
+            dataGridOperations.AutoGenerateColumns = false;
+            dataGridOperations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridOperations.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, bookIdDataGridViewTextBoxColumn, stuffIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn, ActionEditOperation });
+            dataGridOperations.DataSource = bookExchangeBindingSource;
+            dataGridOperations.Location = new Point(6, 6);
+            dataGridOperations.Name = "dataGridOperations";
+            dataGridOperations.Size = new Size(883, 449);
+            dataGridOperations.TabIndex = 12;
+            dataGridOperations.CellContentClick += dataGridView3_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn3
             // 
@@ -1279,7 +1303,7 @@
             tabPageBookExchange.ResumeLayout(false);
             groupBoxOperationFind.ResumeLayout(false);
             groupBoxOperationFind.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridOperations).EndInit();
             ((System.ComponentModel.ISupportInitialize)bookExchangeBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -1307,10 +1331,8 @@
         private DataGridView dataGridCustomers;
         private Button buttonAddOperation;
         private Button buttonDeleteOperation;
-        private DataGridView dataGridView3;
+        private DataGridView dataGridOperations;
         private GroupBox groupBoxBookFind;
-        private TextBox textBoxBookID;
-        private Label labelBookID;
         private Label labelBookName;
         private TextBox textBoxBookInvNumber;
         private Label labelBookInvNumber;
@@ -1330,8 +1352,6 @@
         private Label labelStuffFirstName;
         private TextBox textBoxStuffSecondName;
         private Label labelStuffSecondName;
-        private Label labelStuffID;
-        private TextBox textBoxStuffID;
         private TextBox textBoxStuffEmail;
         private Label labelStuffEmail;
         private GroupBox groupBoxCustomerFind;
@@ -1350,8 +1370,6 @@
         private Label labelCustomerFirstName;
         private TextBox textBoxCustomerSecondName;
         private Label labelCustomerSecondName;
-        private Label labelCustomerID;
-        private TextBox textBoxCustomerID;
         private GroupBox groupBoxOperationFind;
         private TextBox textBoxOperationBookID;
         private Label labelOperationDate;
@@ -1416,5 +1434,13 @@
         private DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateOperationDataGridViewTextBoxColumn;
         private DataGridViewLinkColumn ActionEditOperation;
+        private Label labelBookAuthor;
+        private TextBox textBoxGenre;
+        private Label labelGenre;
+        private TextBox textBoxPublicationYear;
+        private Label labelPublicationYear;
+        private TextBox textBoxBookPublisher;
+        private Label labelBookPublisher;
+        private TextBox textBoxBookAuthor;
     }
 }

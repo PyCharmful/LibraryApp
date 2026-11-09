@@ -47,5 +47,9 @@ namespace LibraryWinFormsApp
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+        ~FormAddCustomer()
+        {
+            _context.Dispose();
+        }
     }
 }

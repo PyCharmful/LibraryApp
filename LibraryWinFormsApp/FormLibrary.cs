@@ -14,6 +14,10 @@ namespace LibraryWinFormsApp
         {
             InitializeComponent();
             _context = new LibraryContext();
+            LoadBooks();
+            LoadStuff();
+            LoadCustomers();
+            LoadBookExchange();
         }
         private void labelBookName_Click(object sender, EventArgs e)
         {
@@ -57,7 +61,38 @@ namespace LibraryWinFormsApp
 
         private void buttonStuffFind_Click(object sender, EventArgs e)
         {
-
+            var query = _context.Stuff.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(textBoxStuffSecondName.Text))
+            {
+                query = query.Where(x => x.SecondName == textBoxStuffSecondName.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxStuffFirstName.Text))
+            {
+                query = query.Where(x => x.FirstName == textBoxStuffSecondName.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxStuffThirdName.Text))
+            {
+                query = query.Where(x => x.ThirdName == textBoxStuffThirdName.Text);
+            }
+            // ???
+            if (!string.IsNullOrWhiteSpace(textBoxStuffBirthDate.Text))
+            {
+                query = query.Where(x => x.BirthDate == textBoxStuffBirthDate.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxStuffJobRole.Text))
+            {
+                query = query.Where(x => x.JobRole == textBoxStuffJobRole.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxStuffPhoneNumber.Text))
+            {
+                query = query.Where(x => x.PhoneNumber == textBoxStuffPhoneNumber.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxStuffEmail.Text))
+            {
+                query = query.Where(x => x.Email == textBoxStuffEmail.Text);
+            }
+            var stuff = query.ToList();
+            stuffBindingSource.DataSource = stuff;
         }
         // Практическая работа №3
         private void FormLibrary_Load(object sender, EventArgs e)
@@ -147,84 +182,37 @@ namespace LibraryWinFormsApp
             formAbout.Owner = this;
             formAbout.ShowDialog();
         }
-
+        // Поиск книги
         private void buttonBookFind_Click(object sender, EventArgs e)
         {
-            var grid = this.dataGridBooks;
-            grid.ClearSelection();
-            grid.CurrentCell = null;
-            string idQuerry = textBoxBookID.Text;
-            string invQuerry = textBoxBookInvNumber.Text;
-            if (grid != null)
+            var query = _context.Books.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(textBoxBookInvNumber.Text))
             {
-                if (idQuerry == "")
-                {
-                    if (invQuerry != "")
-                    {
-                        InvNumberFound(grid);
-                    }
-                }
-                else if (invQuerry == "")
-                {
-                    if (idQuerry != "")
-                    {
-                        BookIdFound(grid);
-                    }
-                }
+                query = query.Where(x => x.InvNumber == Convert.ToInt32(textBoxBookInvNumber.Text));
             }
+            if (!string.IsNullOrWhiteSpace(textBoxBookName.Text))
+            {
+                query = query.Where(x => x.BookName == textBoxBookName.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxBookAuthor.Text))
+            {
+                query = query.Where(x => x.BookAuthor == textBoxBookAuthor.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxBookPublisher.Text))
+            {
+                query = query.Where(x => x.BookPublisher == textBoxBookPublisher.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxPublicationYear.Text))
+            {
+                query = query.Where(x => x.PublicationYear == textBoxPublicationYear.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxGenre.Text))
+            {
+                query = query.Where(x => x.Genre == textBoxGenre.Text);
+            }
+            var book = query.ToList();
+            bookBindingSource.DataSource = book;
         }
-        // Поиск по ID
-        private void BookIdFound(DataGridView grid)
-        {
-            bool idFound = false;
-            for (int i = 0; i < grid.RowCount; i++)
-            {
-                grid.Rows[i].Selected = false;
-
-                for (int j = 0; j < 1; j++)
-                {
-                    if (grid.Rows[i].Cells[j].Value != null)
-                    {
-                        if (grid.Rows[i].Cells[j].Value.ToString().Contains(textBoxBookID.Text))
-                        {
-                            grid.Rows[i].Selected = true;
-                            idFound = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            if (!idFound)
-            {
-                MessageBox.Show("Ничего не найдено");
-            }
-        }
-        // Поиск по инвентарному номеру
-        private void InvNumberFound(DataGridView grid)
-        {
-            bool invFound = false;
-            for (int i = 0; i < grid.RowCount; i++)
-            {
-                grid.Rows[i].Selected = false;
-                for (int j = 1; j < 2; j++)
-                {
-                    if (grid.Rows[i].Cells[j].Value != null)
-                    {
-                        if (grid.Rows[i].Cells[j].Value.ToString().Contains(textBoxBookInvNumber.Text))
-                        {
-                            grid.Rows[i].Selected = true;
-                            invFound = true;
-                            break;
-                        }
-                    }
-                }
-            }
-            if (!invFound)
-            {
-                MessageBox.Show("Ничего не найдено");
-            }
-        }
-
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -263,17 +251,18 @@ namespace LibraryWinFormsApp
             }
             var stuff = (Stuff)stuffBindingSource[e.RowIndex];
             var formAdd = new FormEditStuff(_context, stuff.Id);
-            if (dataGridStuff.Columns[e.RowIndex].Name == "ActionEditStuff")
-            {
-                if (formAdd.ShowDialog() == DialogResult.OK)
-                {
-                    LoadStuff();
-                }
-            }
+            //if (dataGridStuff.Columns[e.RowIndex].Name == "ActionEditStuff")
+            //{
+            //    if (formAdd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        LoadStuff();
+            //    }
+            //}
             if (dataGridStuff.Columns[e.ColumnIndex].Name == "ActionEditStuff")
             {
                 formAdd.Owner = this;
                 formAdd.ShowDialog();
+                LoadStuff();
             }
         }
 
@@ -285,17 +274,18 @@ namespace LibraryWinFormsApp
             }
             var customer = (Customer)customerBindingSource[e.RowIndex];
             var formAdd = new FormEditCustomer(_context, customer.Id);
-            if (dataGridCustomers.Columns[e.RowIndex].Name == "ActionEditCustomer")
-            {
-                if (formAdd.ShowDialog() == DialogResult.OK)
-                {
-                    LoadCustomers();
-                }
-            }
+            //if (dataGridCustomers.Columns[e.RowIndex].Name == "ActionEditCustomer")
+            //{
+            //    if (formAdd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        LoadCustomers();
+            //    }
+            //}
             if (dataGridCustomers.Columns[e.ColumnIndex].Name == "ActionEditCustomer")
             {
                 formAdd.Owner = this;
                 formAdd.ShowDialog();
+                LoadCustomers();
             }
         }
 
@@ -307,17 +297,18 @@ namespace LibraryWinFormsApp
             }
             var book = (Book)bookBindingSource[e.RowIndex];
             var formAdd = new FormEditBook(_context, book.Id);
-            if (dataGridBooks.Columns[e.RowIndex].Name == "ActionEditBook")
-            {
-                if (formAdd.ShowDialog() == DialogResult.OK)
-                {
-                    LoadBooks();
-                }
-            }
+            //if (dataGridBooks.Columns[e.RowIndex].Name == "ActionEditBook")
+            //{
+            //    if (formAdd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        LoadBooks();
+            //    }
+            //}
             if (dataGridBooks.Columns[e.ColumnIndex].Name == "ActionEditBook")
             {
                 formAdd.Owner = this;
                 formAdd.ShowDialog();
+                LoadBooks();
             }
         }
 
@@ -339,6 +330,41 @@ namespace LibraryWinFormsApp
             _context.Stuff.Remove(stuff);
             _context.SaveChanges();
             LoadStuff();
+        }
+
+        private void buttonCustomerFind_Click(object sender, EventArgs e)
+        {
+            var query = _context.Customers.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerSecondName.Text))
+            {
+                query = query.Where(x => x.SecondName == textBoxCustomerSecondName.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerFirstName.Text))
+            {
+                query = query.Where(x => x.FirstName == textBoxCustomerFirstName.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerThirdName.Text))
+            {
+                query = query.Where(x => x.ThirdName == textBoxCustomerThirdName.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerBirthDate.Text))
+            {
+                query = query.Where(x => x.BirthDate == textBoxCustomerBirthDate.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerAddress.Text))
+            {
+                query = query.Where(x => x.Address == textBoxCustomerAddress.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerPhoneNumber.Text))
+            {
+                query = query.Where(x => x.PhoneNumber == textBoxCustomerPhoneNumber.Text);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxCustomerEmail.Text))
+            {
+                query = query.Where(x => x.Email == textBoxCustomerEmail.Text);
+            }
+            var customer = query.ToList();
+            customerBindingSource.DataSource = customer;
         }
     }
 }
