@@ -77,7 +77,7 @@ namespace LibraryWinFormsApp
             // ???
             if (!string.IsNullOrWhiteSpace(textBoxStuffBirthDate.Text))
             {
-                query = query.Where(x => x.BirthDate == textBoxStuffBirthDate.Text);
+                query = query.Where(x => x.BirthDate == Convert.ToDateTime(textBoxStuffBirthDate.Text));
             }
             if (!string.IsNullOrWhiteSpace(textBoxStuffJobRole.Text))
             {
@@ -349,7 +349,7 @@ namespace LibraryWinFormsApp
             }
             if (!string.IsNullOrWhiteSpace(textBoxCustomerBirthDate.Text))
             {
-                query = query.Where(x => x.BirthDate == textBoxCustomerBirthDate.Text);
+                query = query.Where(x => x.BirthDate == Convert.ToDateTime(textBoxCustomerBirthDate.Text));
             }
             if (!string.IsNullOrWhiteSpace(textBoxCustomerAddress.Text))
             {

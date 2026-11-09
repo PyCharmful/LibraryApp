@@ -33,7 +33,7 @@ namespace LibraryWinFormsApp
             textBoxCustomerSecondName.Text = _customer.SecondName;
             textBoxCustomerFirstName.Text = _customer.FirstName;
             textBoxCustomerThirdName.Text = _customer.ThirdName;
-            textBoxCustomerBirthDate.Text = _customer.BirthDate;
+            textBoxCustomerBirthDate.Text = _customer.BirthDate.ToString();
             textBoxCustomerAddress.Text = _customer.Address;
             textBoxCustomerPhoneNumber.Text = _customer.PhoneNumber;
             textBoxCustomerEmail.Text = _customer.Email;
@@ -48,7 +48,7 @@ namespace LibraryWinFormsApp
             textBoxCustomerSecondName.Text = _customer.SecondName;
             textBoxCustomerFirstName.Text = _customer.FirstName;
             textBoxCustomerThirdName.Text = _customer.ThirdName;
-            textBoxCustomerBirthDate.Text = _customer.BirthDate;
+            textBoxCustomerBirthDate.Text = _customer.BirthDate.ToShortDateString();
             textBoxCustomerAddress.Text = _customer.Address;
             textBoxCustomerPhoneNumber.Text = _customer.PhoneNumber;
             textBoxCustomerEmail.Text = _customer.Email;

@@ -34,7 +34,7 @@ namespace LibraryWinFormsApp
             _stuff.SecondName = textBoxStuffSecondName.Text;
             _stuff.FirstName = textBoxStuffFirstName.Text;
             _stuff.ThirdName = textBoxStuffThirdName.Text;
-            _stuff.BirthDate = textBoxStuffBirthDate.Text;
+            _stuff.BirthDate = Convert.ToDateTime(textBoxStuffBirthDate.Text);
             _stuff.JobRole = textBoxStuffJobRole.Text;
             _stuff.PhoneNumber = textBoxStuffPhoneNumber.Text;
             _stuff.Email = textBoxStuffEmail.Text;
@@ -49,7 +49,7 @@ namespace LibraryWinFormsApp
             textBoxStuffSecondName.Text = _stuff.SecondName;
             textBoxStuffFirstName.Text = _stuff.FirstName;
             textBoxStuffThirdName.Text = _stuff.ThirdName;
-            textBoxStuffBirthDate.Text = _stuff.BirthDate;
+            textBoxStuffBirthDate.Text = _stuff.BirthDate.ToShortDateString();
             textBoxStuffJobRole.Text = _stuff.JobRole;
             textBoxStuffPhoneNumber.Text = _stuff.PhoneNumber;
             textBoxStuffEmail.Text = _stuff.Email;

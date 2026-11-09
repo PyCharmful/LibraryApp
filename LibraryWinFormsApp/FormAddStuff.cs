@@ -38,7 +38,7 @@ namespace LibraryWinFormsApp
                 SecondName = textBoxStuffSecondName.Text,
                 FirstName = textBoxStuffFirstName.Text,
                 ThirdName = textBoxStuffThirdName.Text,
-                BirthDate = textBoxStuffBirthDate.Text,
+                BirthDate = Convert.ToDateTime(textBoxStuffBirthDate.Text),
                 JobRole = textBoxStuffJobRole.Text,
                 PhoneNumber = textBoxStuffPhoneNumber.Text,
                 Email = textBoxStuffEmail.Text
