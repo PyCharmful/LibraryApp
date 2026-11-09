@@ -135,7 +135,7 @@
             textBoxOperationBookID = new TextBox();
             labelOperationBookID = new Label();
             dateTimePickerOperationDate = new DateTimePicker();
-            button1 = new Button();
+            buttonOperationFind = new Button();
             labelOperationName = new Label();
             labelOperationID = new Label();
             textBoxOperationID = new TextBox();
@@ -1051,14 +1051,14 @@
             groupBoxOperationFind.Controls.Add(textBoxOperationBookID);
             groupBoxOperationFind.Controls.Add(labelOperationBookID);
             groupBoxOperationFind.Controls.Add(dateTimePickerOperationDate);
-            groupBoxOperationFind.Controls.Add(button1);
+            groupBoxOperationFind.Controls.Add(buttonOperationFind);
             groupBoxOperationFind.Controls.Add(labelOperationName);
             groupBoxOperationFind.Controls.Add(labelOperationID);
             groupBoxOperationFind.Controls.Add(textBoxOperationID);
             groupBoxOperationFind.Font = new Font("Segoe UI", 12F);
             groupBoxOperationFind.Location = new Point(895, 6);
             groupBoxOperationFind.Name = "groupBoxOperationFind";
-            groupBoxOperationFind.Size = new Size(286, 490);
+            groupBoxOperationFind.Size = new Size(286, 449);
             groupBoxOperationFind.TabIndex = 15;
             groupBoxOperationFind.TabStop = false;
             groupBoxOperationFind.Text = "Поиск";
@@ -1144,14 +1144,15 @@
             dateTimePickerOperationDate.Size = new Size(236, 29);
             dateTimePickerOperationDate.TabIndex = 15;
             // 
-            // button1
+            // buttonOperationFind
             // 
-            button1.Location = new Point(24, 451);
-            button1.Name = "button1";
-            button1.Size = new Size(236, 33);
-            button1.TabIndex = 14;
-            button1.Text = "Найти";
-            button1.UseVisualStyleBackColor = true;
+            buttonOperationFind.Location = new Point(24, 410);
+            buttonOperationFind.Name = "buttonOperationFind";
+            buttonOperationFind.Size = new Size(236, 33);
+            buttonOperationFind.TabIndex = 14;
+            buttonOperationFind.Text = "Найти";
+            buttonOperationFind.UseVisualStyleBackColor = true;
+            buttonOperationFind.Click += buttonOperationFind_Click;
             // 
             // labelOperationName
             // 
@@ -1215,7 +1216,7 @@
             dataGridOperations.Name = "dataGridOperations";
             dataGridOperations.Size = new Size(883, 449);
             dataGridOperations.TabIndex = 12;
-            dataGridOperations.CellContentClick += dataGridView3_CellContentClick;
+            dataGridOperations.CellContentClick += dataGridOperations_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn3
             // 
@@ -1373,7 +1374,7 @@
         private GroupBox groupBoxOperationFind;
         private TextBox textBoxOperationBookID;
         private Label labelOperationDate;
-        private Button button1;
+        private Button buttonOperationFind;
         private TextBox textBox2;
         private Label label2;
         private TextBox textBox3;

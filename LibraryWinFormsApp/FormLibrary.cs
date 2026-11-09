@@ -54,11 +54,6 @@ namespace LibraryWinFormsApp
             }
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void buttonStuffFind_Click(object sender, EventArgs e)
         {
             var query = _context.Stuff.AsQueryable();
@@ -365,6 +360,50 @@ namespace LibraryWinFormsApp
             }
             var customer = query.ToList();
             customerBindingSource.DataSource = customer;
+        }
+
+        private void dataGridOperations_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            var operation = (BookExchange)bookExchangeBindingSource[e.RowIndex];
+            var formAdd = new FormEditOperation(_context, operation.Id);
+            if (dataGridOperations.Columns[e.ColumnIndex].Name == "ActionEditOperation")
+            {
+                formAdd.Owner = this;
+                formAdd.ShowDialog();
+                LoadBookExchange();
+            }
+        }
+
+        private void buttonOperationFind_Click(object sender, EventArgs e)
+        {
+            var query = _context.BookExchange.AsQueryable();
+            if (comboBoxOperationName.SelectedValue is not null)
+            {
+                query = query.Where(x => x.OperationName == comboBoxOperationName.SelectedValue);
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxOperationBookID.Text))
+            {
+                query = query.Where(x => x.BookId == Convert.ToInt32(textBoxOperationBookID.Text));
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxOperationStuffID.Text))
+            {
+                query = query.Where(x => x.StuffId == Convert.ToInt32(textBoxOperationStuffID.Text));
+            }
+            if (!string.IsNullOrWhiteSpace(textBoxOperationCustomerID.Text))
+            {
+                query = query.Where(x => x.CustomerId == Convert.ToInt32(textBoxOperationCustomerID.Text));
+            }
+            // ???
+            //if (dateTimePickerOperationDate_ValueChanged)
+            //{
+            //    query = query.Where(x => x.DateOperation == dateTimePickerOperationDate.Value);
+            //}
+            var operation = query.ToList();
+            bookExchangeBindingSource.DataSource = operation;
         }
     }
 }
