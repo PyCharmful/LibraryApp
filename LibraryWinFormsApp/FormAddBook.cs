@@ -34,19 +34,32 @@ namespace LibraryWinFormsApp
 
         private void buttonConfirmAddBook_Click(object sender, EventArgs e)
         {
-            var book = new Book
+            if (textBoxBookInvNumber.Text == string.Empty || textBoxBookName.Text == string.Empty || textBoxBookAuthor.Text == string.Empty || 
+                textBoxBookPublisher.Text == string.Empty || textBoxBookPublicationYear.Text == string.Empty || textBoxBookGenre.Text == string.Empty)
             {
-                InvNumber = int.Parse(textBoxBookInvNumber.Text),
-                BookName = textBoxBookName.Text,
-                BookAuthor = textBoxBookAuthor.Text,
-                BookPublisher = textBoxBookPublisher.Text,
-                PublicationYear = textBoxBookPublicationYear.Text,
-                Genre = textBoxBookGenre.Text
-            };
-            _context.Books.Add(book);
-            _context.SaveChanges();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                MessageBox.Show("Введите все данные");
+                return;
+            }
+            try
+            {
+                var book = new Book
+                {
+                    InvNumber = int.Parse(textBoxBookInvNumber.Text),
+                    BookName = textBoxBookName.Text,
+                    BookAuthor = textBoxBookAuthor.Text,
+                    BookPublisher = textBoxBookPublisher.Text,
+                    PublicationYear = textBoxBookPublicationYear.Text,
+                    Genre = textBoxBookGenre.Text
+                };
+                _context.Books.Add(book);
+                _context.SaveChanges();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetType().ToString() + "\n" + "Некорректный ввод данных");
+            }
         }
         ~FormAddBook()
         {

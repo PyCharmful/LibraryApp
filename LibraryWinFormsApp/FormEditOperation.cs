@@ -25,11 +25,11 @@ namespace LibraryWinFormsApp
 
         private void FormEditOperation_Load(object sender, EventArgs e)
         {
-            comboBoxOperationName.SelectedValue = _operation.OperationName.ToString();
+            comboBoxOperationName.SelectedItem = _operation.OperationName.ToString();
             textBoxOperationBookID.Text = _operation.BookId.ToString();
             textBoxOperationStuffID.Text = _operation.StuffId.ToString();
             textBoxOperationCustomerID.Text = _operation.CustomerId.ToString();
-            dateTimePickerOperationDate.Value = _operation.DateOperation;
+            dateTimePickerOperationDate.Value = _operation.DateOperation.ToDateTime(TimeOnly.MinValue);
         }
 
         private void buttonCancelEditOperation_Click(object sender, EventArgs e)
@@ -39,12 +39,11 @@ namespace LibraryWinFormsApp
 
         private void buttonConfirmEditOperation_Click(object sender, EventArgs e)
         {
-            // Проблемы
-            _operation.OperationName = comboBoxOperationName.SelectedValue.ToString();
+            _operation.OperationName = comboBoxOperationName.SelectedItem.ToString();
             _operation.BookId = int.Parse(textBoxOperationBookID.Text);
             _operation.StuffId = int.Parse(textBoxOperationStuffID.Text);
             _operation.CustomerId = int.Parse(textBoxOperationCustomerID.Text);
-            _operation.DateOperation = dateTimePickerOperationDate.Value;
+            _operation.DateOperation = DateOnly.FromDateTime(dateTimePickerOperationDate.Value);
             _context.BookExchange.Update(_operation);
             _context.SaveChanges();
             DialogResult = DialogResult.OK;

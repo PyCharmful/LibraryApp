@@ -25,6 +25,6 @@ namespace LibraryWinFormsApp.Data
         [ForeignKey(nameof(Customer))]
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
-        public DateTime DateOperation { get; set; }
+        public DateOnly DateOperation { get; set; }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddStuff));
             groupBoxAddStuff = new GroupBox();
             textBoxStuffEmail = new TextBox();
             labelStuffEmail = new Label();
@@ -64,176 +65,102 @@
             groupBoxAddStuff.Controls.Add(labelStuffFirstName);
             groupBoxAddStuff.Controls.Add(textBoxStuffSecondName);
             groupBoxAddStuff.Controls.Add(labelStuffSecondName);
-            groupBoxAddStuff.Font = new Font("Segoe UI", 14F);
-            groupBoxAddStuff.Location = new Point(12, 12);
+            resources.ApplyResources(groupBoxAddStuff, "groupBoxAddStuff");
             groupBoxAddStuff.Name = "groupBoxAddStuff";
-            groupBoxAddStuff.Size = new Size(481, 255);
-            groupBoxAddStuff.TabIndex = 33;
             groupBoxAddStuff.TabStop = false;
-            groupBoxAddStuff.Text = "Внесение данных";
             // 
             // textBoxStuffEmail
             // 
-            textBoxStuffEmail.Font = new Font("Segoe UI", 10F);
-            textBoxStuffEmail.Location = new Point(216, 213);
+            resources.ApplyResources(textBoxStuffEmail, "textBoxStuffEmail");
             textBoxStuffEmail.Name = "textBoxStuffEmail";
-            textBoxStuffEmail.Size = new Size(236, 25);
-            textBoxStuffEmail.TabIndex = 32;
             // 
             // labelStuffEmail
             // 
-            labelStuffEmail.AutoSize = true;
-            labelStuffEmail.Font = new Font("Segoe UI", 11F);
-            labelStuffEmail.Location = new Point(27, 214);
+            resources.ApplyResources(labelStuffEmail, "labelStuffEmail");
             labelStuffEmail.Name = "labelStuffEmail";
-            labelStuffEmail.Size = new Size(143, 20);
-            labelStuffEmail.TabIndex = 31;
-            labelStuffEmail.Text = "Электронная почта";
             // 
             // textBoxStuffPhoneNumber
             // 
-            textBoxStuffPhoneNumber.Font = new Font("Segoe UI", 10F);
-            textBoxStuffPhoneNumber.Location = new Point(216, 182);
+            resources.ApplyResources(textBoxStuffPhoneNumber, "textBoxStuffPhoneNumber");
             textBoxStuffPhoneNumber.Name = "textBoxStuffPhoneNumber";
-            textBoxStuffPhoneNumber.Size = new Size(236, 25);
-            textBoxStuffPhoneNumber.TabIndex = 30;
             // 
             // labelStuffPhoneNumber
             // 
-            labelStuffPhoneNumber.AutoSize = true;
-            labelStuffPhoneNumber.Font = new Font("Segoe UI", 11F);
-            labelStuffPhoneNumber.Location = new Point(27, 183);
+            resources.ApplyResources(labelStuffPhoneNumber, "labelStuffPhoneNumber");
             labelStuffPhoneNumber.Name = "labelStuffPhoneNumber";
-            labelStuffPhoneNumber.Size = new Size(148, 20);
-            labelStuffPhoneNumber.TabIndex = 29;
-            labelStuffPhoneNumber.Text = "Телефонный номер";
             // 
             // textBoxStuffJobRole
             // 
-            textBoxStuffJobRole.Font = new Font("Segoe UI", 10F);
-            textBoxStuffJobRole.Location = new Point(216, 151);
+            resources.ApplyResources(textBoxStuffJobRole, "textBoxStuffJobRole");
             textBoxStuffJobRole.Name = "textBoxStuffJobRole";
-            textBoxStuffJobRole.Size = new Size(236, 25);
-            textBoxStuffJobRole.TabIndex = 28;
             // 
             // labelStuffJobRole
             // 
-            labelStuffJobRole.AutoSize = true;
-            labelStuffJobRole.Font = new Font("Segoe UI", 11F);
-            labelStuffJobRole.Location = new Point(27, 152);
+            resources.ApplyResources(labelStuffJobRole, "labelStuffJobRole");
             labelStuffJobRole.Name = "labelStuffJobRole";
-            labelStuffJobRole.Size = new Size(86, 20);
-            labelStuffJobRole.TabIndex = 27;
-            labelStuffJobRole.Text = "Должность";
             // 
             // textBoxStuffBirthDate
             // 
-            textBoxStuffBirthDate.Font = new Font("Segoe UI", 10F);
-            textBoxStuffBirthDate.Location = new Point(216, 120);
+            resources.ApplyResources(textBoxStuffBirthDate, "textBoxStuffBirthDate");
             textBoxStuffBirthDate.Name = "textBoxStuffBirthDate";
-            textBoxStuffBirthDate.Size = new Size(236, 25);
-            textBoxStuffBirthDate.TabIndex = 26;
             // 
             // labelStuffBirthDate
             // 
-            labelStuffBirthDate.AutoSize = true;
-            labelStuffBirthDate.Font = new Font("Segoe UI", 11F);
-            labelStuffBirthDate.Location = new Point(27, 121);
+            resources.ApplyResources(labelStuffBirthDate, "labelStuffBirthDate");
             labelStuffBirthDate.Name = "labelStuffBirthDate";
-            labelStuffBirthDate.Size = new Size(116, 20);
-            labelStuffBirthDate.TabIndex = 25;
-            labelStuffBirthDate.Text = "Дата рождения";
             // 
             // textBoxStuffThirdName
             // 
-            textBoxStuffThirdName.Font = new Font("Segoe UI", 10F);
-            textBoxStuffThirdName.Location = new Point(216, 89);
+            resources.ApplyResources(textBoxStuffThirdName, "textBoxStuffThirdName");
             textBoxStuffThirdName.Name = "textBoxStuffThirdName";
-            textBoxStuffThirdName.Size = new Size(236, 25);
-            textBoxStuffThirdName.TabIndex = 24;
             // 
             // labelStuffThirdName
             // 
-            labelStuffThirdName.AutoSize = true;
-            labelStuffThirdName.Font = new Font("Segoe UI", 11F);
-            labelStuffThirdName.Location = new Point(27, 90);
+            resources.ApplyResources(labelStuffThirdName, "labelStuffThirdName");
             labelStuffThirdName.Name = "labelStuffThirdName";
-            labelStuffThirdName.Size = new Size(72, 20);
-            labelStuffThirdName.TabIndex = 23;
-            labelStuffThirdName.Text = "Отчество";
             // 
             // textBoxStuffFirstName
             // 
-            textBoxStuffFirstName.Font = new Font("Segoe UI", 10F);
-            textBoxStuffFirstName.Location = new Point(217, 58);
+            resources.ApplyResources(textBoxStuffFirstName, "textBoxStuffFirstName");
             textBoxStuffFirstName.Name = "textBoxStuffFirstName";
-            textBoxStuffFirstName.Size = new Size(236, 25);
-            textBoxStuffFirstName.TabIndex = 22;
             // 
             // labelStuffFirstName
             // 
-            labelStuffFirstName.AutoSize = true;
-            labelStuffFirstName.Font = new Font("Segoe UI", 11F);
-            labelStuffFirstName.Location = new Point(27, 59);
+            resources.ApplyResources(labelStuffFirstName, "labelStuffFirstName");
             labelStuffFirstName.Name = "labelStuffFirstName";
-            labelStuffFirstName.Size = new Size(39, 20);
-            labelStuffFirstName.TabIndex = 21;
-            labelStuffFirstName.Text = "Имя";
             // 
             // textBoxStuffSecondName
             // 
-            textBoxStuffSecondName.Font = new Font("Segoe UI", 10F);
-            textBoxStuffSecondName.Location = new Point(217, 27);
+            resources.ApplyResources(textBoxStuffSecondName, "textBoxStuffSecondName");
             textBoxStuffSecondName.Name = "textBoxStuffSecondName";
-            textBoxStuffSecondName.Size = new Size(236, 25);
-            textBoxStuffSecondName.TabIndex = 20;
             // 
             // labelStuffSecondName
             // 
-            labelStuffSecondName.AutoSize = true;
-            labelStuffSecondName.Font = new Font("Segoe UI", 11F);
-            labelStuffSecondName.Location = new Point(27, 28);
+            resources.ApplyResources(labelStuffSecondName, "labelStuffSecondName");
             labelStuffSecondName.Name = "labelStuffSecondName";
-            labelStuffSecondName.Size = new Size(73, 20);
-            labelStuffSecondName.TabIndex = 19;
-            labelStuffSecondName.Text = "Фамилия";
             // 
             // buttonCancelAddStuff
             // 
-            buttonCancelAddStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonCancelAddStuff.Font = new Font("Segoe UI", 12F);
-            buttonCancelAddStuff.Location = new Point(289, 277);
+            resources.ApplyResources(buttonCancelAddStuff, "buttonCancelAddStuff");
             buttonCancelAddStuff.Name = "buttonCancelAddStuff";
-            buttonCancelAddStuff.Size = new Size(101, 34);
-            buttonCancelAddStuff.TabIndex = 36;
-            buttonCancelAddStuff.Text = "Отмена";
             buttonCancelAddStuff.UseVisualStyleBackColor = true;
             buttonCancelAddStuff.Click += buttonCancelAddStuff_Click;
             // 
             // buttonConfirmAddStuff
             // 
-            buttonConfirmAddStuff.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonConfirmAddStuff.Font = new Font("Segoe UI", 12F);
-            buttonConfirmAddStuff.Location = new Point(396, 277);
+            resources.ApplyResources(buttonConfirmAddStuff, "buttonConfirmAddStuff");
             buttonConfirmAddStuff.Name = "buttonConfirmAddStuff";
-            buttonConfirmAddStuff.Size = new Size(101, 34);
-            buttonConfirmAddStuff.TabIndex = 35;
-            buttonConfirmAddStuff.Text = "Добавить";
             buttonConfirmAddStuff.UseVisualStyleBackColor = true;
             buttonConfirmAddStuff.Click += buttonConfirmAddStuff_Click;
             // 
             // FormAddStuff
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(509, 323);
             Controls.Add(buttonCancelAddStuff);
             Controls.Add(buttonConfirmAddStuff);
             Controls.Add(groupBoxAddStuff);
-            MinimumSize = new Size(525, 362);
             Name = "FormAddStuff";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Добавление сотрудника";
             Load += FormAddStuff_Load;
             groupBoxAddStuff.ResumeLayout(false);
             groupBoxAddStuff.PerformLayout();

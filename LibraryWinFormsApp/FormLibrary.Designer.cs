@@ -133,7 +133,7 @@
             textBoxOperationStuffID = new TextBox();
             labelOperationStuffID = new Label();
             textBoxOperationBookID = new TextBox();
-            labelOperationBookID = new Label();
+            labelOperationBookInvNumber = new Label();
             dateTimePickerOperationDate = new DateTimePicker();
             buttonOperationFind = new Button();
             labelOperationName = new Label();
@@ -1049,7 +1049,7 @@
             groupBoxOperationFind.Controls.Add(textBoxOperationStuffID);
             groupBoxOperationFind.Controls.Add(labelOperationStuffID);
             groupBoxOperationFind.Controls.Add(textBoxOperationBookID);
-            groupBoxOperationFind.Controls.Add(labelOperationBookID);
+            groupBoxOperationFind.Controls.Add(labelOperationBookInvNumber);
             groupBoxOperationFind.Controls.Add(dateTimePickerOperationDate);
             groupBoxOperationFind.Controls.Add(buttonOperationFind);
             groupBoxOperationFind.Controls.Add(labelOperationName);
@@ -1127,15 +1127,15 @@
             textBoxOperationBookID.Size = new Size(236, 25);
             textBoxOperationBookID.TabIndex = 18;
             // 
-            // labelOperationBookID
+            // labelOperationBookInvNumber
             // 
-            labelOperationBookID.AutoSize = true;
-            labelOperationBookID.Font = new Font("Segoe UI", 11F);
-            labelOperationBookID.Location = new Point(24, 127);
-            labelOperationBookID.Name = "labelOperationBookID";
-            labelOperationBookID.Size = new Size(68, 20);
-            labelOperationBookID.TabIndex = 17;
-            labelOperationBookID.Text = "ID книги";
+            labelOperationBookInvNumber.AutoSize = true;
+            labelOperationBookInvNumber.Font = new Font("Segoe UI", 11F);
+            labelOperationBookInvNumber.Location = new Point(24, 127);
+            labelOperationBookInvNumber.Name = "labelOperationBookInvNumber";
+            labelOperationBookInvNumber.Size = new Size(200, 20);
+            labelOperationBookInvNumber.TabIndex = 17;
+            labelOperationBookInvNumber.Text = "Инвентарный номер книги";
             // 
             // dateTimePickerOperationDate
             // 
@@ -1390,7 +1390,7 @@
         private Label labelOperationID;
         private TextBox textBoxOperationID;
         private DateTimePicker dateTimePickerOperationDate;
-        private Label labelOperationBookID;
+        private Label labelOperationBookInvNumber;
         private TextBox textBoxOperationStuffID;
         private Label labelOperationStuffID;
         private Label labelOperationCustomerID;

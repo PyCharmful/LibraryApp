@@ -32,20 +32,35 @@ namespace LibraryWinFormsApp
 
         private void buttonConfirmAddCustomer_Click(object sender, EventArgs e)
         {
-            var customer = new Customer
+            if (textBoxCustomerSecondName.Text == string.Empty || textBoxCustomerFirstName.Text == string.Empty || textBoxCustomerThirdName.Text == string.Empty ||
+                textBoxCustomerBirthDate.Text == string.Empty || textBoxCustomerAddress.Text == string.Empty || textBoxCustomerPhoneNumber.Text == string.Empty ||
+                textBoxCustomerEmail.Text == string.Empty)
             {
-                SecondName = textBoxCustomerSecondName.Text,
-                FirstName = textBoxCustomerFirstName.Text,
-                ThirdName = textBoxCustomerThirdName.Text,
-                BirthDate = Convert.ToDateTime(textBoxCustomerBirthDate.Text),
-                Address = textBoxCustomerAddress.Text,
-                PhoneNumber = textBoxCustomerPhoneNumber.Text,
-                Email = textBoxCustomerEmail.Text
-            };
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                MessageBox.Show("Введите все данные");
+                return;
+            }
+            try
+            {
+                var customer = new Customer
+                {
+                    SecondName = textBoxCustomerSecondName.Text,
+                    FirstName = textBoxCustomerFirstName.Text,
+                    ThirdName = textBoxCustomerThirdName.Text,
+                    BirthDate = Convert.ToDateTime(textBoxCustomerBirthDate.Text),
+                    Address = textBoxCustomerAddress.Text,
+                    PhoneNumber = textBoxCustomerPhoneNumber.Text,
+                    Email = textBoxCustomerEmail.Text
+                };
+                _context.Customers.Add(customer);
+                _context.SaveChanges();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetType().ToString() + "\n" + "Некорректный ввод данных");
+            }
+            
         }
         ~FormAddCustomer()
         {

@@ -33,20 +33,35 @@ namespace LibraryWinFormsApp
 
         private void buttonConfirmAddStuff_Click(object sender, EventArgs e)
         {
-            var stuff = new Stuff
+            if (textBoxStuffSecondName.Text == string.Empty || textBoxStuffFirstName.Text == string.Empty || textBoxStuffThirdName.Text == string.Empty ||
+                textBoxStuffBirthDate.Text == string.Empty || textBoxStuffJobRole.Text == string.Empty || textBoxStuffPhoneNumber.Text == string.Empty ||
+                textBoxStuffEmail.Text == string.Empty)
             {
-                SecondName = textBoxStuffSecondName.Text,
-                FirstName = textBoxStuffFirstName.Text,
-                ThirdName = textBoxStuffThirdName.Text,
-                BirthDate = Convert.ToDateTime(textBoxStuffBirthDate.Text),
-                JobRole = textBoxStuffJobRole.Text,
-                PhoneNumber = textBoxStuffPhoneNumber.Text,
-                Email = textBoxStuffEmail.Text
-            };
-            _context.Stuff.Add(stuff);
-            _context.SaveChanges();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                MessageBox.Show("Введите все данные");
+                return;
+            }
+            try 
+            {
+                var stuff = new Stuff
+                {
+                    SecondName = textBoxStuffSecondName.Text,
+                    FirstName = textBoxStuffFirstName.Text,
+                    ThirdName = textBoxStuffThirdName.Text,
+                    BirthDate = DateOnly.FromDateTime(Convert.ToDateTime(textBoxStuffBirthDate.Text)),
+                    JobRole = textBoxStuffJobRole.Text,
+                    PhoneNumber = textBoxStuffPhoneNumber.Text,
+                    Email = textBoxStuffEmail.Text
+                };
+                _context.Stuff.Add(stuff);
+                _context.SaveChanges();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.GetType().ToString() + "\n" + "Некорректный ввод данных");
+            }
+            
         }
         ~FormAddStuff()
         {

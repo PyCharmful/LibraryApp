@@ -117,4 +117,499 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBoxCustomerEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 222</value>
+  </data>
+  <data name="textBoxCustomerEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxCustomerEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerEmail.Name" xml:space="preserve">
+    <value>textBoxCustomerEmail</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerEmail.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelCustomerEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 223</value>
+  </data>
+  <data name="labelCustomerEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 20</value>
+  </data>
+  <data name="labelCustomerEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labelCustomerEmail.Text" xml:space="preserve">
+    <value>Электронная почта</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerEmail.Name" xml:space="preserve">
+    <value>labelCustomerEmail</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerEmail.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerEmail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxCustomerPhoneNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerPhoneNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 191</value>
+  </data>
+  <data name="textBoxCustomerPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxCustomerPhoneNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerPhoneNumber.Name" xml:space="preserve">
+    <value>textBoxCustomerPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerPhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerPhoneNumber.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerPhoneNumber.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelCustomerPhoneNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerPhoneNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerPhoneNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 192</value>
+  </data>
+  <data name="labelCustomerPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="labelCustomerPhoneNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="labelCustomerPhoneNumber.Text" xml:space="preserve">
+    <value>Телефонный номер</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerPhoneNumber.Name" xml:space="preserve">
+    <value>labelCustomerPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerPhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerPhoneNumber.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerPhoneNumber.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBoxCustomerAddress.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 160</value>
+  </data>
+  <data name="textBoxCustomerAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxCustomerAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerAddress.Name" xml:space="preserve">
+    <value>textBoxCustomerAddress</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerAddress.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerAddress.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelCustomerAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerAddress.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 161</value>
+  </data>
+  <data name="labelCustomerAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="labelCustomerAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="labelCustomerAddress.Text" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerAddress.Name" xml:space="preserve">
+    <value>labelCustomerAddress</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerAddress.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerAddress.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxCustomerBirthDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerBirthDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 129</value>
+  </data>
+  <data name="textBoxCustomerBirthDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxCustomerBirthDate.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerBirthDate.Name" xml:space="preserve">
+    <value>textBoxCustomerBirthDate</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerBirthDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerBirthDate.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerBirthDate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelCustomerBirthDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerBirthDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerBirthDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 130</value>
+  </data>
+  <data name="labelCustomerBirthDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="labelCustomerBirthDate.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="labelCustomerBirthDate.Text" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerBirthDate.Name" xml:space="preserve">
+    <value>labelCustomerBirthDate</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerBirthDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerBirthDate.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerBirthDate.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="textBoxCustomerThirdName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerThirdName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 98</value>
+  </data>
+  <data name="textBoxCustomerThirdName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxCustomerThirdName.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerThirdName.Name" xml:space="preserve">
+    <value>textBoxCustomerThirdName</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerThirdName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerThirdName.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerThirdName.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelCustomerThirdName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerThirdName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerThirdName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 99</value>
+  </data>
+  <data name="labelCustomerThirdName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 20</value>
+  </data>
+  <data name="labelCustomerThirdName.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="labelCustomerThirdName.Text" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerThirdName.Name" xml:space="preserve">
+    <value>labelCustomerThirdName</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerThirdName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerThirdName.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerThirdName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxCustomerFirstName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 67</value>
+  </data>
+  <data name="textBoxCustomerFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxCustomerFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerFirstName.Name" xml:space="preserve">
+    <value>textBoxCustomerFirstName</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerFirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerFirstName.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerFirstName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelCustomerFirstName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerFirstName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 68</value>
+  </data>
+  <data name="labelCustomerFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="labelCustomerFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelCustomerFirstName.Text" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerFirstName.Name" xml:space="preserve">
+    <value>labelCustomerFirstName</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerFirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerFirstName.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerFirstName.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="textBoxCustomerSecondName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxCustomerSecondName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 36</value>
+  </data>
+  <data name="textBoxCustomerSecondName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxCustomerSecondName.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerSecondName.Name" xml:space="preserve">
+    <value>textBoxCustomerSecondName</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerSecondName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerSecondName.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;textBoxCustomerSecondName.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelCustomerSecondName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCustomerSecondName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelCustomerSecondName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 37</value>
+  </data>
+  <data name="labelCustomerSecondName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="labelCustomerSecondName.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelCustomerSecondName.Text" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerSecondName.Name" xml:space="preserve">
+    <value>labelCustomerSecondName</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerSecondName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerSecondName.Parent" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;labelCustomerSecondName.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupBoxEditCustomer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="groupBoxEditCustomer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="groupBoxEditCustomer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 262</value>
+  </data>
+  <data name="groupBoxEditCustomer.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="groupBoxEditCustomer.Text" xml:space="preserve">
+    <value>Изменение данных</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEditCustomer.Name" xml:space="preserve">
+    <value>groupBoxEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEditCustomer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEditCustomer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxEditCustomer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonCancelEditCustomer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonCancelEditCustomer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="buttonCancelEditCustomer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 284</value>
+  </data>
+  <data name="buttonCancelEditCustomer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 34</value>
+  </data>
+  <data name="buttonCancelEditCustomer.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="buttonCancelEditCustomer.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelEditCustomer.Name" xml:space="preserve">
+    <value>buttonCancelEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelEditCustomer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelEditCustomer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelEditCustomer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonConfirmEditCustomer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonConfirmEditCustomer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="buttonConfirmEditCustomer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 284</value>
+  </data>
+  <data name="buttonConfirmEditCustomer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 34</value>
+  </data>
+  <data name="buttonConfirmEditCustomer.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="buttonConfirmEditCustomer.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmEditCustomer.Name" xml:space="preserve">
+    <value>buttonConfirmEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmEditCustomer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmEditCustomer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmEditCustomer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>509, 330</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>525, 369</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>525, 369</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Изменение клиента</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormEditCustomer</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

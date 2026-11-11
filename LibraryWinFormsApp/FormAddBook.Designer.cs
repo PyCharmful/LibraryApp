@@ -200,7 +200,7 @@
             groupBoxAddBook.TabStop = false;
             groupBoxAddBook.Text = "Внесение данных";
             // 
-            // AddBookForm
+            // FormAddBook
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -209,7 +209,7 @@
             Controls.Add(buttonCancelAddBook);
             Controls.Add(buttonConfirmAddBook);
             MinimumSize = new Size(474, 357);
-            Name = "AddBookForm";
+            Name = "FormAddBook";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление книги";
             Load += AddBookForm_Load;

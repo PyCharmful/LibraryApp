@@ -30,13 +30,13 @@ namespace LibraryWinFormsApp
 
         private void buttonConfirmEditCustomer_Click(object sender, EventArgs e)
         {
-            textBoxCustomerSecondName.Text = _customer.SecondName;
-            textBoxCustomerFirstName.Text = _customer.FirstName;
-            textBoxCustomerThirdName.Text = _customer.ThirdName;
-            textBoxCustomerBirthDate.Text = _customer.BirthDate.ToString();
-            textBoxCustomerAddress.Text = _customer.Address;
-            textBoxCustomerPhoneNumber.Text = _customer.PhoneNumber;
-            textBoxCustomerEmail.Text = _customer.Email;
+            _customer.SecondName = textBoxCustomerSecondName.Text;
+            _customer.FirstName = textBoxCustomerFirstName.Text;
+            _customer.ThirdName = textBoxCustomerThirdName.Text;
+            _customer.BirthDate = Convert.ToDateTime(textBoxCustomerBirthDate.Text);
+            _customer.Address = textBoxCustomerAddress.Text;
+            _customer.PhoneNumber = textBoxCustomerPhoneNumber.Text;
+            _customer.Email = textBoxCustomerEmail.Text;
             _context.Customers.Update(_customer);
             _context.SaveChanges();
             DialogResult = DialogResult.OK;

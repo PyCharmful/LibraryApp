@@ -34,7 +34,7 @@ namespace LibraryWinFormsApp
             _stuff.SecondName = textBoxStuffSecondName.Text;
             _stuff.FirstName = textBoxStuffFirstName.Text;
             _stuff.ThirdName = textBoxStuffThirdName.Text;
-            _stuff.BirthDate = Convert.ToDateTime(textBoxStuffBirthDate.Text);
+            _stuff.BirthDate = DateOnly.FromDateTime(Convert.ToDateTime(textBoxStuffBirthDate.Text));
             _stuff.JobRole = textBoxStuffJobRole.Text;
             _stuff.PhoneNumber = textBoxStuffPhoneNumber.Text;
             _stuff.Email = textBoxStuffEmail.Text;

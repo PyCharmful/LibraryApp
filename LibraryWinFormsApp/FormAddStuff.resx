@@ -117,4 +117,496 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBoxStuffEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 213</value>
+  </data>
+  <data name="textBoxStuffEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxStuffEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffEmail.Name" xml:space="preserve">
+    <value>textBoxStuffEmail</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffEmail.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelStuffEmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffEmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 214</value>
+  </data>
+  <data name="labelStuffEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 20</value>
+  </data>
+  <data name="labelStuffEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="labelStuffEmail.Text" xml:space="preserve">
+    <value>Электронная почта</value>
+  </data>
+  <data name="&gt;&gt;labelStuffEmail.Name" xml:space="preserve">
+    <value>labelStuffEmail</value>
+  </data>
+  <data name="&gt;&gt;labelStuffEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffEmail.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffEmail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxStuffPhoneNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffPhoneNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 182</value>
+  </data>
+  <data name="textBoxStuffPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxStuffPhoneNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffPhoneNumber.Name" xml:space="preserve">
+    <value>textBoxStuffPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffPhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffPhoneNumber.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffPhoneNumber.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelStuffPhoneNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffPhoneNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffPhoneNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 183</value>
+  </data>
+  <data name="labelStuffPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 20</value>
+  </data>
+  <data name="labelStuffPhoneNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="labelStuffPhoneNumber.Text" xml:space="preserve">
+    <value>Телефонный номер</value>
+  </data>
+  <data name="&gt;&gt;labelStuffPhoneNumber.Name" xml:space="preserve">
+    <value>labelStuffPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;labelStuffPhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffPhoneNumber.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffPhoneNumber.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBoxStuffJobRole.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffJobRole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 151</value>
+  </data>
+  <data name="textBoxStuffJobRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxStuffJobRole.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffJobRole.Name" xml:space="preserve">
+    <value>textBoxStuffJobRole</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffJobRole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffJobRole.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffJobRole.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelStuffJobRole.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffJobRole.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffJobRole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 152</value>
+  </data>
+  <data name="labelStuffJobRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 20</value>
+  </data>
+  <data name="labelStuffJobRole.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="labelStuffJobRole.Text" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="&gt;&gt;labelStuffJobRole.Name" xml:space="preserve">
+    <value>labelStuffJobRole</value>
+  </data>
+  <data name="&gt;&gt;labelStuffJobRole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffJobRole.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffJobRole.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxStuffBirthDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffBirthDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 120</value>
+  </data>
+  <data name="textBoxStuffBirthDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxStuffBirthDate.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffBirthDate.Name" xml:space="preserve">
+    <value>textBoxStuffBirthDate</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffBirthDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffBirthDate.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffBirthDate.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelStuffBirthDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffBirthDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffBirthDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 121</value>
+  </data>
+  <data name="labelStuffBirthDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="labelStuffBirthDate.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="labelStuffBirthDate.Text" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="&gt;&gt;labelStuffBirthDate.Name" xml:space="preserve">
+    <value>labelStuffBirthDate</value>
+  </data>
+  <data name="&gt;&gt;labelStuffBirthDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffBirthDate.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffBirthDate.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="textBoxStuffThirdName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffThirdName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 89</value>
+  </data>
+  <data name="textBoxStuffThirdName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxStuffThirdName.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffThirdName.Name" xml:space="preserve">
+    <value>textBoxStuffThirdName</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffThirdName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffThirdName.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffThirdName.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelStuffThirdName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffThirdName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffThirdName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 90</value>
+  </data>
+  <data name="labelStuffThirdName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 20</value>
+  </data>
+  <data name="labelStuffThirdName.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="labelStuffThirdName.Text" xml:space="preserve">
+    <value>Отчество</value>
+  </data>
+  <data name="&gt;&gt;labelStuffThirdName.Name" xml:space="preserve">
+    <value>labelStuffThirdName</value>
+  </data>
+  <data name="&gt;&gt;labelStuffThirdName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffThirdName.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffThirdName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxStuffFirstName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 58</value>
+  </data>
+  <data name="textBoxStuffFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxStuffFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffFirstName.Name" xml:space="preserve">
+    <value>textBoxStuffFirstName</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffFirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffFirstName.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffFirstName.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelStuffFirstName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffFirstName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffFirstName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 59</value>
+  </data>
+  <data name="labelStuffFirstName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="labelStuffFirstName.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="labelStuffFirstName.Text" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="&gt;&gt;labelStuffFirstName.Name" xml:space="preserve">
+    <value>labelStuffFirstName</value>
+  </data>
+  <data name="&gt;&gt;labelStuffFirstName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffFirstName.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffFirstName.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="textBoxStuffSecondName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="textBoxStuffSecondName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>217, 27</value>
+  </data>
+  <data name="textBoxStuffSecondName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 25</value>
+  </data>
+  <data name="textBoxStuffSecondName.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffSecondName.Name" xml:space="preserve">
+    <value>textBoxStuffSecondName</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffSecondName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffSecondName.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;textBoxStuffSecondName.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelStuffSecondName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelStuffSecondName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="labelStuffSecondName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 28</value>
+  </data>
+  <data name="labelStuffSecondName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="labelStuffSecondName.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelStuffSecondName.Text" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="&gt;&gt;labelStuffSecondName.Name" xml:space="preserve">
+    <value>labelStuffSecondName</value>
+  </data>
+  <data name="&gt;&gt;labelStuffSecondName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelStuffSecondName.Parent" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;labelStuffSecondName.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupBoxAddStuff.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="groupBoxAddStuff.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="groupBoxAddStuff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>481, 255</value>
+  </data>
+  <data name="groupBoxAddStuff.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="groupBoxAddStuff.Text" xml:space="preserve">
+    <value>Внесение данных</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAddStuff.Name" xml:space="preserve">
+    <value>groupBoxAddStuff</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAddStuff.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAddStuff.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxAddStuff.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonCancelAddStuff.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonCancelAddStuff.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="buttonCancelAddStuff.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 277</value>
+  </data>
+  <data name="buttonCancelAddStuff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 34</value>
+  </data>
+  <data name="buttonCancelAddStuff.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="buttonCancelAddStuff.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelAddStuff.Name" xml:space="preserve">
+    <value>buttonCancelAddStuff</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelAddStuff.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelAddStuff.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCancelAddStuff.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonConfirmAddStuff.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="buttonConfirmAddStuff.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="buttonConfirmAddStuff.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 277</value>
+  </data>
+  <data name="buttonConfirmAddStuff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 34</value>
+  </data>
+  <data name="buttonConfirmAddStuff.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="buttonConfirmAddStuff.Text" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmAddStuff.Name" xml:space="preserve">
+    <value>buttonConfirmAddStuff</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmAddStuff.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmAddStuff.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmAddStuff.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>509, 323</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>525, 362</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Добавление сотрудника</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormAddStuff</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
