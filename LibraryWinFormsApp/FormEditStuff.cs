@@ -31,10 +31,20 @@ namespace LibraryWinFormsApp
 
         private void buttonConfirmEditStuff_Click(object sender, EventArgs e)
         {
+            List<string> errors = new List<string>();
+            
             _stuff.SecondName = textBoxStuffSecondName.Text;
             _stuff.FirstName = textBoxStuffFirstName.Text;
             _stuff.ThirdName = textBoxStuffThirdName.Text;
-            _stuff.BirthDate = DateOnly.FromDateTime(Convert.ToDateTime(textBoxStuffBirthDate.Text));
+            try
+            {
+                _stuff.BirthDate = DateOnly.FromDateTime(Convert.ToDateTime(textBoxStuffBirthDate.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Введите корректную дату рождения");
+                return;
+            }
             _stuff.JobRole = textBoxStuffJobRole.Text;
             _stuff.PhoneNumber = textBoxStuffPhoneNumber.Text;
             _stuff.Email = textBoxStuffEmail.Text;

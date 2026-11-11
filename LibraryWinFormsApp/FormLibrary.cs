@@ -1,6 +1,7 @@
 using LibraryWinFormsApp.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Net;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace LibraryWinFormsApp
@@ -400,7 +401,6 @@ namespace LibraryWinFormsApp
             {
                 query = query.Where(x => x.CustomerId == Convert.ToInt32(textBoxOperationCustomerID.Text));
             }
-            // ???
             query = query.Where(x => x.DateOperation == DateOnly.FromDateTime(dateTimePickerOperationDate.Value));
             var operation = query.ToList();
             bookExchangeBindingSource.DataSource = operation;

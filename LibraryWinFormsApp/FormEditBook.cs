@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,9 +38,33 @@ namespace LibraryWinFormsApp
             textBoxBookPublicationYear.Text = _book.PublicationYear;
             textBoxBookGenre.Text = _book.Genre;
         }
-
+        private int? ToIntOrNull(string s)
+        {
+            if (int.TryParse(s, out int result))
+            {
+                return result;
+            }
+            return null;
+        }
         private void buttonConfirmEditBook_Click(object sender, EventArgs e)
         {
+            List<string> errors = new List<string>();
+            if (int.TryParse(textBoxBookInvNumber.Text, out int a) == false)
+            {
+                errors.Add("Введите корректный инвентарный номер.");
+            }
+            if (int.TryParse(textBoxBookPublicationYear.Text, out int b) == false)
+            {
+                errors.Add("Введите корректный год.");
+            }
+            string message = null;
+            message = string.Join("\n", errors);
+            if (message.Length > 2)
+            {
+
+                MessageBox.Show(message);
+                return;
+            }
             _book.InvNumber = int.Parse(textBoxBookInvNumber.Text);
             _book.BookName = textBoxBookName.Text;
             _book.BookAuthor = textBoxBookAuthor.Text;

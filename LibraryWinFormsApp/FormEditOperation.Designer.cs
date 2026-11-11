@@ -35,8 +35,8 @@
             labelOperationCustomerID = new Label();
             textBoxOperationStuffID = new TextBox();
             labelOperationStuffID = new Label();
-            textBoxOperationBookID = new TextBox();
-            labelOperationBookID = new Label();
+            textBoxOperationBookInvNumber = new TextBox();
+            labelOperationBookInvNumber = new Label();
             dateTimePickerOperationDate = new DateTimePicker();
             labelOperationName = new Label();
             buttonCancelEditOperation = new Button();
@@ -52,24 +52,24 @@
             groupBoxAddOperation.Controls.Add(labelOperationCustomerID);
             groupBoxAddOperation.Controls.Add(textBoxOperationStuffID);
             groupBoxAddOperation.Controls.Add(labelOperationStuffID);
-            groupBoxAddOperation.Controls.Add(textBoxOperationBookID);
-            groupBoxAddOperation.Controls.Add(labelOperationBookID);
+            groupBoxAddOperation.Controls.Add(textBoxOperationBookInvNumber);
+            groupBoxAddOperation.Controls.Add(labelOperationBookInvNumber);
             groupBoxAddOperation.Controls.Add(dateTimePickerOperationDate);
             groupBoxAddOperation.Controls.Add(labelOperationName);
             groupBoxAddOperation.Font = new Font("Segoe UI", 14F);
             groupBoxAddOperation.Location = new Point(12, 12);
             groupBoxAddOperation.Name = "groupBoxAddOperation";
-            groupBoxAddOperation.Size = new Size(466, 205);
+            groupBoxAddOperation.Size = new Size(484, 205);
             groupBoxAddOperation.TabIndex = 34;
             groupBoxAddOperation.TabStop = false;
-            groupBoxAddOperation.Text = "изменение данных";
+            groupBoxAddOperation.Text = "Изменение данных";
             // 
             // comboBoxOperationName
             // 
             comboBoxOperationName.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxOperationName.FormattingEnabled = true;
             comboBoxOperationName.Items.AddRange(new object[] { "Выдача", "Возврат" });
-            comboBoxOperationName.Location = new Point(206, 21);
+            comboBoxOperationName.Location = new Point(233, 21);
             comboBoxOperationName.Name = "comboBoxOperationName";
             comboBoxOperationName.Size = new Size(236, 33);
             comboBoxOperationName.TabIndex = 36;
@@ -87,7 +87,7 @@
             // textBoxOperationCustomerID
             // 
             textBoxOperationCustomerID.Font = new Font("Segoe UI", 10F);
-            textBoxOperationCustomerID.Location = new Point(206, 122);
+            textBoxOperationCustomerID.Location = new Point(233, 122);
             textBoxOperationCustomerID.Name = "textBoxOperationCustomerID";
             textBoxOperationCustomerID.Size = new Size(236, 25);
             textBoxOperationCustomerID.TabIndex = 34;
@@ -105,7 +105,7 @@
             // textBoxOperationStuffID
             // 
             textBoxOperationStuffID.Font = new Font("Segoe UI", 10F);
-            textBoxOperationStuffID.Location = new Point(206, 91);
+            textBoxOperationStuffID.Location = new Point(233, 91);
             textBoxOperationStuffID.Name = "textBoxOperationStuffID";
             textBoxOperationStuffID.Size = new Size(236, 25);
             textBoxOperationStuffID.TabIndex = 32;
@@ -114,33 +114,33 @@
             // 
             labelOperationStuffID.AutoSize = true;
             labelOperationStuffID.Font = new Font("Segoe UI", 11F);
-            labelOperationStuffID.Location = new Point(36, 92);
+            labelOperationStuffID.Location = new Point(36, 91);
             labelOperationStuffID.Name = "labelOperationStuffID";
             labelOperationStuffID.Size = new Size(107, 20);
             labelOperationStuffID.TabIndex = 31;
             labelOperationStuffID.Text = "ID сотрудника";
             // 
-            // textBoxOperationBookID
+            // textBoxOperationBookInvNumber
             // 
-            textBoxOperationBookID.Font = new Font("Segoe UI", 10F);
-            textBoxOperationBookID.Location = new Point(206, 60);
-            textBoxOperationBookID.Name = "textBoxOperationBookID";
-            textBoxOperationBookID.Size = new Size(236, 25);
-            textBoxOperationBookID.TabIndex = 30;
+            textBoxOperationBookInvNumber.Font = new Font("Segoe UI", 10F);
+            textBoxOperationBookInvNumber.Location = new Point(233, 60);
+            textBoxOperationBookInvNumber.Name = "textBoxOperationBookInvNumber";
+            textBoxOperationBookInvNumber.Size = new Size(236, 25);
+            textBoxOperationBookInvNumber.TabIndex = 30;
             // 
-            // labelOperationBookID
+            // labelOperationBookInvNumber
             // 
-            labelOperationBookID.AutoSize = true;
-            labelOperationBookID.Font = new Font("Segoe UI", 11F);
-            labelOperationBookID.Location = new Point(36, 61);
-            labelOperationBookID.Name = "labelOperationBookID";
-            labelOperationBookID.Size = new Size(68, 20);
-            labelOperationBookID.TabIndex = 29;
-            labelOperationBookID.Text = "ID книги";
+            labelOperationBookInvNumber.AutoSize = true;
+            labelOperationBookInvNumber.Font = new Font("Segoe UI", 11F);
+            labelOperationBookInvNumber.Location = new Point(36, 61);
+            labelOperationBookInvNumber.Name = "labelOperationBookInvNumber";
+            labelOperationBookInvNumber.Size = new Size(191, 20);
+            labelOperationBookInvNumber.TabIndex = 29;
+            labelOperationBookInvNumber.Text = "Инвентарны номер книги";
             // 
             // dateTimePickerOperationDate
             // 
-            dateTimePickerOperationDate.Location = new Point(206, 153);
+            dateTimePickerOperationDate.Location = new Point(233, 153);
             dateTimePickerOperationDate.Name = "dateTimePickerOperationDate";
             dateTimePickerOperationDate.Size = new Size(236, 32);
             dateTimePickerOperationDate.TabIndex = 27;
@@ -159,7 +159,7 @@
             // 
             buttonCancelEditOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonCancelEditOperation.Font = new Font("Segoe UI", 12F);
-            buttonCancelEditOperation.Location = new Point(269, 225);
+            buttonCancelEditOperation.Location = new Point(289, 225);
             buttonCancelEditOperation.Name = "buttonCancelEditOperation";
             buttonCancelEditOperation.Size = new Size(101, 34);
             buttonCancelEditOperation.TabIndex = 35;
@@ -171,7 +171,7 @@
             // 
             buttonConfirmEditOperation.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonConfirmEditOperation.Font = new Font("Segoe UI", 12F);
-            buttonConfirmEditOperation.Location = new Point(376, 225);
+            buttonConfirmEditOperation.Location = new Point(396, 225);
             buttonConfirmEditOperation.Name = "buttonConfirmEditOperation";
             buttonConfirmEditOperation.Size = new Size(101, 34);
             buttonConfirmEditOperation.TabIndex = 36;
@@ -183,11 +183,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(489, 271);
+            ClientSize = new Size(509, 271);
             Controls.Add(buttonConfirmEditOperation);
             Controls.Add(buttonCancelEditOperation);
             Controls.Add(groupBoxAddOperation);
-            MaximumSize = new Size(505, 310);
             MinimumSize = new Size(505, 310);
             Name = "FormEditOperation";
             StartPosition = FormStartPosition.CenterScreen;
@@ -207,8 +206,8 @@
         private Label labelOperationCustomerID;
         private TextBox textBoxOperationStuffID;
         private Label labelOperationStuffID;
-        private TextBox textBoxOperationBookID;
-        private Label labelOperationBookID;
+        private TextBox textBoxOperationBookInvNumber;
+        private Label labelOperationBookInvNumber;
         private DateTimePicker dateTimePickerOperationDate;
         private Label labelOperationName;
         private Button buttonCancelEditOperation;

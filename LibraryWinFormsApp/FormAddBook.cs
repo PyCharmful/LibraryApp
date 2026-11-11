@@ -31,7 +31,6 @@ namespace LibraryWinFormsApp
         {
 
         }
-
         private void buttonConfirmAddBook_Click(object sender, EventArgs e)
         {
             if (textBoxBookInvNumber.Text == string.Empty || textBoxBookName.Text == string.Empty || textBoxBookAuthor.Text == string.Empty || 

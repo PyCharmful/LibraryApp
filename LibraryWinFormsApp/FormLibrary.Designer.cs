@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            buttonSave = new Button();
             buttonAddBook = new Button();
             buttonDeleteBook = new Button();
             menuStripPanel = new MenuStrip();
@@ -121,7 +120,6 @@
             birthDateDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             addressDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             phoneNumberDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            emailDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             ActionEditCustomer = new DataGridViewLinkColumn();
             customerBindingSource = new BindingSource(components);
             tabPageBookExchange = new TabPage();
@@ -144,7 +142,7 @@
             dataGridOperations = new DataGridView();
             idDataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             operationNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            bookIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            BookId = new DataGridViewTextBoxColumn();
             stuffIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             dateOperationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -169,18 +167,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridOperations).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bookExchangeBindingSource).BeginInit();
             SuspendLayout();
-            // 
-            // buttonSave
-            // 
-            buttonSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonSave.Font = new Font("Segoe UI", 12F);
-            buttonSave.Location = new Point(1087, 566);
-            buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(103, 43);
-            buttonSave.TabIndex = 2;
-            buttonSave.Text = "Сохранить";
-            buttonSave.UseVisualStyleBackColor = true;
-            buttonSave.Click += buttonSave_Click;
             // 
             // buttonAddBook
             // 
@@ -211,7 +197,7 @@
             menuStripPanel.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem, видToolStripMenuItem, справкаToolStripMenuItem });
             menuStripPanel.Location = new Point(0, 0);
             menuStripPanel.Name = "menuStripPanel";
-            menuStripPanel.Size = new Size(1202, 24);
+            menuStripPanel.Size = new Size(1356, 24);
             menuStripPanel.TabIndex = 5;
             menuStripPanel.Text = "menuStrip1";
             // 
@@ -258,7 +244,7 @@
             tabControlLibrary.Location = new Point(0, 27);
             tabControlLibrary.Name = "tabControlLibrary";
             tabControlLibrary.SelectedIndex = 0;
-            tabControlLibrary.Size = new Size(1195, 530);
+            tabControlLibrary.Size = new Size(1353, 530);
             tabControlLibrary.TabIndex = 6;
             // 
             // tabPageBooks
@@ -270,7 +256,7 @@
             tabPageBooks.Location = new Point(4, 24);
             tabPageBooks.Name = "tabPageBooks";
             tabPageBooks.Padding = new Padding(3);
-            tabPageBooks.Size = new Size(1187, 502);
+            tabPageBooks.Size = new Size(1345, 502);
             tabPageBooks.TabIndex = 0;
             tabPageBooks.Text = "Книги";
             tabPageBooks.UseVisualStyleBackColor = true;
@@ -292,7 +278,7 @@
             groupBoxBookFind.Controls.Add(textBoxBookInvNumber);
             groupBoxBookFind.Controls.Add(labelBookInvNumber);
             groupBoxBookFind.Font = new Font("Segoe UI", 12F);
-            groupBoxBookFind.Location = new Point(895, 6);
+            groupBoxBookFind.Location = new Point(1053, 6);
             groupBoxBookFind.Name = "groupBoxBookFind";
             groupBoxBookFind.Size = new Size(286, 449);
             groupBoxBookFind.TabIndex = 6;
@@ -420,65 +406,75 @@
             // dataGridBooks
             // 
             dataGridBooks.AutoGenerateColumns = false;
+            dataGridBooks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridBooks.BackgroundColor = Color.PeachPuff;
             dataGridBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridBooks.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, invNumberDataGridViewTextBoxColumn, bookNameDataGridViewTextBoxColumn, bookAuthorDataGridViewTextBoxColumn, bookPublisherDataGridViewTextBoxColumn, publicationYearDataGridViewTextBoxColumn, genreDataGridViewTextBoxColumn, ActionEditBook });
             dataGridBooks.DataSource = bookBindingSource;
             dataGridBooks.Location = new Point(6, 6);
             dataGridBooks.Name = "dataGridBooks";
-            dataGridBooks.Size = new Size(883, 449);
+            dataGridBooks.ReadOnly = true;
+            dataGridBooks.Size = new Size(1041, 449);
             dataGridBooks.TabIndex = 5;
             dataGridBooks.CellContentClick += dataGridBooks_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn
             // 
             idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "ID";
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // invNumberDataGridViewTextBoxColumn
             // 
             invNumberDataGridViewTextBoxColumn.DataPropertyName = "InvNumber";
-            invNumberDataGridViewTextBoxColumn.HeaderText = "InvNumber";
+            invNumberDataGridViewTextBoxColumn.HeaderText = "Инв. номер";
             invNumberDataGridViewTextBoxColumn.Name = "invNumberDataGridViewTextBoxColumn";
+            invNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bookNameDataGridViewTextBoxColumn
             // 
             bookNameDataGridViewTextBoxColumn.DataPropertyName = "BookName";
-            bookNameDataGridViewTextBoxColumn.HeaderText = "BookName";
+            bookNameDataGridViewTextBoxColumn.HeaderText = "Назв. книги";
             bookNameDataGridViewTextBoxColumn.Name = "bookNameDataGridViewTextBoxColumn";
+            bookNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bookAuthorDataGridViewTextBoxColumn
             // 
             bookAuthorDataGridViewTextBoxColumn.DataPropertyName = "BookAuthor";
-            bookAuthorDataGridViewTextBoxColumn.HeaderText = "BookAuthor";
+            bookAuthorDataGridViewTextBoxColumn.HeaderText = "Автор";
             bookAuthorDataGridViewTextBoxColumn.Name = "bookAuthorDataGridViewTextBoxColumn";
+            bookAuthorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bookPublisherDataGridViewTextBoxColumn
             // 
             bookPublisherDataGridViewTextBoxColumn.DataPropertyName = "BookPublisher";
-            bookPublisherDataGridViewTextBoxColumn.HeaderText = "BookPublisher";
+            bookPublisherDataGridViewTextBoxColumn.HeaderText = "Издатель";
             bookPublisherDataGridViewTextBoxColumn.Name = "bookPublisherDataGridViewTextBoxColumn";
+            bookPublisherDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // publicationYearDataGridViewTextBoxColumn
             // 
             publicationYearDataGridViewTextBoxColumn.DataPropertyName = "PublicationYear";
-            publicationYearDataGridViewTextBoxColumn.HeaderText = "PublicationYear";
+            publicationYearDataGridViewTextBoxColumn.HeaderText = "Год";
             publicationYearDataGridViewTextBoxColumn.Name = "publicationYearDataGridViewTextBoxColumn";
+            publicationYearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // genreDataGridViewTextBoxColumn
             // 
             genreDataGridViewTextBoxColumn.DataPropertyName = "Genre";
-            genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            genreDataGridViewTextBoxColumn.HeaderText = "Жанр";
             genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            genreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ActionEditBook
             // 
             ActionEditBook.DataPropertyName = "Id";
             ActionEditBook.HeaderText = "Редактирование";
             ActionEditBook.Name = "ActionEditBook";
+            ActionEditBook.ReadOnly = true;
             ActionEditBook.Text = "Редактировать";
             ActionEditBook.UseColumnTextForLinkValue = true;
-            ActionEditBook.Width = 105;
             // 
             // bookBindingSource
             // 
@@ -493,7 +489,7 @@
             tabPageStuff.Location = new Point(4, 24);
             tabPageStuff.Name = "tabPageStuff";
             tabPageStuff.Padding = new Padding(3);
-            tabPageStuff.Size = new Size(1187, 502);
+            tabPageStuff.Size = new Size(1345, 502);
             tabPageStuff.TabIndex = 1;
             tabPageStuff.Text = "Сотрудники";
             tabPageStuff.UseVisualStyleBackColor = true;
@@ -516,7 +512,7 @@
             groupBoxStuffFind.Controls.Add(textBoxStuffSecondName);
             groupBoxStuffFind.Controls.Add(labelStuffSecondName);
             groupBoxStuffFind.Font = new Font("Segoe UI", 12F);
-            groupBoxStuffFind.Location = new Point(895, 6);
+            groupBoxStuffFind.Location = new Point(1053, 6);
             groupBoxStuffFind.Name = "groupBoxStuffFind";
             groupBoxStuffFind.Size = new Size(286, 449);
             groupBoxStuffFind.TabIndex = 9;
@@ -686,71 +682,82 @@
             // dataGridStuff
             // 
             dataGridStuff.AutoGenerateColumns = false;
+            dataGridStuff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridStuff.BackgroundColor = SystemColors.ScrollBar;
             dataGridStuff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridStuff.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, secondNameDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, thirdNameDataGridViewTextBoxColumn, birthDateDataGridViewTextBoxColumn, jobRoleDataGridViewTextBoxColumn, phoneNumberDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, ActionEditStuff });
             dataGridStuff.DataSource = stuffBindingSource;
             dataGridStuff.Location = new Point(6, 6);
             dataGridStuff.Name = "dataGridStuff";
-            dataGridStuff.Size = new Size(883, 449);
+            dataGridStuff.ReadOnly = true;
+            dataGridStuff.Size = new Size(1041, 449);
             dataGridStuff.TabIndex = 6;
             dataGridStuff.CellContentClick += dataGridStuff_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn1
             // 
             idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            idDataGridViewTextBoxColumn1.HeaderText = "ID";
             idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            idDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // secondNameDataGridViewTextBoxColumn
             // 
             secondNameDataGridViewTextBoxColumn.DataPropertyName = "SecondName";
-            secondNameDataGridViewTextBoxColumn.HeaderText = "SecondName";
+            secondNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             secondNameDataGridViewTextBoxColumn.Name = "secondNameDataGridViewTextBoxColumn";
+            secondNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
             firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            firstNameDataGridViewTextBoxColumn.HeaderText = "Имя";
             firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            firstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // thirdNameDataGridViewTextBoxColumn
             // 
             thirdNameDataGridViewTextBoxColumn.DataPropertyName = "ThirdName";
-            thirdNameDataGridViewTextBoxColumn.HeaderText = "ThirdName";
+            thirdNameDataGridViewTextBoxColumn.HeaderText = "Отчество";
             thirdNameDataGridViewTextBoxColumn.Name = "thirdNameDataGridViewTextBoxColumn";
+            thirdNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // birthDateDataGridViewTextBoxColumn
             // 
             birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
-            birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
+            birthDateDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
             birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
+            birthDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // jobRoleDataGridViewTextBoxColumn
             // 
             jobRoleDataGridViewTextBoxColumn.DataPropertyName = "JobRole";
-            jobRoleDataGridViewTextBoxColumn.HeaderText = "JobRole";
+            jobRoleDataGridViewTextBoxColumn.HeaderText = "Должность";
             jobRoleDataGridViewTextBoxColumn.Name = "jobRoleDataGridViewTextBoxColumn";
+            jobRoleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
             phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn.HeaderText = "Номер телефона";
             phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            emailDataGridViewTextBoxColumn.HeaderText = "Эл. почта";
             emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ActionEditStuff
             // 
             ActionEditStuff.DataPropertyName = "Id";
             ActionEditStuff.HeaderText = "Редактирование";
             ActionEditStuff.Name = "ActionEditStuff";
+            ActionEditStuff.ReadOnly = true;
             ActionEditStuff.Text = "Редактировать";
             ActionEditStuff.UseColumnTextForLinkValue = true;
-            ActionEditStuff.Width = 105;
             // 
             // stuffBindingSource
             // 
@@ -764,7 +771,7 @@
             tabPageCustomers.Controls.Add(dataGridCustomers);
             tabPageCustomers.Location = new Point(4, 24);
             tabPageCustomers.Name = "tabPageCustomers";
-            tabPageCustomers.Size = new Size(1187, 502);
+            tabPageCustomers.Size = new Size(1345, 502);
             tabPageCustomers.TabIndex = 2;
             tabPageCustomers.Text = "Клиенты";
             tabPageCustomers.UseVisualStyleBackColor = true;
@@ -787,7 +794,7 @@
             groupBoxCustomerFind.Controls.Add(textBoxCustomerSecondName);
             groupBoxCustomerFind.Controls.Add(labelCustomerSecondName);
             groupBoxCustomerFind.Font = new Font("Segoe UI", 12F);
-            groupBoxCustomerFind.Location = new Point(895, 6);
+            groupBoxCustomerFind.Location = new Point(1054, 6);
             groupBoxCustomerFind.Name = "groupBoxCustomerFind";
             groupBoxCustomerFind.Size = new Size(286, 449);
             groupBoxCustomerFind.TabIndex = 12;
@@ -957,71 +964,75 @@
             // dataGridCustomers
             // 
             dataGridCustomers.AutoGenerateColumns = false;
+            dataGridCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridCustomers.BackgroundColor = Color.CadetBlue;
             dataGridCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn2, secondNameDataGridViewTextBoxColumn1, firstNameDataGridViewTextBoxColumn1, thirdNameDataGridViewTextBoxColumn1, birthDateDataGridViewTextBoxColumn1, addressDataGridViewTextBoxColumn1, phoneNumberDataGridViewTextBoxColumn1, emailDataGridViewTextBoxColumn1, ActionEditCustomer });
+            dataGridCustomers.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn2, secondNameDataGridViewTextBoxColumn1, firstNameDataGridViewTextBoxColumn1, thirdNameDataGridViewTextBoxColumn1, birthDateDataGridViewTextBoxColumn1, addressDataGridViewTextBoxColumn1, phoneNumberDataGridViewTextBoxColumn1, ActionEditCustomer });
             dataGridCustomers.DataSource = customerBindingSource;
             dataGridCustomers.Location = new Point(6, 6);
             dataGridCustomers.Name = "dataGridCustomers";
-            dataGridCustomers.Size = new Size(883, 449);
+            dataGridCustomers.ReadOnly = true;
+            dataGridCustomers.Size = new Size(1042, 449);
             dataGridCustomers.TabIndex = 9;
             dataGridCustomers.CellContentClick += dataGridCustomers_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn2
             // 
             idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn2.HeaderText = "Id";
+            idDataGridViewTextBoxColumn2.HeaderText = "ID";
             idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            idDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // secondNameDataGridViewTextBoxColumn1
             // 
             secondNameDataGridViewTextBoxColumn1.DataPropertyName = "SecondName";
-            secondNameDataGridViewTextBoxColumn1.HeaderText = "SecondName";
+            secondNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
             secondNameDataGridViewTextBoxColumn1.Name = "secondNameDataGridViewTextBoxColumn1";
+            secondNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // firstNameDataGridViewTextBoxColumn1
             // 
             firstNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
-            firstNameDataGridViewTextBoxColumn1.HeaderText = "FirstName";
+            firstNameDataGridViewTextBoxColumn1.HeaderText = "Имя";
             firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
+            firstNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // thirdNameDataGridViewTextBoxColumn1
             // 
             thirdNameDataGridViewTextBoxColumn1.DataPropertyName = "ThirdName";
-            thirdNameDataGridViewTextBoxColumn1.HeaderText = "ThirdName";
+            thirdNameDataGridViewTextBoxColumn1.HeaderText = "Отчество";
             thirdNameDataGridViewTextBoxColumn1.Name = "thirdNameDataGridViewTextBoxColumn1";
+            thirdNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // birthDateDataGridViewTextBoxColumn1
             // 
             birthDateDataGridViewTextBoxColumn1.DataPropertyName = "BirthDate";
-            birthDateDataGridViewTextBoxColumn1.HeaderText = "BirthDate";
+            birthDateDataGridViewTextBoxColumn1.HeaderText = "Дата рождения";
             birthDateDataGridViewTextBoxColumn1.Name = "birthDateDataGridViewTextBoxColumn1";
+            birthDateDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn1
             // 
             addressDataGridViewTextBoxColumn1.DataPropertyName = "Address";
-            addressDataGridViewTextBoxColumn1.HeaderText = "Address";
+            addressDataGridViewTextBoxColumn1.HeaderText = "Адрес";
             addressDataGridViewTextBoxColumn1.Name = "addressDataGridViewTextBoxColumn1";
+            addressDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // phoneNumberDataGridViewTextBoxColumn1
             // 
             phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
-            phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
+            phoneNumberDataGridViewTextBoxColumn1.HeaderText = "Номер телефона";
             phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
-            emailDataGridViewTextBoxColumn1.HeaderText = "Email";
-            emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            phoneNumberDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // ActionEditCustomer
             // 
             ActionEditCustomer.DataPropertyName = "Id";
             ActionEditCustomer.HeaderText = "Редактирование";
             ActionEditCustomer.Name = "ActionEditCustomer";
+            ActionEditCustomer.ReadOnly = true;
             ActionEditCustomer.Text = "Редактировать";
             ActionEditCustomer.UseColumnTextForLinkValue = true;
-            ActionEditCustomer.Width = 105;
             // 
             // customerBindingSource
             // 
@@ -1035,7 +1046,7 @@
             tabPageBookExchange.Controls.Add(dataGridOperations);
             tabPageBookExchange.Location = new Point(4, 24);
             tabPageBookExchange.Name = "tabPageBookExchange";
-            tabPageBookExchange.Size = new Size(1187, 502);
+            tabPageBookExchange.Size = new Size(1345, 502);
             tabPageBookExchange.TabIndex = 3;
             tabPageBookExchange.Text = "Операции";
             tabPageBookExchange.UseVisualStyleBackColor = true;
@@ -1056,7 +1067,7 @@
             groupBoxOperationFind.Controls.Add(labelOperationID);
             groupBoxOperationFind.Controls.Add(textBoxOperationID);
             groupBoxOperationFind.Font = new Font("Segoe UI", 12F);
-            groupBoxOperationFind.Location = new Point(895, 6);
+            groupBoxOperationFind.Location = new Point(1054, 6);
             groupBoxOperationFind.Name = "groupBoxOperationFind";
             groupBoxOperationFind.Size = new Size(286, 449);
             groupBoxOperationFind.TabIndex = 15;
@@ -1209,59 +1220,68 @@
             // dataGridOperations
             // 
             dataGridOperations.AutoGenerateColumns = false;
+            dataGridOperations.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridOperations.BackgroundColor = Color.Tan;
             dataGridOperations.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridOperations.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, bookIdDataGridViewTextBoxColumn, stuffIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn, ActionEditOperation });
+            dataGridOperations.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn3, operationNameDataGridViewTextBoxColumn, BookId, stuffIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, dateOperationDataGridViewTextBoxColumn, ActionEditOperation });
             dataGridOperations.DataSource = bookExchangeBindingSource;
             dataGridOperations.Location = new Point(6, 6);
             dataGridOperations.Name = "dataGridOperations";
-            dataGridOperations.Size = new Size(883, 449);
+            dataGridOperations.ReadOnly = true;
+            dataGridOperations.Size = new Size(1042, 449);
             dataGridOperations.TabIndex = 12;
             dataGridOperations.CellContentClick += dataGridOperations_CellContentClick;
             // 
             // idDataGridViewTextBoxColumn3
             // 
             idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn3.HeaderText = "Id";
+            idDataGridViewTextBoxColumn3.HeaderText = "ID";
             idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            idDataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // operationNameDataGridViewTextBoxColumn
             // 
             operationNameDataGridViewTextBoxColumn.DataPropertyName = "OperationName";
-            operationNameDataGridViewTextBoxColumn.HeaderText = "OperationName";
+            operationNameDataGridViewTextBoxColumn.HeaderText = "Операция";
             operationNameDataGridViewTextBoxColumn.Name = "operationNameDataGridViewTextBoxColumn";
+            operationNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bookIdDataGridViewTextBoxColumn
+            // BookId
             // 
-            bookIdDataGridViewTextBoxColumn.DataPropertyName = "BookId";
-            bookIdDataGridViewTextBoxColumn.HeaderText = "BookId";
-            bookIdDataGridViewTextBoxColumn.Name = "bookIdDataGridViewTextBoxColumn";
+            BookId.DataPropertyName = "BookId";
+            BookId.HeaderText = "ID книги";
+            BookId.Name = "BookId";
+            BookId.ReadOnly = true;
             // 
             // stuffIdDataGridViewTextBoxColumn
             // 
             stuffIdDataGridViewTextBoxColumn.DataPropertyName = "StuffId";
-            stuffIdDataGridViewTextBoxColumn.HeaderText = "StuffId";
+            stuffIdDataGridViewTextBoxColumn.HeaderText = "ID сотрудника";
             stuffIdDataGridViewTextBoxColumn.Name = "stuffIdDataGridViewTextBoxColumn";
+            stuffIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerIdDataGridViewTextBoxColumn
             // 
             customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
-            customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
+            customerIdDataGridViewTextBoxColumn.HeaderText = "ID клиента";
             customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            customerIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dateOperationDataGridViewTextBoxColumn
             // 
             dateOperationDataGridViewTextBoxColumn.DataPropertyName = "DateOperation";
-            dateOperationDataGridViewTextBoxColumn.HeaderText = "DateOperation";
+            dateOperationDataGridViewTextBoxColumn.HeaderText = "Дата";
             dateOperationDataGridViewTextBoxColumn.Name = "dateOperationDataGridViewTextBoxColumn";
+            dateOperationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ActionEditOperation
             // 
             ActionEditOperation.DataPropertyName = "Id";
             ActionEditOperation.HeaderText = "Редактирование";
             ActionEditOperation.Name = "ActionEditOperation";
+            ActionEditOperation.ReadOnly = true;
             ActionEditOperation.Text = "Редактировать";
             ActionEditOperation.UseColumnTextForLinkValue = true;
-            ActionEditOperation.Width = 105;
             // 
             // bookExchangeBindingSource
             // 
@@ -1271,13 +1291,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1202, 621);
+            ClientSize = new Size(1356, 567);
             Controls.Add(tabControlLibrary);
-            Controls.Add(buttonSave);
             Controls.Add(menuStripPanel);
             MainMenuStrip = menuStripPanel;
-            MaximumSize = new Size(1218, 660);
-            MinimumSize = new Size(1218, 660);
             Name = "FormLibrary";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Библиотека";
@@ -1311,7 +1328,6 @@
         }
 
         #endregion
-        private Button buttonSave;
         private Button buttonAddBook;
         private Button buttonDeleteBook;
         private MenuStrip menuStripPanel;
@@ -1402,6 +1418,14 @@
         private BindingSource customerBindingSource;
         private BindingSource bookExchangeBindingSource;
         private ComboBox comboBoxOperationName;
+        private Label labelBookAuthor;
+        private TextBox textBoxGenre;
+        private Label labelGenre;
+        private TextBox textBoxPublicationYear;
+        private Label labelPublicationYear;
+        private TextBox textBoxBookPublisher;
+        private Label labelBookPublisher;
+        private TextBox textBoxBookAuthor;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn invNumberDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn bookNameDataGridViewTextBoxColumn;
@@ -1428,20 +1452,13 @@
         private DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
         private DataGridViewLinkColumn ActionEditCustomer;
+        private DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn operationNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn bookIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn BookId;
         private DataGridViewTextBoxColumn stuffIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateOperationDataGridViewTextBoxColumn;
         private DataGridViewLinkColumn ActionEditOperation;
-        private Label labelBookAuthor;
-        private TextBox textBoxGenre;
-        private Label labelGenre;
-        private TextBox textBoxPublicationYear;
-        private Label labelPublicationYear;
-        private TextBox textBoxBookPublisher;
-        private Label labelBookPublisher;
-        private TextBox textBoxBookAuthor;
     }
 }

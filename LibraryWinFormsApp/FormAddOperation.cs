@@ -64,7 +64,7 @@ namespace LibraryWinFormsApp
             string message = null;
             message = string.Join("\n", errors);
             
-            if (message != null )
+            if (message.Length > 2)
             {
                
                 MessageBox.Show(message);

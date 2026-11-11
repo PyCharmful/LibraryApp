@@ -33,7 +33,15 @@ namespace LibraryWinFormsApp
             _customer.SecondName = textBoxCustomerSecondName.Text;
             _customer.FirstName = textBoxCustomerFirstName.Text;
             _customer.ThirdName = textBoxCustomerThirdName.Text;
-            _customer.BirthDate = Convert.ToDateTime(textBoxCustomerBirthDate.Text);
+            try
+            {
+                _customer.BirthDate = Convert.ToDateTime(textBoxCustomerBirthDate.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Введите корректную дату рождения");
+                return;
+            }
             _customer.Address = textBoxCustomerAddress.Text;
             _customer.PhoneNumber = textBoxCustomerPhoneNumber.Text;
             _customer.Email = textBoxCustomerEmail.Text;
