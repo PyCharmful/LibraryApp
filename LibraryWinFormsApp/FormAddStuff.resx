@@ -594,6 +594,9 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>509, 323</value>
   </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>525, 362</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>525, 362</value>
   </data>

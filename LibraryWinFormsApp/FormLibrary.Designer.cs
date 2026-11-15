@@ -39,6 +39,7 @@
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
             tabControlLibrary = new TabControl();
             tabPageBooks = new TabPage();
+            buttonStatisticBook = new Button();
             groupBoxBookFind = new GroupBox();
             textBoxGenre = new TextBox();
             labelGenre = new Label();
@@ -249,6 +250,7 @@
             // 
             // tabPageBooks
             // 
+            tabPageBooks.Controls.Add(buttonStatisticBook);
             tabPageBooks.Controls.Add(groupBoxBookFind);
             tabPageBooks.Controls.Add(dataGridBooks);
             tabPageBooks.Controls.Add(buttonAddBook);
@@ -261,6 +263,17 @@
             tabPageBooks.Text = "Книги";
             tabPageBooks.UseVisualStyleBackColor = true;
             tabPageBooks.Click += tabPageBooks_Click;
+            // 
+            // buttonStatisticBook
+            // 
+            buttonStatisticBook.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonStatisticBook.Location = new Point(238, 461);
+            buttonStatisticBook.Name = "buttonStatisticBook";
+            buttonStatisticBook.Size = new Size(109, 35);
+            buttonStatisticBook.TabIndex = 7;
+            buttonStatisticBook.Text = "Статистика";
+            buttonStatisticBook.UseVisualStyleBackColor = true;
+            buttonStatisticBook.Click += buttonStatisticBook_Click;
             // 
             // groupBoxBookFind
             // 
@@ -1295,6 +1308,8 @@
             Controls.Add(tabControlLibrary);
             Controls.Add(menuStripPanel);
             MainMenuStrip = menuStripPanel;
+            MaximumSize = new Size(1372, 606);
+            MinimumSize = new Size(1372, 606);
             Name = "FormLibrary";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Библиотека";
@@ -1460,5 +1475,6 @@
         private DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn dateOperationDataGridViewTextBoxColumn;
         private DataGridViewLinkColumn ActionEditOperation;
+        private Button buttonStatisticBook;
     }
 }

@@ -230,6 +230,7 @@
             Controls.Add(buttonConfirmEditStuff);
             Controls.Add(buttonCancelEditStuff);
             Controls.Add(groupBoxEditStuff);
+            MaximumSize = new Size(525, 362);
             MinimumSize = new Size(525, 362);
             Name = "FormEditStuff";
             StartPosition = FormStartPosition.CenterParent;

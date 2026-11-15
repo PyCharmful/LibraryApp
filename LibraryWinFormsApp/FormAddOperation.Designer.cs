@@ -187,7 +187,8 @@
             Controls.Add(buttonCancelAddOperation);
             Controls.Add(buttonConfirmAddOperation);
             Controls.Add(groupBoxAddOperation);
-            MinimumSize = new Size(510, 312);
+            MaximumSize = new Size(548, 312);
+            MinimumSize = new Size(548, 312);
             Name = "FormAddOperation";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добавление операции";

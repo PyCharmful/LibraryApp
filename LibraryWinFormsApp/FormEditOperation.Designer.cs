@@ -187,6 +187,7 @@
             Controls.Add(buttonConfirmEditOperation);
             Controls.Add(buttonCancelEditOperation);
             Controls.Add(groupBoxAddOperation);
+            MaximumSize = new Size(525, 310);
             MinimumSize = new Size(505, 310);
             Name = "FormEditOperation";
             StartPosition = FormStartPosition.CenterScreen;

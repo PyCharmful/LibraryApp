@@ -208,6 +208,7 @@
             Controls.Add(groupBoxAddBook);
             Controls.Add(buttonCancelAddBook);
             Controls.Add(buttonConfirmAddBook);
+            MaximumSize = new Size(474, 357);
             MinimumSize = new Size(474, 357);
             Name = "FormAddBook";
             StartPosition = FormStartPosition.CenterScreen;

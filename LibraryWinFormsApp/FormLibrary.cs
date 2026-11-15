@@ -405,5 +405,13 @@ namespace LibraryWinFormsApp
             var operation = query.ToList();
             bookExchangeBindingSource.DataSource = operation;
         }
+        private void buttonStatisticBook_Click(object sender, EventArgs e)
+        {
+            var formStats = new FormStatisticBook(_context);
+            if (formStats.ShowDialog() == DialogResult.OK)
+            {
+                LoadBooks();
+            }
+        }
     }
 }

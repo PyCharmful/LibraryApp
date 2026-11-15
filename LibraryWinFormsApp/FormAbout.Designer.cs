@@ -90,6 +90,8 @@
             Controls.Add(pictureBox1);
             Controls.Add(pictureBoxURFUlogo);
             Controls.Add(buttonCloseAbout);
+            MaximumSize = new Size(776, 330);
+            MinimumSize = new Size(776, 330);
             Name = "FormAbout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "О программе";
