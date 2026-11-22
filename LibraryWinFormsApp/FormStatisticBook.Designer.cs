@@ -175,6 +175,7 @@ partial class FormStatisticBook
         Name = "FormStatisticBook";
         Text = "Статистика книг";
         Load += FormStatisticBook_Load;
+        this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         ResumeLayout(false);
         PerformLayout();
     }

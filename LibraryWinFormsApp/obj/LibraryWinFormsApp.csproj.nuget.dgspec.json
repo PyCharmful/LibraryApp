@@ -52,6 +52,14 @@
           "framework": "net8.0-windows7.0",
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "FastReport.OpenSource": {
+              "target": "Package",
+              "version": "[2027.1.0, )"
+            },
+            "FastReport.OpenSource.Export.PdfSimple": {
+              "target": "Package",
+              "version": "[2027.1.0, )"
+            },
             "LiveChartsCore.SkiaSharpView.WinForms": {
               "target": "Package",
               "version": "[2.1.0-dev-798, )"
